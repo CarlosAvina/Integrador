@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="pnlRoot" prefHeight="571.0" prefWidth="758.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane fx:id="panelTab" layoutX="11.0" layoutY="186.0" prefHeight="200.0" prefWidth="577.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="paneCompra" text="Compra Nueva">
+            <content>
+              <AnchorPane fx:id="pane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #54acd2;">
+                     <children>
+                        <Label layoutX="308.0" layoutY="64.0" text="Cantidad del Producto:">
+                           <font>
+                              
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtIdProducto" layoutX="191.0" layoutY="60.0" prefHeight="25.0" prefWidth="80.0">
+                           <effect>
+                              
+                           </effect>
+                        </TextField>
+                        <Label layoutX="55.0" layoutY="96.0" text="Precio de Compra:">
+                           <font>
+                              
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtPrecioCompra" layoutX="191.0" layoutY="92.0" prefHeight="25.0" prefWidth="80.0">
+                           <effect>
+                              
+                           </effect>
+                        </TextField>
+                        <Label layoutX="105.0" layoutY="64.0" text="IdProducto:">
+                           <font>
+                              
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtCantidadProducto" layoutX="483.0" layoutY="60.0" prefHeight="25.0" prefWidth="80.0">
+                           <effect>
+                              
+                           </effect>
+                        </TextField>
+                        <Button fx:id="btnGuardar" layoutX="509.0" layoutY="172.0" mnemonicParsing="false" text="Guardar" textAlignment="JUSTIFY">
+                           <font>
+                              
+                           </font>
+                        </Button>
+                        <Button fx:id="btnNuevo" layoutX="419.0" layoutY="90.0" mnemonicParsing="false" text="Nuevo" textAlignment="JUSTIFY">
+                           <font>
+                              
+                           </font>
+                        </Button>
+                        <Label layoutX="26.0" layoutY="189.0" text="Detalle Compra">
+                           <font>
+                              
+                           </font>
+                        </Label>
+                        <TableView fx:id="tblProductos" layoutX="5.0" layoutY="213.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="213.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Reportes">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #54acd2;">
+                     <children>
+                        <TableView fx:id="tblVerCompra" layoutX="14.0" layoutY="44.0" prefHeight="444.0" prefWidth="361.0" />
+                        <TableView fx:id="tblVerDetalleCompra" layoutX="377.0" layoutY="44.0" prefHeight="444.0" prefWidth="361.0" />
+                        <Label layoutX="27.0" layoutY="14.0" text="Compra" />
+                        <Label layoutX="394.0" layoutY="14.0" text="Detalles" />
+                        <Button fx:id="btnEliminarCompra" layoutX="686.0" layoutY="495.0" mnemonicParsing="false" text="Eliminar" />
+                        <Label fx:id="lblIdVenta" layoutX="575.0" layoutY="499.0" text="ID Compra" />
+                        <TextField fx:id="txtID" disable="true" editable="false" layoutX="640.0" layoutY="495.0" prefHeight="25.0" prefWidth="41.0" />
+                        <Button fx:id="btnconsultarCompras" layoutX="78.0" layoutY="10.0" mnemonicParsing="false" text="Consultar" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
