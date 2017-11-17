@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wfcJugueteriaK", "wfcJugueteriaK\wfcJugueteriaK.csproj", "{A2A7F600-6BA1-400E-A8EC-0FD5AFE6DF3E}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "wcfServiciosJK", "http://localhost:83/wcfServiciosJK", "{7D39C253-612F-4FB1-B11E-1EEE1DAE7D3C}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		ProjectReferences = "{a2a7f600-6ba1-400e-a8ec-0fd5afe6df3e}|wfcJugueteriaK.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/wcfServiciosJK"
+		Debug.AspNetCompiler.PhysicalPath = "..\wcfServiciosJK\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\wcfServiciosJK\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/wcfServiciosJK"
+		Release.AspNetCompiler.PhysicalPath = "..\wcfServiciosJK\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\wcfServiciosJK\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\wcfServiciosJK\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebSiteJK", "http://localhost:83/WebSiteJK", "{548411CB-83BD-449A-A42C-40FE17A76732}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/WebSiteJK"
+		Debug.AspNetCompiler.PhysicalPath = "..\WebSiteJK\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\WebSiteJK\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/WebSiteJK"
+		Release.AspNetCompiler.PhysicalPath = "..\WebSiteJK\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\WebSiteJK\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\WebSiteJK\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2A7F600-6BA1-400E-A8EC-0FD5AFE6DF3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2A7F600-6BA1-400E-A8EC-0FD5AFE6DF3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2A7F600-6BA1-400E-A8EC-0FD5AFE6DF3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2A7F600-6BA1-400E-A8EC-0FD5AFE6DF3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D39C253-612F-4FB1-B11E-1EEE1DAE7D3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D39C253-612F-4FB1-B11E-1EEE1DAE7D3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D39C253-612F-4FB1-B11E-1EEE1DAE7D3C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D39C253-612F-4FB1-B11E-1EEE1DAE7D3C}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{548411CB-83BD-449A-A42C-40FE17A76732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{548411CB-83BD-449A-A42C-40FE17A76732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{548411CB-83BD-449A-A42C-40FE17A76732}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{548411CB-83BD-449A-A42C-40FE17A76732}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
