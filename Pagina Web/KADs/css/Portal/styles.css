@@ -1,0 +1,140 @@
+.bodyLogin{
+	height: 100%;
+	background-color: #EDF1F5;
+}
+.bodyLogin .container{
+	width: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);  
+	transform: translate(-50%, -50%);   
+	border-radius: 15px;
+	padding: 40px 40px 40px 40px; 
+	background-color: #FFFFFF;
+}
+.bodyLogin .input-field input[type=text]:focus{
+	border-bottom: 1px solid #2196f3;
+    box-shadow: 0 1px 0 0 #2196f3
+}
+.bodyLogin .input-field label{
+	color: #2F323D;
+}
+.bodyLogin .input-field input[type=text]:focus + label{
+	 color: #2196f3	
+}
+.bodyLogin .input-field input[type=password]:focus{
+	border-bottom: 1px solid #2196f3;
+    box-shadow: 0 1px 0 0 #2196f3
+}
+.bodyLogin .input-field input[type=password]:focus + label{
+	 color: #2196f3	
+}
+
+.content{
+	padding-left: 300px;
+}
+
+@media only screen and (max-width: 992px) {
+	.content {
+		padding-left: 0;
+	}
+}
+
+body{
+	background-color: #EDF1F5;
+}
+
+.titleContent{
+	background-color:#FFFFFF;
+}
+.titleContent p{
+	color: #2F323D;
+	text-transform: uppercase;
+}
+.secondary-content .iclose{
+	color: red;
+}
+.secondary-content .idone{
+	color: green;
+}
+.secondary-content .iedit{
+	color: #2F323D;
+}
+.secondary-content .iphoto{
+	color: #2F323D;
+}
+.btnInfo{
+	color: #2F323D;
+}
+.modal-close{
+	background-color: #2F323D;
+	color: #FFFFFF;
+}
+.modalEdit{ 
+	width: 90% !important; 
+	height: 100% !important; 
+	max-height: 85% !important 
+}
+.modalEdit .input-field label{
+	color: #2F323D;
+}
+.modalEdit .input-field input[type=text]:focus + label{
+	 color: #2196f3	
+}
+.modalEdit .input-field input[type=text]:focus{
+	border-bottom: 1px solid #2196f3;
+    box-shadow: 0 1px 0 0 #2196f3;
+}
+.dropdown-content li > a, .dropdown-content li > span {
+  font-size: 16px;
+  color: #65737e;
+}
+	
+
+.checkbox-indigo[type="checkbox"] + label:before{
+  border: 2px solid indigo;
+  background: transparent;
+}
+.checkbox-indigo[type="checkbox"]:checked + label:before{
+  border: 2px solid transparent;
+  border-bottom: 2px solid indigo;
+  border-right: 2px solid indigo;
+  background: transparent;
+}
+.checkbox-indigo.filled-in[type="checkbox"] + label:after{
+  border: 2px solid indigo;
+  background: transparent;
+}
+.checkbox-indigo.filled-in[type="checkbox"]:checked + label:after{
+  background: indigo;
+}
+.checkbox-indigo.filled-in[type="checkbox"]:checked + label:before{
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+.cbxPremLbl{
+	color: #2F323D!important;
+}
+.cbxPrem:checked+label:before{
+	border-right: 2px solid #2196f3; /* You need to change the colour here */
+  	border-bottom: 2px solid #2196f3;
+}
+#mdlPhoto{ 
+	width: 90% !important; 
+	height: 100% !important; 
+	max-height: 85% !important 
+}
+.photoAdmin{
+	position: relative;
+}
+.iclosePhoto{
+	position: absolute;
+	font-size: 30px;
+	top: 0;
+	right:11px;
+	color: #FFFFFF;
+	background-color: #2F323D;
+}

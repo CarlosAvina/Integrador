@@ -31,7 +31,10 @@ public class ControladorCliente
 {
     
     //private static final String URL_REST = "http://192.168.1.102/jwonka/api/RestCliente";
-    private static final String URL_REST = "http://192.168.2.154/jwonka/api/RestCliente";
+    //private static final String URL_REST = "http://192.168.2.154/jwonka/api/RestCliente";
+    //192.168.43.129
+    private static final String URL_REST = "http://192.168.1.254/wcfServiciosJK/ServiceJS.svc/ConsultarCliente";
+    
     
     public int insert(Cliente c) throws Exception
     {

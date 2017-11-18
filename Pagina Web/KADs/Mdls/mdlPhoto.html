@@ -1,0 +1,57 @@
+<div id="mdlPhoto" class="modal modal-fixed-footer">
+	<form id="formularioF" method="post" enctype="multipart/form-data">
+	<div class="modal-content">
+		<h4 class="center">Añadir Foto</h4>
+		<div class="row">
+			<div class="col s12">
+				<form action="#">
+					<div class="file-field input-field">
+						<div class="btn blue">
+							<span>Foto</span>
+							<input type="file" name="ImagenAdd" >
+						</div>
+						<div class="file-path-wrapper">
+							<input class="file-path validate" type="text" id="ImagenAdd">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="galerry">
+			<?php 
+				$tres = 0;
+					if ($dbG->rows($sqlG) > 0) {
+	                    $HTML = '<div class="row">';
+	                    while ($dataG = $dbG->recorrer($sqlG)) {
+	                    	if ($tres == 3) {
+	                    		$HTML .= '</div>';
+	                    		$HTML .= '<div class="row">';
+	                    		$HTML .= '<div class="col s12 m4 photoAdmin"><img src="views/app/imgcliente/'.$dataG['Ruta'].'" class="responsive-img" alt="">
+									<a onclick="DeleteItem(\'¿Está seguro que desea eliminar esta foto?\',\'?view=galeria&mode=delete&id='.$dataG['IDGaleria'].'\')" role="button"><span class="material-icons iclosePhoto">close</span></a></div>';
+									$tres = 0;
+	                    	}
+	                    	else{
+	                    		$HTML .= '<div class="col s12 m4 photoAdmin"><img src="views/app/imgcliente/'.$dataG['Ruta'].'" class="responsive-img" alt="">
+									<a onclick="DeleteItem(\'¿Está seguro que desea eliminar esta foto?\',\'?view=galeria&mode=delete&id='.$dataG['IDGaleria'].'\')" role="button"><span class="material-icons iclosePhoto">close</span></a></div>';
+	                    	}
+	                    	
+	                    	$tres++;
+                    	}
+                    	$HTML .= '</div>';
+	                }else{
+                    $HTML = '<div style = "text-align:center"; class="alert alert-dismissible alert-info">
+                          <strong>Atención!</strong> Aún no se han registrado fotos.
+                        </div>';
+                  	}
+                  	
+                 echo $HTML;
+			 ?>
+
+		</div>
+	</div>
+	<input type="text" style="display: none" id="idCli" value="<?php echo $_cliente[$_GET['id']]['IDCliente'] ?>">
+	<div class="modal-footer">
+		<a href="#!" onclick="goAddFoto()" class="modal-action btn-flat green" id="btnGuardar">Aceptar</a>
+	</div>
+	</form>
+</div>

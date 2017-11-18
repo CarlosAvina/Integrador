@@ -1,0 +1,129 @@
+
+<form id="formularioE" method="post" enctype="multipart/form-data">
+<div id="mdlEdit" class="modal modalEdit modal-fixed-footer">
+	<div class="modal-content">
+		<h4 class="center">Editar</h4>
+		<div class="row">
+			<div class="input-field col s12 m6">
+				<input type="text" name="txtLocal" value="['Nombre'] " id="txtLocal">
+				<label for="txtLocal">Nombre del Local</label>
+			</div>
+			<div class="input-field col s12 m6">
+				<input type="text" name="txtNombre" value="['NombreP'] " id="txtNombre">
+				<label for="txtNombre">Nombre</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12 m6">
+				<input type="text" name="txtPaterno" value="['Paterno'] " id="txtPaterno">
+				<label for="txtNombre">Paterno</label>
+			</div>
+			<div class="input-field col s12 m6">
+				<input type="text" name="txtMaterno" value="['Materno'] " id="txtMaterno">
+				<label for="txtNombre">Materno</label>
+			</div>
+		</div>
+		<div class="row">						
+			<div class="input-field col s12 m4">
+				<input type="text" name="txtFNaci" id="txtFNaci" value="['FechaN'] " class="datepicker">
+				<label for="txtFNaci">Fecha de Nacimiento</label>
+			</div>
+			<div class="input-field col s12 m4">
+				<input type="text" value="['Telefono'] " name="txtTel" id="txtTel">
+				<label for="txtTel">Telefono</label>
+			</div>
+			<div class="input-field col s12 m4">
+				<input type="text" value="['Correo'] " name="txtCorreo" id="txtCorreo">
+				<label for="txtTel">Correo</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12 m6">
+			</div>
+		</div>
+		<div class="row">
+
+			<div class="input-field col s12 m6">
+				<select id="sltCiudad" name="sltCiudad" >
+					<option value="['idCiudad'] ">['Ciudad'] </option>
+				</select>
+			</div>
+		</div>
+		<div class="row">						
+			<div class="input-field col s12 m4">
+				<input type="text" value="['Calle'] " name="txtCalle" id="txtCalle">
+				<label for="txtCalle">Calle</label>
+			</div>
+			<div class="input-field col s12 m4">
+				<input type="text" value="['Numero'] " name="txtNumero" id="txtNumero">
+				<label for="txtNumero">Numero</label>
+			</div>
+			<div class="input-field col s12 m4">
+				<input type="text" value="['Colonia'] " name="txtColonia" id="txtColonia">
+				<label for="txtColonia">Colonia</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12">
+				<form action="#">
+					<div class="file-field input-field">
+						<div class="btn btnFile blue">
+							<span>Foto</span>
+							<input type="file" name="Imagen">
+						</div>
+							<div class="file-path-wrapper">
+							<input class="file-path validate" value="Default" type="text" id = "Imagen">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12">
+				<form action="#">
+					<p>
+					<input type="checkbox" class="cbxPrem" id="inpPrem" name="inpPrem" />
+							
+						<label for="inpPrem" class="cbxPremLbl">Premium</label>
+					</p>
+				</form>
+			</div>
+		</div>
+				<section id="premSect">
+
+			<div class="row">
+				<div class="input-field col s12 m6">
+					<input type="text" name="txtWeb" id="txtWeb" value="['Pagina'] ">
+					<label for="txtWeb">WebSite</label>
+				</div>
+				<div class=" input-field col s12 m6">
+					<input type="text" name="txtFContrato" id="txtFContrato" class="datepicker" value="['FechaF'] ">
+					<label for="txtFContrato">Fecha Final de Contrato</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12 m6">
+					<input type="text" id="txtFacebook" value="['Facebook'] ">
+					<label for="txtWeb">Facebook</label>
+				</div>
+				<div class=" input-field col s12 m6">
+					<input type="text" id="txtFTwitter" value="['Twitter'] ">
+					<label for="txtFContrato">Twitter</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<textarea id="txtDes" name="txtDes" class="materialize-textarea">['Descripcion'] </textarea>
+					<label for="txtDes">Descripción</label>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="modal-footer">
+		<a href="#!" class="modal-action modal-close btn-flat red" id="btnCancelar">Cancelar</a>
+		<a href="#!" onclick="goEditCliente()" class="modal-action btn-flat green" id="btnGuardar">Guardar</a>
+	</div>
+	<input type="text" style="display: none" id="ID" value="['IDCliente'] ">
+	<input type="text" style="display: none" id="gm" value="['Imagen'] ">
+</div>
+</form>
