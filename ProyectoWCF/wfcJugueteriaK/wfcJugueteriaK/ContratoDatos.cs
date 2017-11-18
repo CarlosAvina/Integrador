@@ -13,27 +13,27 @@ namespace wfcJugueteriaK
     public class Persona
     {
         [DataMember]
-        public long IdPersona { get; set; }
+        public long id { get; set; }
         [DataMember]
-        public string Name { get; set; }
+        public string nombre { get; set; }
         [DataMember]
-        public string ApellidoPaterno { get; set; }
+        public string apellidoPaterno { get; set; }
         [DataMember]
-        public string ApellidoMaterno { get; set; }
+        public string apellidoMaterno { get; set; }
         [DataMember]
-        public string Genero { get; set; }
+        public string genero { get; set; }
         [DataMember]
-        public string Rfc { get; set; }
+        public string rfc { get; set; }
         [DataMember]
-        public string Curp { get; set; }
+        public string curp { get; set; }
         [DataMember]
-        public string FechaNacimiento { get; set; }
+        public string fechaNacimiento { get; set; }
         [DataMember]
-        public string Cp { get; set; }
+        public string cp { get; set; }
         [DataMember]
-        public string Fotografia { get; set; }
+        public string fotografia { get; set; }
         [DataMember]
-        public string Domicilio { get; set; }
+        public string domicilio { get; set; }
     }
     [DataContract]
     public class Rol
@@ -80,13 +80,13 @@ namespace wfcJugueteriaK
     public class Cliente
     {
         [DataMember]
-        public long IdCliente { get; set; }
+        public long id { get; set; }
         [DataMember]
-        public string Email { get; set; }
+        public string email { get; set; }
         [DataMember]
-        public string Telefono { get; set; }
+        public string telefono { get; set; }
         [DataMember]
-        public int Activo { get; set; }
+        public int activo { get; set; }
         [DataMember]
         public Persona persona { get; set; }
     }
