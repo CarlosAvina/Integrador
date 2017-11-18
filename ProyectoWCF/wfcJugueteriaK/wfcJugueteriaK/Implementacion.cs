@@ -964,7 +964,7 @@ namespace wfcJugueteriaK
             }
         }
 
-        public List<Cliente> ConsultarCliente()
+           public List<Cliente> ConsultarCliente()
         {
             List<Cliente> listC = new List<Cliente>();
             DSL conexion = new DSL();
@@ -978,21 +978,22 @@ namespace wfcJugueteriaK
                 {
                     Cliente tempC = new Cliente();
                     Persona tempP = new Persona();
-                    tempP.Name = dtr.GetString(dtr.GetOrdinal("Nombre"));
-                    tempP.ApellidoPaterno = dtr.GetString(dtr.GetOrdinal("ApellidoPaterno"));
-                    tempP.ApellidoMaterno = dtr.GetString(dtr.GetOrdinal("ApellidoMaterno"));
-                    tempP.Fotografia = dtr.GetString(dtr.GetOrdinal("Fotografia"));
-                    tempP.Genero = dtr.GetString(dtr.GetOrdinal("Genero"));
-                    tempP.Rfc = dtr.GetString(dtr.GetOrdinal("Rfc"));
-                    tempP.Curp = dtr.GetString(dtr.GetOrdinal("Curp"));
-                    tempP.Cp = dtr.GetString(dtr.GetOrdinal("Cp"));
-                    tempP.Domicilio = dtr.GetString(dtr.GetOrdinal("Domicilio"));
-                    tempP.FechaNacimiento = dtr.GetString(dtr.GetOrdinal("FechaNacimiento"));
+                    tempP.id = dtr.GetInt32(dtr.GetOrdinal("IdPersona"));
+                    tempP.nombre = dtr.GetString(dtr.GetOrdinal("Nombre"));
+                    tempP.apellidoPaterno = dtr.GetString(dtr.GetOrdinal("ApellidoPaterno"));
+                    tempP.apellidoMaterno = dtr.GetString(dtr.GetOrdinal("ApellidoMaterno"));
+                    //tempP.fotografia = dtr.GetString(dtr.GetOrdinal("Fotografia"));
+                    tempP.genero = dtr.GetString(dtr.GetOrdinal("Genero"));
+                    tempP.rfc = dtr.GetString(dtr.GetOrdinal("Rfc"));
+                    tempP.curp = dtr.GetString(dtr.GetOrdinal("Curp"));
+                    tempP.cp = dtr.GetString(dtr.GetOrdinal("Cp"));
+                    tempP.domicilio = dtr.GetString(dtr.GetOrdinal("Domicilio"));
+                    tempP.fechaNacimiento = dtr.GetString(dtr.GetOrdinal("FechaNacimiento"));
 
                     tempC.persona = tempP;
-                    tempC.IdCliente = dtr.GetInt32(dtr.GetOrdinal("IdCliente"));
-                    tempC.Email = dtr.GetString(dtr.GetOrdinal("Email"));
-                    tempC.Telefono = dtr.GetString(dtr.GetOrdinal("Telefono"));
+                    tempC.id = dtr.GetInt32(dtr.GetOrdinal("IdCliente"));
+                    tempC.email = dtr.GetString(dtr.GetOrdinal("Email"));
+                    tempC.telefono = dtr.GetString(dtr.GetOrdinal("Telefono"));
                     listC.Add(tempC);
                 }
                 return listC;
