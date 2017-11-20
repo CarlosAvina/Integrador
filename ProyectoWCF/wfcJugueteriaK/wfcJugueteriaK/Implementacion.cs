@@ -982,7 +982,7 @@ namespace wfcJugueteriaK
                     tempP.nombre = dtr.GetString(dtr.GetOrdinal("Nombre"));
                     tempP.apellidoPaterno = dtr.GetString(dtr.GetOrdinal("ApellidoPaterno"));
                     tempP.apellidoMaterno = dtr.GetString(dtr.GetOrdinal("ApellidoMaterno"));
-                    //tempP.fotografia = dtr.GetString(dtr.GetOrdinal("Fotografia"));
+                    tempP.fotografia = dtr.GetString(dtr.GetOrdinal("Fotografia"));//no funcionará el metodo sí llega haber algún NULL en este campo en la BD
                     tempP.genero = dtr.GetString(dtr.GetOrdinal("Genero"));
                     tempP.rfc = dtr.GetString(dtr.GetOrdinal("Rfc"));
                     tempP.curp = dtr.GetString(dtr.GetOrdinal("Curp"));
