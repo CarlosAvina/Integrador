@@ -97,7 +97,7 @@ namespace wfcJugueteriaK
 
         //View
         [OperationContract]
-        [WebGet()]
+        [WebGet(ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.WrappedRequest)]
         List<Cliente> ConsultarCliente();
         [OperationContract]
         [WebGet()]
