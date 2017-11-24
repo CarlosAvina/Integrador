@@ -33,7 +33,7 @@ public class ControladorCliente
     //private static final String URL_REST = "http://192.168.1.102/jwonka/api/RestCliente";
     //private static final String URL_REST = "http://192.168.2.154/jwonka/api/RestCliente";
     //192.168.43.129
-    private static final String URL_REST = "http://192.168.1.254/wcfServiciosJK/ServiceJS.svc/ConsultarCliente";
+    private static final String URL_REST = "http://192.168.43.129:83/wcfServiciosJK/ServiceJS.svc/ConsultarCliente";
     
     
     public int insert(Cliente c) throws Exception
@@ -81,7 +81,7 @@ public class ControladorCliente
         connHttp.setRequestMethod("POST");
         
         //Indicamos que enviaremos los parametros codificador a traves del cuerpo de la peticion BODY
-        connHttp.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+        connHttp.setRequestProperty("Content-Type", "application/json");
         
         //Establecemos que enviaremos los valores por un metodo POST
         connHttp.setDoOutput(true);

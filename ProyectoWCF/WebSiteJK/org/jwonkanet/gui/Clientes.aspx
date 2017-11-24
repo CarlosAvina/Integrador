@@ -1,0 +1,265 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Clientes.aspx.cs" Inherits="org_jwonkanet_gui_Clientes" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>KAD's</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">  
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css/portal/materialize.min.css">
+	<link rel="stylesheet" href="css/portal/styles.css">
+	<link rel="stylesheet" href="css/portal/animate.css">
+	<link rel="stylesheet" href="css/portal/font-awesome.min.css">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="?view=logout">Cerrar Sesion</a></li>
+        </ul>
+
+        <div class="navbar-fixed">
+          <nav style="background-color: rgb(3, 44, 91);">
+            <div class="nav-wrapper">
+              <ul class="left show-on-med-and-down">
+                <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a> 
+              </ul>
+              <ul class="right">
+                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Usuario<i class="material-icons right">arrow_drop_down</i></a></li>
+              </ul>
+            </div>
+          </nav>    
+        </div>
+
+        <ul id="slide-out" class="side-nav fixed">
+          <li>
+            <div class="user-view">
+              <div class="background" style="background-color:rgb(3, 44, 91);"></div>
+              <a href="#!user"><img class="circle" src="img/logo.png"></a>
+              <a href="#!name"><span class="white-text name">KAD's</span></a>
+              <a href="#!email"><span class="white-text email">cooreo@correo.com</span></a>
+            </div>
+          </li>
+          <li><a class="subheader">Acciones</a></li>
+          <li><a href="Clientes.html"><i class="material-icons">group</i>Clientes</a></li>
+          <li><a href="Empleados.html"><i class="material-icons">group</i>Empleados</a></li>
+          <li><a href="Productos.html"><i class="material-icons">star_rate</i>Productos</a></li>
+          <li><a href="Ventas.html"><i class="material-icons">star_rate</i>Ventas</a></li>
+          <li><a href="Compras.html"><i class="material-icons">star_rate</i>Compras</a></li>
+        </ul>
+
+
+        <section class="content">
+			<div class="row titleContent">
+				<div class="col s12" >
+					<b><p>Clientes</p></b>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col s12">
+					<ul class="collection">
+						<li class="collection-item avatar">
+									<i class="material-icons circle green">mood</i>
+									<a href="#mdlView" class="modal-trigger btnInfo"><b><span class="title">Nombre</span></b></a>
+									<p>Edad<br>
+									Dirección
+									</p>
+									<div class="secondary-content">
+										<a onclick="DeleteItem(\'¿Está seguro que desea eliminar este aspirante?\',\'?view=usersadmin&mode=delete&id='.$data['IDCliente'].'\')"><i class="small material-icons iclose">close</i></a>
+										<a href="#mdlEdit" class="modal-trigger"><i class="small material-icons iedit">edit</i></a>
+								</li>
+								<li class="collection-item avatar">
+									<i class="material-icons circle green">mood</i>
+									<a href="#mdlView" class="modal-trigger btnInfo"><b><span class="title">Nombre</span></b></a>
+									<p>Edad<br>
+									Dirección
+									</p>
+									<div class="secondary-content">
+										<a onclick="DeleteItem(\'¿Está seguro que desea eliminar este aspirante?\',\'?view=usersadmin&mode=delete&id='.$data['IDCliente'].'\')"><i class="small material-icons iclose">close</i></a>
+										<a href="#mdlEdit" class="modal-trigger"><i class="small material-icons iedit">edit</i></a>
+								</li>
+								<li class="collection-item avatar">
+									<i class="material-icons circle green">mood</i>
+									<a href="#mdlView" class="modal-trigger btnInfo"><b><span class="title">Nombre</span></b></a>
+									<p>Edad<br>
+									Dirección
+									</p>
+									<div class="secondary-content">
+										<a onclick="DeleteItem(\'¿Está seguro que desea eliminar este aspirante?\',\'?view=usersadmin&mode=delete&id='.$data['IDCliente'].'\')"><i class="small material-icons iclose">close</i></a>
+
+										<a href="#mdlEdit" class="modal-trigger"><i class="small material-icons iedit">edit</i></a>
+									</div>
+								</li>
+					</ul>
+				</div>
+			</div>
+			<script src="js/portal/jQuery.min.js"></script>
+			<script src="js/portal/materialize.min.js"></script>
+			<script src="js/portal/inicializacion.js"></script>
+
+<div id="mdlView" class="modal modal-fixed-footer">
+	<div class="modal-content">
+		<h4 class="center">'Nombre']</h4>
+		<div class="row">
+			<div class="col s6 offset-s3">
+				<img class="responsive-img" src="img/logo.png" alt="">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12">
+				<ul class="collection">
+					<li class="collection-item"><b>Nombre: </b>'NombreP']</li>
+					<li class="collection-item"><b>Fecha de Nacimiento: </b>'FechaN']</li>
+					<li class="collection-item"><b>Correo: </b>'Correo']</li>
+					<li class="collection-item"><b>Telefono: </b>'Telefono']</li>
+					<li class="collection-item"><b>Servicio: </b>'Servicio']</li>
+					<li class="collection-item"><b>Evento: </b>'Evento']</li>
+					<li class="collection-item"><b>Calle y Numero: </b>'Calle']; Numero
+					<li class="collection-item"><b>Colonia: </b>'Colonia']</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<a href="#!" class="modal-action modal-close btn-flat">Aceptar</a>
+	</div>
+</div>
+
+
+<form id="formularioE" method="post" enctype="multipart/form-data">
+<div id="mdlEdit" class="modal modalEdit modal-fixed-footer">
+	<div class="modal-content">
+		<h4 class="center">Editar</h4>
+		<div class="row">
+			<div class="input-field col s12 m6">
+				<input type="text" name="txtLocal" value="['Nombre'] " id="txtLocal">
+				<label for="txtLocal">Nombre del Local</label>
+			</div>
+			<div class="input-field col s12 m6">
+				<input type="text" name="txtNombre" value="['NombreP'] " id="txtNombre">
+				<label for="txtNombre">Nombre</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12 m6">
+				<input type="text" name="txtPaterno" value="['Paterno'] " id="txtPaterno">
+				<label for="txtNombre">Paterno</label>
+			</div>
+			<div class="input-field col s12 m6">
+				<input type="text" name="txtMaterno" value="['Materno'] " id="txtMaterno">
+				<label for="txtNombre">Materno</label>
+			</div>
+		</div>
+		<div class="row">						
+			<div class="input-field col s12 m4">
+				<input type="text" name="txtFNaci" id="txtFNaci" value="['FechaN'] " class="datepicker">
+				<label for="txtFNaci">Fecha de Nacimiento</label>
+			</div>
+			<div class="input-field col s12 m4">
+				<input type="text" value="['Telefono'] " name="txtTel" id="txtTel">
+				<label for="txtTel">Telefono</label>
+			</div>
+			<div class="input-field col s12 m4">
+				<input type="text" value="['Correo'] " name="txtCorreo" id="txtCorreo">
+				<label for="txtTel">Correo</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12 m6">
+			</div>
+		</div>
+		<div class="row">
+
+			<div class="input-field col s12 m6">
+				<select id="sltCiudad" name="sltCiudad" >
+					<option value="['idCiudad'] ">['Ciudad'] </option>
+				</select>
+			</div>
+		</div>
+		<div class="row">						
+			<div class="input-field col s12 m4">
+				<input type="text" value="['Calle'] " name="txtCalle" id="txtCalle">
+				<label for="txtCalle">Calle</label>
+			</div>
+			<div class="input-field col s12 m4">
+				<input type="text" value="['Numero'] " name="txtNumero" id="txtNumero">
+				<label for="txtNumero">Numero</label>
+			</div>
+			<div class="input-field col s12 m4">
+				<input type="text" value="['Colonia'] " name="txtColonia" id="txtColonia">
+				<label for="txtColonia">Colonia</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12">
+				<form action="#">
+					<div class="file-field input-field">
+						<div class="btn btnFile blue">
+							<span>Foto</span>
+							<input type="file" name="Imagen">
+						</div>
+							<div class="file-path-wrapper">
+							<input class="file-path validate" value="Default" type="text" id = "Imagen">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12">
+				<form action="#">
+					<p>
+					<input type="checkbox" class="cbxPrem" id="inpPrem" name="inpPrem" />
+							
+						<label for="inpPrem" class="cbxPremLbl">Premium</label>
+					</p>
+				</form>
+			</div>
+		</div>
+				<section id="premSect">
+
+			<div class="row">
+				<div class="input-field col s12 m6">
+					<input type="text" name="txtWeb" id="txtWeb" value="['Pagina'] ">
+					<label for="txtWeb">WebSite</label>
+				</div>
+				<div class=" input-field col s12 m6">
+					<input type="text" name="txtFContrato" id="txtFContrato" class="datepicker" value="['FechaF'] ">
+					<label for="txtFContrato">Fecha Final de Contrato</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12 m6">
+					<input type="text" id="txtFacebook" value="['Facebook'] ">
+					<label for="txtWeb">Facebook</label>
+				</div>
+				<div class=" input-field col s12 m6">
+					<input type="text" id="txtFTwitter" value="['Twitter'] ">
+					<label for="txtFContrato">Twitter</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<textarea id="txtDes" name="txtDes" class="materialize-textarea">['Descripcion'] </textarea>
+					<label for="txtDes">Descripción</label>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="modal-footer">
+		<a href="#!" class="modal-action modal-close btn-flat red" id="btnCancelar">Cancelar</a>
+		<a href="#!" onclick="goEditCliente()" class="modal-action btn-flat green" id="btnGuardar">Guardar</a>
+	</div>
+	<input type="text" style="display: none" id="ID" value="['IDCliente'] ">
+	<input type="text" style="display: none" id="gm" value="['Imagen'] ">
+</div>
+</form>
+
+		</section>
+    </form>
+</body>
+</html>

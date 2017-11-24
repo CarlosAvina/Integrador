@@ -1,0 +1,3532 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body{
+	font-family: 'Montserrat', sans-serif;
+}
+
+.center{
+	text-align: center;
+}
+
+#navS{
+	color: black;
+	width: 100%;
+}
+#navS a{
+	text-decoration: none;
+	font-size: 16px;
+	color: rgb(12, 52, 93);
+	padding-right: 12px;
+}
+#navS a:hover{
+	color: rgb(201, 31, 27);
+}
+.btnB{
+    background-color: blue !important;
+    color: red;
+}
+
+.menus{
+	height: 120px;
+	background-color: #662d91;
+	color: white;
+}
+.menusb{
+	height: 120px;
+	background-color: #996bac;
+	color: white;
+}
+.menusc{
+	height: 1200px;
+	background-color: #996bac;
+	color: white;
+}
+.wella{
+	background-color:  #4f1654;
+	text-decoration: none;
+	width: 200px;
+}
+
+#flipkart-navbar {
+    color: #FFFFFF;
+}
+
+.row1{
+	background-color: rgb(3, 44, 91);
+    padding-top: 10px;
+    background-image: url(../img/BannerP.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 100%;
+}
+.row1 a{
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.row2 {
+	padding-top: 15px;
+	background-color: #ecf0f1;
+    padding-bottom: 20px;
+}
+.row3 {
+	background-color: #ecf0f1;
+	max-height: 45px;
+}
+
+.flipkart-navbar-input {
+    padding: 11px 16px;
+    border-radius: 2px 0 0 2px;
+    border: 0 none;
+    outline: 0 none;
+    font-size: 15px;
+}
+
+.flipkart-navbar-button {
+    background-color: #ffe11b;
+    border: 1px solid #ffe11b;
+    border-radius: 0 2px 2px 0;
+    color: #565656;
+    padding: 10px 0;
+    height: 43px;
+    cursor: pointer;
+}
+
+.cart-button {
+    background-color: #2469d9;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .23), inset 1px 1px 0 0 hsla(0, 0%, 100%, .2);
+    padding: 10px 0;
+    text-align: center;
+    height: 41px;
+    border-radius: 2px;
+    font-weight: 500;
+    width: 120px;
+    display: inline-block;
+    color: #FFFFFF;
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    outline: none;
+}
+
+.cart-button:hover{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.cart-svg {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.item-number {
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, .1);
+    height: 20px;
+    padding: 3px 6px;
+    font-weight: 500;
+    display: inline-block;
+    color: #fff;
+    line-height: 12px;
+    margin-left: 10px;
+}
+
+.upper-links {
+    display: inline-block;
+    padding: 0 11px;
+    line-height: 23px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0;
+    color: inherit;
+    border: none;
+    outline: none;
+    font-size: 12px;
+}
+.main .img-responsive {
+    margin-bottom: 30px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+.dropdown:hover {
+    background-color: #fff;
+}
+
+.dropdown:hover .links {
+    color: #000;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    display: none;
+    background-color: #fff;
+    color: #333;
+    left: 0px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: 0 4px 8px -3px #555454;
+    margin: 0;
+    padding: 0px;
+}
+
+.links {
+    color: #fff;
+    text-decoration: none;
+}
+
+.links:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-stripe-wrapper {
+    position: relative;
+    margin-bottom: 0
+}
+
+.header-stripe-info {
+    z-index: 9;
+    left: 20px;
+    right: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.header-stripe-info p {
+    font: 400 15px / 30px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    color: #fff;
+    margin: 0;
+    display: inline-block;
+    white-space: pre;
+}
+
+.header-stripe-info .slice {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    height: 0;
+    width: 0;
+    border-bottom: 40px solid #79B864;
+    border-left: 10px solid transparent
+}
+
+.header-stripe-info .shipping-stripe, .header-stripe-info .return-stripe {
+    position: relative;
+    width: 50%;
+    padding: 6px 20px;
+    float: left
+}
+
+.header-stripe-info .shipping-stripe {
+    background: #8ECF78
+}
+
+.header-stripe-info .shipping-stripe p:before {
+    content: "";
+    float: left;
+    margin-right: 5px;
+    width: 29px;
+    height: 30px;
+    background: url(//juguettos.com/assets/i-rocket-green-b4915164220fd6fba9a2073bd81130192907ae47fdf976af4129a50460d22090.svg) no-repeat top center
+}
+
+.header-stripe-info .shipping-stripe:after {
+    content: "";
+    position: absolute;
+    right: 100%;
+    bottom: 0;
+    height: 0;
+    width: 0;
+    border-bottom: 30px solid #8ECF78;
+    border-left: 20px solid transparent
+}
+
+.header-stripe-info .shipping-stripe:before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 0;
+    height: 0;
+    width: 0;
+    border-top: 30px solid #8ECF78;
+    border-left: 20px solid transparent
+}
+
+.header-stripe-info .return-stripe {
+    background: #79B864
+}
+
+.header-stripe-info .return-stripe p:before {
+    content: "";
+    float: left;
+    margin-right: 5px;
+    width: 28px;
+    height: 26px;
+    background: url(//juguettos.com/assets/i-store-green-47402560dfe40d9807f497b74f9233b57c99c611191b5f5370763ca72bd65311.svg) no-repeat left center
+}
+
+.header-stripe-info .return-stripe:after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    height: 0;
+    width: 0;
+    border-bottom: 30px solid #79B864;
+    border-right: 20px solid transparent
+}
+
+.header-stripe-info .return-stripe:before {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height: 0;
+    width: 0;
+    border-top: 30px solid #79B864;
+    border-right: 20px solid transparent
+}
+
+@media only screen and (max-width: 1240px) {
+    .header-stripe-info {
+        left: 30px;
+        right: 30px
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .header-stripe-info {
+        left: 20px;
+        right: 20px;
+        bottom: -2px
+    }
+
+    .header-stripe-info .shipping-stripe {
+        width: 100%;
+        padding: 6px 10px
+    }
+
+    .header-stripe-info .shipping-stripe p {
+        margin: 7px 0;
+        font: 400 14px / 15px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif
+    }
+
+    .header-stripe-info .shipping-stripe p:before {
+        display: none
+    }
+
+    .header-stripe-info .slice {
+        display: none
+    }
+
+    .header-stripe-info .return-stripe {
+        background: none;
+        position: absolute;
+        right: 1px;
+        top: 0;
+        width: 20px;
+        height: 34px;
+        float: left
+    }
+
+    .header-stripe-info .return-stripe p {
+        display: none
+    }
+
+    .header-stripe-info .return-stripe p:before {
+        display: none
+    }
+
+    .header-stripe-info .return-stripe:before, .header-stripe-info .return-stripe:after {
+        border-top-color: #8ECF78;
+        border-bottom-color: #8ECF78
+    }
+
+    .header-stripe-info .return-stripe:after {
+        bottom: -7px
+    }
+}
+
+
+
+.profile-links {
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    border-bottom: 1px solid #e9e9e9;
+    box-sizing: border-box;
+    display: block;
+    padding: 0 11px;
+    line-height: 23px;
+}
+
+.profile-li{
+    padding-top: 2px;
+}
+
+.largenav {
+    display: none;
+}
+
+.smallnav{
+    display: block;
+}
+
+.smallsearch{
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.menu{
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .largenav {
+        display: block;
+    }
+    .smallnav{
+        display: none;
+    }
+    .smallsearch{
+        margin: 0px;
+    }
+}
+
+/*Sidenav*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    box-shadow: 0 4px 8px -3px #555454;
+    padding-top: 0px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #fff;        
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav a {font-size: 18px;}
+}
+
+.sidenav-heading{
+    font-size: 36px;
+    color: #fff;
+}
+
+.media-carousel 
+{
+  margin-bottom: 0;
+  padding: 0 40px 30px 40px;
+  margin-top: 30px;
+}
+/* Previous button  */
+.media-carousel .carousel-control.left 
+{
+  left: -12px;
+  background-image: none;
+  background: none repeat scroll 0 0 rgb(254, 223, 58);
+  height: 40px;
+  width : 40px;
+  margin-top: 30px
+}
+/* Next button  */
+.media-carousel .carousel-control.right 
+{
+  right: -12px !important;
+  background-image: none;
+  background: none repeat scroll 0 0 rgb(254, 223, 58);
+  height: 40px;
+  width : 40px;
+  margin-top: 30px
+}
+.thumbnail{
+	border:none;
+}
+/* Changes the position of the indicators */
+.media-carousel .carousel-indicators 
+{
+  right: 50%;
+  top: auto;
+  bottom: 0px;
+  margin-right: -19px;
+}
+/* Changes the colour of the indicators */
+.media-carousel .carousel-indicators li 
+{
+  background: #c0c0c0;
+}
+.media-carousel .carousel-indicators .active 
+{
+  background: #333333;
+}
+.media-carousel img
+{
+  width: 250px;
+  height: 100px
+}
+
+
+#panel{
+	background-color: rgb(3, 44, 91);
+	color: white;
+}
+#panel a{
+	color: rgb(234,144,43);
+}
+
+.carousel-inner{
+	text-align: center;
+}
+.price h5{
+	text-align: center;
+}
+.img-responsive, .thumbnail a>img, .thumbnail>img{
+	display: inline;
+}
+
+.intro-header {
+	color: #f8f8f8;
+	text-align: center;
+}
+
+.containerN{
+background-image: url(../img/BannerM.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 90px;
+    background-position: 90% 40%;
+border-width: 5px;
+border-radius: 10px ;
+border-style: solid;
+border-color: rgb(3, 44, 91);
+margin-bottom: 20px;
+padding-bottom: 20px;
+}
+.containerN h1{
+	color: rgb(12, 52, 93);
+}
+.containerN p{
+	color: rgb(235, 144, 53);
+}
+.custom-tab-contentN{
+color:#fff;
+font-family: 'Open Sans', sans-serif;
+}
+
+#foot{
+	background-color:rgba(44, 62, 80,1.0);
+
+}
+footer{
+    height:300px;
+    width:100%;
+    bottom:0;
+    font-weight:lighter;
+    color:white;
+}
+.footerHeader{
+    width:100%;
+    padding:1em;
+    background-color:rgba(52, 73, 94,1.0);
+    text-align:center;
+    color:white;
+}
+footer h3{
+    font-weight:lighter;
+}
+footer ul{
+    padding-left:5px;
+    list-style:none;
+}
+footer p{
+    text-align : justify;
+    font-size : 12px;
+}
+footer iframe {
+    width:100%;
+    position:relative;
+    height:170px;
+}
+.sm{
+    list-style:none;
+    overflow:auto;
+}
+.sm li {
+    display: inline;
+    padding:5px;
+    float:left;
+} 
+.sm li a img {
+    width:32px;
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+    .product-list-item .btn-add-cart {
+        margin-left: 0
+    }
+
+    .products-listed {
+        margin-bottom: 15px;
+        width: 100%
+    }
+
+    .home .wrapper-banner-small {
+        width: 100%
+    }
+
+    .home .wrapper-banner-small .small-banner, .home .wrapper-banner-small .big-banner {
+        width: 50%
+    }
+
+    .home .wrapper-banner-bg .wrapper-small-banner {
+        width: 100%;
+        max-width: 390px;
+        float: none;
+        display: inline-block;
+        margin-right: -0.285em
+    }
+
+    .home .wrapper-banner-bg .image {
+        width: auto;
+        height: auto;
+        min-height: 0;
+        max-height: 205px
+    }
+
+    .home .wrapper-banner-bg .image.big {
+        width: 100%;
+        max-height: 100%
+    }
+
+    .home .wrapper-banner-bg .box {
+        width: 50%;
+        max-width: 320px;
+        padding-left: 0
+    }
+
+    .home .only-tablet-scroll {
+        width: 1170px;
+        overflow: visible
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .home .only-tablet-scroll {
+        width: 100%
+    }
+
+    .home .wrapper-banner-small .small-banner, .home .wrapper-banner-small .big-banner {
+        width: 100%
+    }
+
+    .products-listed {
+        width: 100%;
+        border-bottom: 1px solid #E6E6E6;
+        margin-bottom: 15px
+    }
+
+    .products-listed .wrapper-col-ages {
+        width: 100%
+    }
+
+    .products-listed .wrapper-col-ages .wrapper-title-flag select {
+        display: block
+    }
+
+    .products-listed .wrapper-col-ages .wrapper-title-flag .fk-select {
+        width: calc(100% - 103px)
+    }
+
+    .products-listed .wrapper-col-ages .title-flag {
+        float: left
+    }
+
+    .products-listed .wrapper-col-ages ul.list-items-home {
+        height: auto
+    }
+
+    .products-listed .wrapper-col-ages ul.list-items-home > li {
+        display: none;
+        width: 100%;
+        clear: none
+    }
+
+    .products-listed .wrapper-col-ages ul.list-items-home > li a.link-li {
+        display: none
+    }
+
+    .products-listed .wrapper-col-ages ul.list-items-home > li .big-banner,
+    .products-listed .wrapper-col-ages ul.list-items-home > li .products,
+    .products-listed .wrapper-col-ages ul.list-items-home > li .product-container .product,
+    .product-container .products-listed .wrapper-col-ages ul.list-items-home > li .product {
+        position: relative;
+        max-height: inherit;
+        display: inline-block;
+        width: 100%;
+        padding: 0
+    }
+
+    .products-listed .wrapper-col-ages ul.list-items-home > li .flex-direction-nav .flex-next {
+        right: -3px
+    }
+
+    .products-listed .wrapper-col-ages ul.list-items-home > li .flex-direction-nav .flex-prev {
+        left: -3px
+    }
+
+    .products-listed .wrapper-col-ages ul.list-items-home > li .flex-direction-nav a {
+        top: 30%;
+        width: 25px;
+        height: 17px
+    }
+
+    .products-listed .wrapper-col-ages .slides {
+        display: inline-block;
+        padding: 20px
+    }
+
+    .products-listed .wrapper-col-ages .product-list-item {
+        width: 100%;
+        padding: 0
+    }
+
+    .products-listed .wrapper-col-ages .product-list-item .description {
+        display: block;
+        float: left
+    }
+
+    .products-listed .wrapper-col-ages .product-list-item .panel-footer {
+        width: 100%;
+        display: inline-block
+    }
+
+    .products-listed .wrapper-col-ages .product-list-item .btn {
+        display: inline-block
+    }
+
+    .products-listed .wrapper-col-ages .product-list-item img {
+        max-width: 210px;
+        max-height: 210px;
+        width: auto;
+        margin: 0 auto 15px;
+        float: none
+    }
+
+    .products-listed .wrapper-col-ages .product-list-item .link-taxon,
+    .products-listed .wrapper-col-ages .product-list-item .title, .products-listed .wrapper-col-ages .product-list-item .mobile-nav .is-children .back-menu,
+    .mobile-nav .is-children .products-listed .wrapper-col-ages .product-list-item .back-menu,
+    .products-listed .wrapper-col-ages .product-list-item .price {
+        width: 100%;
+        margin-left: 0
+    }
+
+    .products-listed .wrapper-col-ages .product-list-item .price {
+        margin: 5px 0 0 0;
+        font-size: 26px
+    }
+
+    .products-listed .wrapper-col-ages .product-list-item .link-taxon {
+        margin: 0 0 5px 0;
+        font-size: 12px
+    }
+
+    .products-listed .wrapper-col-ages .product-list-item .description {
+        margin: 5px 0
+    }
+
+    .products-listed .wrapper-col-ages .product-list-item .btn-add-cart {
+        margin-left: 10px
+    }
+
+    .products-listed .wrapper-col-ages .product-list-item .title, .products-listed .wrapper-col-ages .product-list-item .mobile-nav .is-children .back-menu,
+    .mobile-nav .is-children .products-listed .wrapper-col-ages .product-list-item .back-menu {
+        font-size: 21px
+    }
+
+    .products-listed .wrapper-col-ages .product-list-item .link {
+        float: none;
+        display: inline-block;
+        width: 100%;
+        text-align: center
+    }
+
+    .products-listed .wrapper-col-ages .product-list-item:first-child {
+        width: 100%;
+        margin: 0;
+        padding: 0
+    }
+
+    .products-listed .wrapper-col-ages .product-list-item:first-child .link {
+        float: none;
+        display: inline-block;
+        width: 100%;
+        height: auto
+    }
+
+    .products-listed .wrapper-col-ages .product-list-item:first-child .link img {
+        width: auto;
+        margin: 0 auto 15px;
+        float: none;
+        max-width: 210px;
+        max-height: 210px
+    }
+}
+
+.taxon-header {
+    position: relative;
+    overflow: hidden;
+    margin-top: -55px
+}
+
+.taxon-header > .wrapper, .main-footer .taxon-header > .footer-nav,
+.taxon-header > .footer-other-links {
+    position: relative
+}
+
+.taxon-header.small {
+    margin-top: -10px
+}
+
+.taxon-header.small .shape-category-i {
+    float: left;
+    height: 122px;
+    margin: 20px 20px 20px 20px;
+    background: url(//juguettos.com/assets/bg-taxons-tittle-trans-cdde401a726491486b79cc77d672197f587f702a4ed511c927860ba5569c0536.svg) no-repeat center center
+}
+
+.taxon-header.small .breadcrum {
+    margin: 15px 0 10px 0
+}
+
+.taxon-header.small .taxon-image-header {
+    min-height: inherit
+}
+
+.taxon-header.over-v {
+    overflow: visible;
+    padding-bottom: 160px;
+    margin-bottom: -160px
+}
+
+.taxon-header .taxon-image-header {
+    position: absolute;
+    max-width: 100%;
+    min-width: 1190px;
+    min-height: 455px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 0
+}
+
+.taxon-header .taxon-image-cloud {
+    position: absolute;
+    z-index: 1
+}
+
+.taxon-header .taxon-image-cloud.left {
+    left: -130px;
+    top: 385px
+}
+
+.taxon-header .taxon-image-cloud.right {
+    right: -90px;
+    top: 429px;
+    width: 143px
+}
+
+.taxon-header .taxon-image-cloud.trans.left {
+    left: -125px;
+    top: 390px;
+    width: 46px
+}
+
+.taxon-header .taxon-image-cloud.trans.right {
+    right: -125px;
+    top: 410px;
+    width: auto
+}
+
+.taxon-header .shape-category-i {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    width: 134px;
+    height: 116px;
+    display: inline-block;
+    text-align: center;
+    background: url(//juguettos.com/assets/bg-taxons-tittle-cd1b47ccc942d6b4c2920992f9a4d1da4fd848542b580620859e0e19a3d84926.svg) no-repeat center top
+}
+
+.taxon-header .shape-category-i .i-taxon {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    max-width: 85px
+}
+
+.taxon-header .shape-category-i.no-bg {
+    width: 135px;
+    height: 135px;
+    background: none
+}
+
+.taxon-header .shape-category-i.no-bg .i-taxon {
+    max-width: 135px
+}
+
+.taxon-header .wrapper-title-taxon-small {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    max-width: 360px
+}
+
+.taxon-header .wrapper-title-taxon-small .title, .taxon-header .wrapper-title-taxon-small .mobile-nav .is-children .back-menu,
+.mobile-nav .is-children .taxon-header .wrapper-title-taxon-small .back-menu {
+    font: 400 28px / 39px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    color: #FFF;
+    margin: 30px 0 0
+}
+
+.taxon-header .wrapper-title-taxon-small .text {
+    font: 400 13px / 20px "Open Sans", "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif;
+    color: #FFF;
+    margin: 0
+}
+
+.taxon-header .claim {
+    color: #000;
+    font: 400 37px / 40px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    width: 320px;
+    position: absolute;
+    left: 190px;
+    top: 50px;
+    z-index: 2
+}
+
+.taxon-header .claim span, .taxon-header .claim b, .taxon-header .claim strong {
+    font-weight: bold
+}
+
+.spc-bread {
+    background: #FFF;
+    position: relative;
+    z-index: 3
+}
+
+.cont-products {
+    position: relative;
+    width: 100%;
+    min-height: 500px
+}
+
+.title-wrapper {
+    position: relative;
+    display: inline-block;
+    padding: 15px 0 15px 30px;
+    background: #FFF;
+    margin-left: -30px;
+    max-width: 480px
+}
+
+.title-wrapper hr {
+    background-color: #E6E6E6;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: calc(100% + 10px);
+    margin: 0;
+    z-index: 2
+}
+
+.title-wrapper:before {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height: 0;
+    width: 0;
+    border-bottom: 20px solid #FF3669;
+    border-right: 20px solid transparent
+}
+
+.title-wrapper:after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 20px;
+    bottom: 0;
+    border-width: 10px;
+    border-style: solid;
+    border-color: white
+}
+
+.title-wrapper .title, .title-wrapper .mobile-nav .is-children .back-menu,
+.mobile-nav .is-children .title-wrapper .back-menu {
+    margin: 0;
+    color: black;
+    font: 400 24px / 21px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    vertical-align: middle
+}
+
+.title-wrapper .title .text, .title-wrapper .mobile-nav .is-children .back-menu .text,
+.mobile-nav .is-children .title-wrapper .back-menu .text {
+    display: block
+}
+
+.title-wrapper .title .i-video, .title-wrapper .mobile-nav .is-children .back-menu .i-video,
+.mobile-nav .is-children .title-wrapper .back-menu .i-video {
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
+    background: url(../img/a.png) no-repeat center center;
+    width: 53px;
+    height: 53px;
+    display: inline-block
+}
+
+.title-wrapper .title .subtext, .title-wrapper .mobile-nav .is-children .back-menu .subtext,
+.mobile-nav .is-children .title-wrapper .back-menu .subtext {
+    display: inline-block;
+    width: 80%;
+    clear: both;
+    margin: 15px 0;
+    font: 400 13px / 20px "Open Sans", "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif;
+    color: #646464
+}
+
+.title-wrapper .title.no-child .text, .title-wrapper .mobile-nav .is-children .no-child.back-menu .text,
+.mobile-nav .is-children .title-wrapper .no-child.back-menu .text {
+    float: left;
+    margin: 15px 70px 0 0
+}
+
+.title-wrapper .title.no-child .i-video, .title-wrapper .mobile-nav .is-children .no-child.back-menu .i-video,
+.mobile-nav .is-children .title-wrapper .no-child.back-menu .i-video {
+    margin-right: 15px
+}
+
+.taxons-wrapper-header {
+    padding-top: 40px;
+    z-index: 1
+}
+
+.taxons-wrapper-header .table {
+    display: table;
+    height: 355px;
+    margin-bottom: 0
+}
+
+.taxons-wrapper-header .table-row {
+    display: table-row;
+    height: 1px
+}
+
+.taxons-wrapper-header .table-cell {
+    display: table-cell;
+    vertical-align: bottom
+}
+
+.taxons-wrapper-header .bg-taxon-wrapper {
+    margin: 0 -30px;
+    float: left;
+    padding: 0 30px;
+    background: #FFF;
+    position: relative;
+    z-index: 2
+}
+
+.taxons-wrapper-header .description-taxon {
+    max-width: 670px;
+    margin-top: -0.285em;
+    width: 58.33333%;
+    float: left;
+    display: inline-block;
+    padding-bottom: 10px;
+    background: url(../img/b.png) no-repeat bottom left
+}
+
+.taxons-wrapper-header .description-taxon .intro-text {
+    margin-top: 0;
+    font: 400 16px / 24px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    color: #000
+}
+
+.taxons-wrapper-header .description-taxon .text {
+    color: #646464;
+    font: 400 13px / 24px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif
+}
+
+.taxons-wrapper-header .description-taxon .text:first-letter {
+    font-size: 45px;
+    line-height: 50px;
+    margin: 0 10px -10px 0;
+    color: rgb(122, 183, 103);
+    text-transform: uppercase;
+    float: left
+}
+
+.taxons-wrapper-header .share_social {
+    float: left
+}
+
+.taxons-wrapper-header .childs-slide {
+    display: inline-block;
+    list-style: none;
+    margin: 40px 0 70px;
+    padding: 0;
+    width: 100%
+}
+
+.taxons-wrapper-header .childs-slide li {
+    display: inline-block;
+    color: #646464;
+    padding: 0 60px 0 0;
+    text-align: center
+}
+
+.taxons-wrapper-header .title, .taxons-wrapper-header .mobile-nav .is-children .back-menu,
+.mobile-nav .is-children .taxons-wrapper-header .back-menu {
+    font: 400 21px / 21px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    color: #000;
+    margin: 10px 0 0 0;
+    padding: 0;
+    display: inline-block;
+    width: 100%
+}
+
+.taxons-wrapper-header .wrapper-text-desc {
+    width: 41.66667%;
+    margin-right: 0;
+    padding-left: 90px;
+    float: left
+}
+
+.taxons-wrapper-header .wrapper-text-desc .link-most {
+    float: left;
+    clear: both;
+    margin-left: 50px
+}
+
+.taxons-wrapper-header .breadcrum {
+    margin: 15px 0
+}
+
+.taxons-wrapper-header.top .childs-slide {
+    margin: 0 0 30px
+}
+
+.taxons-wrapper-header.top .bg-taxon-wrapper .title, .taxons-wrapper-header.top .bg-taxon-wrapper .mobile-nav .is-children .back-menu,
+.mobile-nav .is-children .taxons-wrapper-header.top .bg-taxon-wrapper .back-menu {
+    margin: 10px 0 15px 0
+}
+
+.taxons-wrapper-header.top .title, .taxons-wrapper-header.top .mobile-nav .is-children .back-menu,
+.mobile-nav .is-children .taxons-wrapper-header.top .back-menu {
+    font-size: 24px
+}
+
+.taxons-wrapper-header.top .table {
+    height: 270px
+}
+
+.taxons-wrapper-header.top .generic_block {
+    font-size: 10px;
+    width: 58%
+}
+
+.taxon-products-wrapper {
+    position: relative;
+    z-index: 3;
+    background: #FFF;
+    padding: 0
+}
+
+.taxon-products-wrapper .product-listing-page {
+    padding-bottom: 15px;
+    padding-left: 20px;
+    float: left;
+    width: calc(100% - 218px)
+}
+
+.taxon-products-wrapper .product-listing-page .btn-secondary {
+    display: none
+}
+
+.taxon-products-wrapper .product-listing-page .i-grids {
+    display: inline-block;
+    float: left;
+    margin-top: 6px
+}
+
+.taxon-products-wrapper .product-listing-page .order-by {
+    float: right;
+    height: auto;
+    margin-top: 8px
+}
+
+.taxon-products-wrapper .product-listing-page.cols4 .product-list-item {
+    width: 25%
+}
+
+.taxon-products-wrapper .product-listing-page.cols3 .product-list-item {
+    width: 33.33333%
+}
+
+.taxon-products-wrapper .product-listing-page hr {
+    background-color: #E6E6E6;
+    border: none;
+    height: 1px;
+    width: calc(100% + 8px);
+    display: inline-block;
+    margin: 15px 0;
+    z-index: 2
+}
+
+.taxon-products-wrapper .product-listing-page .product-list-item {
+    display: inline-block;
+    margin-right: -0.285em;
+    vertical-align: top;
+    position: relative;
+    width: 25%;
+    margin-bottom: 20px;
+    padding: 0 15px 5px 15px;
+    background: url(../img/b.png) no-repeat 15px bottom
+}
+
+.taxon-products-wrapper .product-listing-page .product-list-item .link {
+    display: block;
+    text-align: center
+}
+
+.taxon-products-wrapper .product-listing-page .product-list-item .out-of-stock {
+    display: inline-block;
+    font: 400 14px / 1.1 "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    color: #000;
+    padding: 6px 30px 6px 40px;
+    border-radius: 20px;
+    background: url(../img/b.png) no-repeat left center
+}
+
+.taxon-products-wrapper .product-listing-page .product-list-item:last-child {
+    padding-right: 0
+}
+
+.taxon-products-wrapper .filter-products {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px
+}
+
+.taxon-products-wrapper .filter-products .title, .taxon-products-wrapper .filter-products .mobile-nav .is-children .back-menu,
+.mobile-nav .is-children .taxon-products-wrapper .filter-products .back-menu {
+    font: 400 28px / 39px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    color: #000;
+    margin: 0
+}
+
+.taxon-products-wrapper .filter-products .filter-options {
+    margin: 0;
+    display: inline;
+    font: 400 15px / 20px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif
+}
+
+.taxon-products-wrapper .filter-products .items-total {
+    float: left;
+    font: 400 15px / 39px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    color: #000;
+    margin: 0
+}
+
+.taxon-products-wrapper .filter-products .items-total strong {
+    font-weight: bold
+}
+
+.taxon-products-wrapper .filter-products .i {
+    width: 25px;
+    height: 12px;
+    display: block;
+    float: left;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 6px 7px 0 7px
+}
+
+.taxon-products-wrapper .filter-products .i-grid-4 {
+    background-image: url(//juguettos.com/assets/i-grid-4-grey-9edc439d3d89ac096fa483fbbf7c13efa2a9bc59bbb131595b27bd3e5bf46762.svg)
+}
+
+.taxon-products-wrapper .filter-products .i-grid-4:hover, .taxon-products-wrapper .filter-products .i-grid-4.active {
+    background-image: url(//juguettos.com/assets/i-grid-4-pink-ee1bb20ebc1097fc22615bed8d9076a61a1f4ec8a3d1d041646320ddef17b77c.svg)
+}
+
+.taxon-products-wrapper .filter-products .i-grid-3 {
+    background-image: url(//juguettos.com/assets/i-grid-3-grey-71635c8ae85f12ac1c56cd1f87f46c30a9292ed9f31be968307d1a774ed7c8e5.svg)
+}
+
+.taxon-products-wrapper .filter-products .i-grid-3:hover, .taxon-products-wrapper .filter-products .i-grid-3.active {
+    background-image: url(//juguettos.com/assets/i-grid-3-pink-efcb972b4957b320813ac647ff2b8cc9af0b42ba0470792fa35022daa9820db0.svg)
+}
+
+.taxon-products-wrapper .filter-products .form-select {
+    float: right;
+    margin-top: -10px;
+    width: 250px
+}
+
+.taxon-products-wrapper .filter-products .text {
+    margin-right: 15px;
+    float: left
+}
+
+.taxon-products-wrapper .filter-products .text-label {
+    margin: 0 10px 0 35px
+}
+
+.taxon-products-wrapper .filter-products .fk-select {
+    border-radius: 15px;
+    border: 1px solid #E6E6E6;
+    background: #FAFAFA url(//juguettos.com/assets/i-arrow-dwn-grey-36a114d13651c0597dc0751f06ce1d7faa46f371ebd917a80828c779536a700f.svg) no-repeat 95% center;
+    padding: 7px 50px 7px 15px
+}
+
+.wrapper-info-products {
+    margin-top: 0
+}
+
+.products .age, .product-container .product .age {
+    display: block;
+    margin: 10px 0 0 0;
+    padding: 6px 0;
+    background: url(//juguettos.com/assets/i-shape-blue-4bce5710da14f64b676ea94a55757fbec4742456704821726d6fadc33d052c76.svg) no-repeat center left
+}
+
+.products .age .numb, .product-container .product .age .numb {
+    font: 700 13px / 20px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    color: #FFF;
+    width: 40px;
+    display: inline-block;
+    text-align: center
+}
+
+.products .age .text, .product-container .product .age .text {
+    font: 400 11px / 19px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    color: rgb(3, 44, 91);
+    text-transform: uppercase
+}
+
+.products .wrapper-link-taxon, .product-container .product .wrapper-link-taxon {
+    margin: 10px 0 3px 0
+}
+
+.products .link-taxon, .product-container .product .link-taxon {
+    display: block;
+    font: 400 11px / 12px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    color: rgb(122, 183, 103);
+    text-transform: uppercase
+}
+
+.products .title, .product-container .product .title, .products .mobile-nav .is-children .back-menu,
+.mobile-nav .is-children .products .back-menu, .product-container .product .mobile-nav .is-children .back-menu,
+.mobile-nav .is-children .product-container .product .back-menu {
+    color: rgb(3, 44, 91);
+    font: 400 17px / 20px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif
+}
+
+.products p, .product-container .product p {
+    color: #646464;
+    font: 400 13px / 18px "Open Sans", "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif;
+    margin-bottom: 15px
+}
+
+.products .warpper-text, .product-container .product .warpper-text {
+    margin: 0
+}
+
+.products .price, .product-container .product .price {
+    margin: 0 0 15px;
+    color: rgb(122, 183, 103);
+    font: 400 22px / 29px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif
+}
+
+.products .price .old, .product-container .product .price .old {
+    text-decoration: line-through;
+    color: #646464;
+    font-size: 16px
+}
+
+.filter-skin:before {
+    content: "";
+    display: block;
+    z-index: 11;
+    position: absolute;
+    right: 20px;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border-bottom: 10px solid #FAFAFA;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent
+}
+
+.popUpFilter .simple_text {
+    font: 400 15px / 18px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    color: #7C7C7C;
+    margin: 10px 0 5px 0
+}
+
+.popUpFilter .filter-title, .popUpFilter .link-taxonomy-root, .popUpFilter .link-filter-title {
+    font: 400 17px / 20px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    width: 100%;
+    display: inline-block;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    color: #000;
+    margin: 10px 0 0 0;
+    text-transform: none;
+    border-bottom: 1px solid #E6E6E6;
+    padding-right: 15px;
+    cursor: pointer;
+    background: url(//juguettos.com/assets/i-arrow-dwn-pink-6340fd9d0caae4a10541e39b7555173b4052c491a85b8cd4fdbcf88144d43295.svg) no-repeat right center
+}
+
+.popUpFilter .filter-title.active, .popUpFilter .link-taxonomy-root.active,
+.popUpFilter .active.link-filter-title {
+    background: url(//juguettos.com/assets/i-arrow-up-pink-8f36ab0931416e02d7d6ac5fc4cf807231d7033c254117fa6612686ffdb15883.svg) no-repeat right center
+}
+
+.popUpFilter .link-taxonomy-root, .popUpFilter .link-filter-title {
+    font-weight: bold;
+    text-transform: uppercase
+}
+
+.popUpFilter .taxonimy-list {
+    font: 400 13px / 22px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    color: rgb(3, 44, 91);
+    margin: 0 0 15px -10px;
+    padding: 0;
+    list-style: none;
+    display: none
+}
+
+.popUpFilter .taxonimy-list li {
+    padding-left: 10px;
+    position: relative
+}
+
+.popUpFilter .taxonimy-list .taxon {
+    padding-right: 15px;
+    background: url(//juguettos.com/assets/i-arrow-right-pink-1538f677ecf187e4ff504abdbcf19e44286f85763b74cebf16e03c36afdf512a.svg) no-repeat center left;
+    font-weight: bold;
+    color: #000
+}
+
+.popUpFilter .taxonimy-list.active {
+    display: inline-block;
+    width: 100%
+}
+
+.popUpFilter .taxonimy-list.active p, .popUpFilter .taxonimy-list.active label,
+.popUpFilter .taxonimy-list.active strong {
+    font-size: 13px
+}
+
+.popUpFilter .taxonimy-list.active p:before, .popUpFilter .taxonimy-list.active p:after,
+.popUpFilter .taxonimy-list.active label:before, .popUpFilter .taxonimy-list.active label:after,
+.popUpFilter .taxonimy-list.active strong:before, .popUpFilter .taxonimy-list.active strong:after {
+    display: inline-block
+}
+
+.popUpFilter .taxonimy-list.active label {
+    display: inline-block
+}
+
+.popUpFilter .filter-list {
+    font: 400 13px / 22px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    color: rgb(3, 44, 91);
+    margin: 0 0 0 0;
+    padding: 0;
+    list-style: none
+}
+
+.popUpFilter .filter-list label {
+    display: none
+}
+
+.popUpFilter .filter-list p, .popUpFilter .filter-list strong {
+    font-size: 0;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    font: 400 13px / 15px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif
+}
+
+.popUpFilter .filter-list p:before, .popUpFilter .filter-list p:after,
+.popUpFilter .filter-list strong:before, .popUpFilter .filter-list strong:after {
+    display: none
+}
+
+.popUpFilter .filter-list.active p, .popUpFilter .filter-list.active label,
+.popUpFilter .filter-list.active strong {
+    font-size: 13px
+}
+
+.popUpFilter .filter-list.active p:before, .popUpFilter .filter-list.active p:after,
+.popUpFilter .filter-list.active label:before, .popUpFilter .filter-list.active label:after,
+.popUpFilter .filter-list.active strong:before, .popUpFilter .filter-list.active strong:after {
+    display: inline-block
+}
+
+.popUpFilter .filter-list.active label {
+    display: inline-block
+}
+
+.popUpFilter .filter-list li {
+    margin: 15px 0;
+    width: 100%
+}
+
+.popUpFilter .filter-list .checked {
+    font-weight: bold;
+    color: #000
+}
+
+.popUpFilter .filter-list .filter-input:before {
+    margin-right: 5px
+}
+
+.popUpFilter .filter-list .filter-input p {
+    width: calc(100% - 30px);
+    margin: 0;
+    padding: 0;
+    display: inline-block
+}
+
+.popUpFilter .filter-list label {
+    padding: 0;
+    width: 100%
+}
+
+.popUpFilter .filter-list label.fk-radio:after, .popUpFilter .filter-list label.fk-check:after {
+    top: 2px;
+    width: 12px;
+    height: 12px
+}
+
+.popUpFilter .filter-list label.fk-radio:before, .popUpFilter .filter-list label.fk-check:before {
+    vertical-align: top;
+    width: 20px;
+    height: 20px
+}
+
+.popUpFilter .link-filter-title {
+    font-weight: 400
+}
+
+.popUpFilter .btn-remove-filters {
+    background: rgb(3, 44, 91) url(//juguettos.com/assets/i-close-white-ecf7e31b247fab6f4e8a8b3f9bb8785701381038fb5db6ead2ec1e688679f21e.svg) no-repeat 90% center;
+    color: #FFF;
+    width: auto;
+    float: left;
+    padding-right: 40px;
+    margin-bottom: 10px
+}
+
+.popUpFilter .selector {
+    margin: 0 0 20px 0;
+    width: 100% !important;
+    background: #FAFAFA;
+    display: none
+}
+
+.popUpFilter .selector.active {
+    display: inline-block
+}
+
+.popUpFilter .select2-selection__rendered {
+    font: 400 12px / 24px "Open Sans", "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif
+}
+
+.popUpFilter .select2-search--dropdown.select2-search {
+    background: #FAFAFA
+}
+
+.popUpFilter .select2-search-field {
+    border: 0 !important;
+    font: 400 12px / 14px "Open Sans", "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif
+}
+
+.popUpFilter .select2-search-field:focus {
+    outline: rgb(122, 183, 103)
+}
+
+.popUpFilter .select2-search {
+    font: 400 13px / 22px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    color: rgb(3, 44, 91)
+}
+
+.popUpFilter .select2-container--default .select2-results__option--highlighted {
+    background: rgb(3, 44, 91) !important
+}
+
+.popUpFilter .select2-search-choice-close {
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 3px;
+    top: 7px;
+    font-size: 1px;
+    outline: none;
+    background: rgb(3, 44, 91) url(//juguettos.com/assets/i-close-white-ecf7e31b247fab6f4e8a8b3f9bb8785701381038fb5db6ead2ec1e688679f21e.svg) no-repeat center;
+    background-size: contain !important
+}
+
+@media only screen and (max-width: 1024px) {
+    .taxon-products-wrapper .childs-slide li {
+        padding: 0 5px
+    }
+
+    .taxon-products-wrapper .childs-slide li img {
+        max-width: 100%;
+        width: 100%;
+        float: left
+    }
+
+    .taxon-products-wrapper .childs-slide li:last-child {
+        padding-right: 5px
+    }
+
+    .taxon-products-wrapper .childs-slide li:first-child {
+        padding-left: 5px
+    }
+
+    .taxon-products-wrapper .product-listing-page .i-grids {
+        display: none
+    }
+
+    .taxon-products-wrapper .product-listing-page .product-list-item {
+        width: 50% !important
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .taxons-wrapper-header {
+        padding: 0px
+    }
+
+    .taxons-wrapper-header .table {
+        height: 250px;
+        width: 100%
+    }
+
+    .taxons-wrapper-header.top .title, .taxons-wrapper-header.top .mobile-nav .is-children .back-menu,
+    .mobile-nav .is-children .taxons-wrapper-header.top .back-menu {
+        margin: 0 0 10px 0
+    }
+
+    .taxons-wrapper-header.top .childs-slide {
+        margin: 0
+    }
+
+    .taxons-wrapper-header.top .childs-slide li {
+        display: inline-block;
+        margin: 0 -0.28em 0 0;
+        padding: 0;
+        vertical-align: bottom;
+        width: 50%
+    }
+
+    .wrapper-info-products {
+        margin-top: 0
+    }
+
+    .taxon-header {
+        height: auto;
+        margin-top: -12px
+    }
+
+    .taxon-header .shape-category-i {
+        margin-top: 5px;
+        width: 93px;
+        height: 82px;
+        background-size: contain
+    }
+
+    .taxon-header .shape-category-i.no-bg {
+        width: 90px;
+        height: 90px
+    }
+
+    .taxon-header .shape-category-i.no-bg .i-taxon {
+        max-width: 80px;
+        width: auto
+    }
+
+    .taxon-header .shape-category-i img {
+        width: 50%
+    }
+
+    .taxon-header.top .taxon-image-header {
+        height: inherit
+    }
+
+    .taxon-header .taxon-image-header {
+        height: 100px;
+        max-width: inherit;
+        left: initial;
+        right: 0;
+        min-width: initial
+    }
+
+    .taxon-header .claim {
+        font: 400 27px / 30px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+        width: 220px;
+        left: 90px;
+        top: 20px
+    }
+
+    .taxon-header.over-v {
+        margin-top: -52px;
+        padding-top: 40px
+    }
+
+    .taxon-header.over-v .table-row:first-child {
+        height: 130px
+    }
+
+    .taxon-header.over-v .table-cell {
+        vertical-align: middle
+    }
+
+    .taxon-header.small {
+        margin-top: -12px
+    }
+
+    .taxon-header.small .shape-category-i {
+        background-size: contain;
+        margin: 10px;
+        width: 93px;
+        height: 82px
+    }
+
+    .taxon-header.small .taxon-image-header {
+        height: 100px;
+        max-width: inherit;
+        left: inherit;
+        right: 0;
+        min-width: initial
+    }
+
+    .taxon-header .wrapper-title-taxon-small {
+        width: 100%;
+        max-width: 100%
+    }
+
+    .taxon-header .wrapper-title-taxon-small .title, .taxon-header .wrapper-title-taxon-small .mobile-nav .is-children .back-menu,
+    .mobile-nav .is-children .taxon-header .wrapper-title-taxon-small .back-menu {
+        color: #000;
+        margin: 0 0 0 5px;
+        font-size: 23px
+    }
+
+    .taxon-header .wrapper-title-taxon-small .text {
+        color: #646464;
+        margin: 0 0 0 5px
+    }
+
+    .taxon-header .title-wrapper {
+        position: relative;
+        width: calc(100% + 20px);
+        margin-left: -10px
+    }
+
+    .taxon-header .title-wrapper:before {
+        display: none
+    }
+
+    .taxon-header .title-wrapper:after {
+        display: none
+    }
+
+    .taxon-header .title-wrapper .subtext {
+        width: 75% !important
+    }
+
+    .taxon-header .title-wrapper .title .i-video, .taxon-header .title-wrapper .mobile-nav .is-children .back-menu .i-video,
+    .mobile-nav .is-children .taxon-header .title-wrapper .back-menu .i-video {
+        vertical-align: top
+    }
+
+    .taxon-header .description-taxon {
+        width: 100%;
+        background: none
+    }
+
+    .taxon-header .description-taxon .intro-text {
+        margin-top: 20px
+    }
+
+    .taxon-header .share_social {
+        display: none
+    }
+
+    .taxon-products-wrapper {
+        margin-top: 0;
+        padding: 0 15px !important
+    }
+
+    .taxon-products-wrapper .product-listing-page {
+        margin-top: 10px;
+        padding: 0 !important;
+        width: 100%
+    }
+
+    .taxon-products-wrapper .product-listing-page .i-grids {
+        display: none
+    }
+
+    .taxon-products-wrapper .product-listing-page .btn-secondary {
+        display: block
+    }
+
+    .taxon-products-wrapper .product-listing-page .product-list-item {
+        width: 50% !important;
+        min-height: initial;
+        padding: 0 5px 10px 5px;
+        background: url(//juguettos.com/assets/i-stripe-curly-29b087152d5ae9f4ca8439d1a3407ca627296d16d9f930fc0e391db937b4a9e0.svg) no-repeat 0 bottom
+    }
+
+    .taxon-products-wrapper .product-listing-page .product-list-item .price {
+        margin: 10px 0;
+        padding: 0;
+        font: 400 18px / 22px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif
+    }
+
+    .taxon-products-wrapper .product-listing-page .product-list-item .link img {
+        width: 100%
+    }
+
+    .taxon-products-wrapper .product-listing-page .product-list-item .warpper-text {
+        display: none
+    }
+
+    .taxon-products-wrapper .product-listing-page .product-list-item .out-of-stock {
+        padding-right: 8px;
+        padding-left: 28px
+    }
+
+    .taxon-products-wrapper .product-listing-page .filter-options {
+        display: block;
+        width: 100%;
+        padding-bottom: 10px;
+        margin: 0 0 10px;
+        border-bottom: 1px solid #E6E6E6
+    }
+
+    .taxon-products-wrapper .product-listing-page .filter-options.fright {
+        border-bottom: 0
+    }
+
+    .taxon-products-wrapper .product-listing-page .order-by {
+        float: none
+    }
+
+    .taxon-products-wrapper .product-listing-page .filter-products {
+        margin-bottom: 0
+    }
+
+    .taxon-products-wrapper .product-listing-page .filter-products .text-label {
+        margin: 0
+    }
+
+    .taxon-products-wrapper .product-listing-page .filter-products .form-select {
+        float: none;
+        width: 100%;
+        margin-top: 0
+    }
+
+    .popUpFilter .filters {
+        margin-top: 15px
+    }
+
+    .popUpFilter .simple_text {
+        margin-top: 20px
+    }
+
+    .popUpFilter .filter-list li {
+        margin: 20px 0
+    }
+
+    .taxonomy-root.marcas, .sidebar .filters .marcas.filter-title {
+        display: none
+    }
+
+    .sidebar .i-see-more.btn-more-taxns {
+        display: none
+    }
+}
+
+.product-container {
+    position: relative
+}
+
+.product-container .wrapper-info-product {
+    max-width: 1130px;
+    display: inline-block;
+    margin-left: 60px
+}
+
+.product-container .detail {
+    background-color: #FFF;
+    padding-top: 15px;
+    width: 75%;
+    float: left;
+    min-height: 385px
+}
+
+.product-container .thumbnails {
+    float: left;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: -60px;
+    top: 0;
+    z-index: 9;
+    list-style: none
+}
+
+.product-container .thumbnails .tmb-all {
+    float: left;
+    clear: left;
+    overflow: hidden;
+    position: relative;
+    width: 76px;
+    height: 76px;
+    margin-bottom: 1px;
+    border: 2px solid #E6E6E6;
+    background-color: #FFF;
+    text-align: center
+}
+
+.product-container .thumbnails .tmb-all.active {
+    border-color: rgb(3, 44, 91)
+}
+
+.product-container .thumbnails .tmb-all.video {
+    position: relative
+}
+
+.product-container .thumbnails .tmb-all.video a:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 76px;
+    height: 76px;
+    display: inline-block;
+    margin: 0 auto;
+    background: url(//juguettos.com/assets/i-video-thumbs-0c9ba31b626ca2601c7cd5117e791c39815c86d5dddcca71dad6b691a0ff66c3.svg) no-repeat center
+}
+
+.product-container .thumbnails .tmb-all img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: auto;
+    width: auto;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+.product-container .image-big {
+    position: relative;
+    width: 50%;
+    padding: 0 40px;
+    float: left
+}
+
+.product-container .image-big .image {
+    margin: 10px -20px 20px -20px;
+    min-height: 380px
+}
+
+.product-container .image-big .image img {
+    width: 100%
+}
+
+.product-container .image-big .new {
+    position: absolute;
+    left: 40px;
+    top: 0;
+    color: #FFF;
+    padding-bottom: 10px;
+    background-image: url(//juguettos.com/assets/i-pole-cb8c8510942fb960ec334dbfb700b10d5fbcc71af8a31f00b507d10f50f38782.svg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    font: 700 11px / 17px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    text-transform: uppercase
+}
+
+.product-container .image-big .new .bg {
+    padding: 7px 15px;
+    background-color: rgb(3, 44, 91);
+}
+
+.product-container .image-big .new:after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    bottom: 10px;
+    height: 0;
+    width: 0;
+    border-bottom: 20px solid rgb(3, 44, 91);
+    border-right: 10px solid transparent
+}
+
+.product-container .image-big .new:before {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height: 0;
+    width: 0;
+    border-top: 20px solid rgb(3, 44, 91);
+    border-right: 10px solid transparent
+}
+
+.product-container .image-big .link {
+    font: 700 12px / 14px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    color: rgb(122, 183, 103);
+    float: left;
+    margin-top: 5px;
+    word-spacing: 26px;
+    width: 142px;
+    text-transform: uppercase
+}
+
+.product-container .image-big .link:before {
+    content: "";
+    width: 45px;
+    height: 42px;
+    float: left;
+    margin: -10px 10px 0 0;
+    background: url(//juguettos.com/assets/i-shape-pink-magn-3ab7ac0afeb6beac1ff6feace8620a8ff997a424a5f05a44358a2c53646c6ce1.svg) no-repeat top left
+}
+
+.product-container .image-big .share_social {
+    padding: 0;
+    margin: 0
+}
+
+.product-container .image-big .share_social li:first-child {
+    display: none
+}
+
+.product-container .product {
+    width: 50%;
+    padding-right: 15px;
+    float: left;
+    position: relative;
+    z-index: 9
+}
+
+.product-container .product .link-taxon {
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 1.15
+}
+
+.product-container .product .title, .product-container .product .mobile-nav .is-children .back-menu,
+.mobile-nav .is-children .product-container .product .back-menu {
+    font-size: 28px;
+    line-height: 27px;
+    margin: 5px 0 5px 0
+}
+
+.product-container .product .reference {
+    margin: 0;
+    color: rgb(3, 44, 91);
+    font: 400 14px / 24px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif
+}
+
+.product-container .product .price {
+    font-size: 33px;
+    line-height: 32px;
+    margin: 10px 0 15px
+}
+
+.product-container .product .out-of-stock {
+    font: 400 14px / 24px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    color: #000;
+    padding: 1px 30px 1px 40px;
+    border-radius: 20px;
+    background: #F3F3F3 url(//juguettos.com/assets/i-sold-out-92517ab016e0aeb71ae9a89d738ce753fed5e91a596bbe84923c04142db6a1e4.svg) no-repeat left center;
+    display: inline-block
+}
+
+.product-container .product .wrapper-desc {
+    overflow: hidden;
+    margin-top: 20px
+}
+
+.product-container .product .wrapper-desc .link-more {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #FFF
+}
+
+.product-container .product .wrapper-desc.edades {
+    background: #FAFAFA;
+    border-radius: 10px;
+    height: auto;
+    padding: 10px 20px
+}
+
+.product-container .product .wrapper-desc.edades p {
+    margin: 0
+}
+
+.product-container .product .wrapper-desc.edades a {
+    margin-right: 15px;
+    font-size: 14px
+}
+
+.product-container .product .sizes, .product-container .product .battery {
+    font: 400 13px / 20px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    color: rgb(3, 44, 91);
+    margin: 5px 0
+}
+
+.product-container .product .sizes .link, .product-container .product .battery .link {
+    color: rgb(122, 183, 103);
+    text-decoration: underline
+}
+
+.product-container .product .sizes:before {
+    content: "";
+    width: 22px;
+    height: 12px;
+    float: left;
+    margin: 5px 10px 0 0;
+    background: url(//juguettos.com/assets/i-ruler-9bf788ad4ef9080a0eba938c238dbb1ba8a204f4d06cb4da7501cccb6ca01a50.svg) no-repeat 0 0
+}
+
+.product-container .product .battery:before {
+    content: "";
+    width: 25px;
+    height: 15px;
+    float: left;
+    margin: 5px 10px 0 0;
+    background: url(//juguettos.com/assets/i-battery-043e9c9163a17c641f1c859cd66f0d3df1f1b52bfd8e4f941ed00f3811d3e901.svg) no-repeat 0 0
+}
+
+.product-container .product .curly {
+    margin: 15px 0;
+    border: 0;
+    height: 6px;
+    background: url(//juguettos.com/assets/i-stripe-curly-29b087152d5ae9f4ca8439d1a3407ca627296d16d9f930fc0e391db937b4a9e0.svg) no-repeat bottom left
+}
+
+.product-container .product .wrapper-desc p {
+    font-size: 13px;
+    line-height: 23px
+}
+
+.product-container .product .wrapper-desc p a {
+    text-transform: lowercase;
+    background: none;
+    text-decoration: none
+}
+
+.product-container .product .wrapper-desc a {
+    font: 400 13px / 14px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    color: rgb(122, 183, 103);
+    display: inline-block;
+    text-transform: uppercase;
+    margin-top: 5px;
+    padding-right: 15px;
+    background: url(//juguettos.com/assets/i-arrow-right-pink-1538f677ecf187e4ff504abdbcf19e44286f85763b74cebf16e03c36afdf512a.svg) no-repeat center right
+}
+
+.product-container .info-product {
+    padding: 25px 25px 50px;
+    color: #7C7C7C;
+    background-color: #FAFAFA;
+    width: 25%;
+    float: left;
+    min-height: 415px
+}
+
+.product-container .info-product .title, .product-container .info-product .mobile-nav .is-children .back-menu,
+.mobile-nav .is-children .product-container .info-product .back-menu {
+    margin: 0;
+    font: 700 13px / 20px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif
+}
+
+.product-container .info-product .text {
+    margin: 0;
+    font: 400 12px / 19px "Open Sans", "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif;
+    color: #7C7C7C
+}
+
+.product-container .info-product .link {
+    text-decoration: underline;
+    color: #7C7C7C
+}
+
+.product-container .info-product .icon-left {
+    padding-left: 45px;
+    margin-bottom: 35px
+}
+
+.product-container .info-product .stores {
+    background: url(//juguettos.com/assets/i-store-flat-f95cdd9eaa3e8788df4afe89c876dd8794e5f9abbc491d070cae4158fff89851.svg) no-repeat top left
+}
+
+.product-container .info-product .discount {
+    background: url(//juguettos.com/assets/i-sticker-discount-d855ae165c0e876e5efefd9c4d4c4d0a3b486d532e1444f92b7ef6b62d1e3baa.svg) no-repeat top left
+}
+
+.product-container .info-product .gifts {
+    background: url(//juguettos.com/assets/i-present-9de26c4497c0ac582c3512bbe3d789870090fa8785611ec06a46921b80f65e28.svg) no-repeat top left
+}
+
+.product-container .only_mobile {
+    display: none
+}
+
+.product-container .wrapper-variants {
+    display: inline-block;
+    width: 100%;
+    margin: 15px 0
+}
+
+.product-container .wrapper-variants .fk-select {
+    padding: 5px 25px 5px 25px;
+    width: 45%;
+    border: 1px solid #E6E6E6;
+    background: #fff url(//juguettos.com/assets/i-arrow-dwn-pink-6340fd9d0caae4a10541e39b7555173b4052c491a85b8cd4fdbcf88144d43295.svg) no-repeat 95% center
+}
+
+.product-container .wrapper-variants .fk-select .fk-select-label {
+    color: #000;
+    font-size: 13px
+}
+
+.product-container .wrapper-variants .cart-variant {
+    margin-top: 5px;
+    display: block
+}
+
+.product-container .wrapper-variants .cart-variant label {
+    display: inline-block;
+    width: 45px
+}
+
+.product-container .wrapper-variants .cart-variant .fk-select {
+    width: 50%;
+    margin-top: 5px
+}
+
+.no-items {
+    margin: 0 20px;
+    display: inline-block
+}
+
+.wrapper-notification {
+    padding: 24px
+}
+
+.wrapper-stock-notification {
+    text-align: center
+}
+
+@media only screen and (max-width: 1024px) {
+    .product-container .image-big img {
+        width: 100%
+    }
+
+    .product-container .thumbnails img {
+        max-width: 80px
+    }
+
+    .product-container .detail, .product-container .info-product {
+        width: 100%;
+        float: none
+    }
+
+    .product-container .detail::after, .product-container .info-product::after {
+        clear: both;
+        content: "";
+        display: table
+    }
+
+    .product-container .info-product {
+        width: -webkit-calc(100% + 80px);
+        width: calc(100% + 80px);
+        margin: 20px 0 0 -70px;
+        padding: 50px 25px;
+        min-height: 0
+    }
+
+    .product-container .info-product .icon-left {
+        float: left;
+        width: 33.33333%;
+        margin-bottom: 0
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .product-container .breadcrum {
+        display: none
+    }
+
+    .product-container .wrapper-info-product {
+        max-width: inherit;
+        width: 100%;
+        position: relative;
+        margin: 0;
+        z-index: 4
+    }
+
+    .product-container .detail {
+        width: 100%;
+        padding: 10px 10px 20px
+    }
+
+    .product-container .info {
+        width: 100%
+    }
+
+    .product-container .thumbnails {
+        display: none
+    }
+
+    .product-container .image-big {
+        width: 100%;
+        padding: 0
+    }
+
+    .product-container .image-big .image {
+        margin: 0;
+        min-height: inherit
+    }
+
+    .product-container .image-big .image img {
+        display: block;
+        margin: 0 auto;
+        max-width: 210px;
+        max-height: 210px
+    }
+
+    .product-container .image-big .link, .product-container .image-big .share_social {
+        display: none
+    }
+
+    .product-container .image-big .new {
+        left: 10px
+    }
+
+    .product-container .product {
+        width: 100%;
+        padding: 0
+    }
+
+    .product-container .product .title, .product-container .product .mobile-nav .is-children .back-menu,
+    .mobile-nav .is-children .product-container .product .back-menu {
+        margin: 0;
+        font: 400 24px / 27px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif
+    }
+
+    .product-container .product .age {
+        margin: 0
+    }
+
+    .product-container .info-product {
+        display: none
+    }
+
+    .product-container .only_mobile {
+        display: block;
+        margin: 0 auto
+    }
+
+    .product-container .wrapper-variants select, .product-container .wrapper-variants .fk-select {
+        width: 100%
+    }
+
+    .product-container .wrapper-variants select:last-child, .product-container .wrapper-variants .fk-select:last-child {
+        margin-left: 0;
+        margin-top: 20px
+    }
+
+    .product-container .wrapper-variants .cart-variant .fk-select {
+        width: calc(100% - 50px);
+        margin-top: 5px
+    }
+}
+
+.wrapper-banner {
+    width: 50%;
+    float: left;
+    padding-right: 15px
+}
+
+.wrapper-banner:last-child {
+    padding-right: 0
+}
+
+.wrapper-banner .banner {
+    padding: 40px 0 40px 40px;
+    margin-bottom: 15px;
+    position: relative;
+    background-position: 95% center;
+    background-repeat: no-repeat;
+    float: left;
+    width: calc(100% - 36px);
+    height: 265px
+}
+
+.wrapper-banner .banner.tiendas {
+    background-color: rgb(3, 44, 91);
+    background-image: url(../img/x1.svg)
+}
+
+.wrapper-banner .banner.tiendas:after {
+    border-color: rgb(3, 44, 91);
+    top: 40px;
+    bottom: 0
+}
+
+.wrapper-banner .banner.tiendas:before {
+    height: 0;
+    width: 0;
+    border-bottom: 40px solid #95A4D8;
+    border-right: 35px solid transparent;
+    top: 0
+}
+
+.wrapper-banner .banner.tiendas .title, .wrapper-banner .banner.tiendas .mobile-nav .is-children .back-menu,
+.mobile-nav .is-children .wrapper-banner .banner.tiendas .back-menu {
+    color: #C3CEF6
+}
+
+.wrapper-banner .banner.news {
+    background-color: rgb(122, 183, 103);
+    background-image: url(../img/x2.svg)
+}
+
+.wrapper-banner .banner.news:after {
+    border-color: rgb(122, 183, 103);
+    bottom: 40px;
+    top: 0
+}
+
+.wrapper-banner .banner.news:before {
+    height: 0;
+    width: 0;
+    border-top: 40px solid #FF92B7;
+    border-right: 35px solid transparent;
+    bottom: 0
+}
+
+.wrapper-banner .banner.news .title, .wrapper-banner .banner.news .mobile-nav .is-children .back-menu,
+.mobile-nav .is-children .wrapper-banner .banner.news .back-menu {
+    color: #881C40
+}
+
+.wrapper-banner .banner:before {
+    content: "";
+    position: absolute;
+    left: 100%
+}
+
+.wrapper-banner .banner:after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    border-width: 18px;
+    border-style: solid
+}
+
+.wrapper-banner .banner .title, .wrapper-banner .banner .mobile-nav .is-children .back-menu,
+.mobile-nav .is-children .wrapper-banner .banner .back-menu {
+    margin: 0;
+    font: 400 23px / 22px "Bellaboo", Arial;
+    text-transform: lowercase;
+    vertical-align: middle;
+    margin-bottom: 15px
+}
+
+.wrapper-banner .banner .text {
+    max-width: 250px;
+    display: block;
+    color: #FFF;
+    margin-bottom: 15px;
+    font: 400 18px / 23px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif
+}
+
+.wrapper-banner .banner a {
+    font: 400 13px / 12px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    color: #FFF;
+    margin-bottom: 15px;
+    float: left;
+    clear: left;
+    text-transform: uppercase;
+    padding-right: 15px;
+    background: url(//juguettos.com/assets/i-arrow-right-white-small-02444cb2a117b3474522ff7bc95442161a2c2d65bb91659ee44f0c8903a5adb8.svg) no-repeat center right
+}
+
+.wrapper-banner .banner a span {
+    margin-left: 15px
+}
+
+.wrapper-banner-small {
+    width: 33.33333%;
+    padding-left: 10px;
+    float: left;
+    position: relative;
+    z-index: 9
+}
+
+.small-banner, .big-banner {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    min-height: 205px;
+    background: #FFF
+}
+
+.small-banner a, .big-banner a {
+    display: inline-block
+}
+
+.small-banner .image, .big-banner .image {
+    float: right;
+    min-height: 205px
+}
+
+.small-banner .image.big, .big-banner .image.big {
+    width: 100%
+}
+
+.small-banner .box, .big-banner .box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    padding: 20px 18px;
+    max-width: 170px;
+    height: 185px;
+    margin: 10px
+}
+
+.small-banner .box.corner, .big-banner .box.corner {
+    background: #FFF;
+    padding: 20px 0 20px 18px
+}
+
+.small-banner .box.corner:before, .big-banner .box.corner:before {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height: 0;
+    width: 0;
+    border-bottom: 18px solid #FF3669;
+    border-right: 18px solid transparent
+}
+
+.small-banner .box.corner:after, .big-banner .box.corner:after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 18px;
+    bottom: 0;
+    border-width: 9px;
+    border-style: solid;
+    border-color: white
+}
+
+.small-banner .box .title, .big-banner .box .title, .small-banner .box .mobile-nav .is-children .back-menu,
+.mobile-nav .is-children .small-banner .box .back-menu, .big-banner .box .mobile-nav .is-children .back-menu,
+.mobile-nav .is-children .big-banner .box .back-menu {
+    margin: 0;
+    text-transform: uppercase;
+    color: rgb(3, 44, 91);
+    font: 400 17px / 19px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    vertical-align: middle
+}
+
+.small-banner .box .title strong, .big-banner .box .title strong, .small-banner .box .mobile-nav .is-children .back-menu strong,
+.mobile-nav .is-children .small-banner .box .back-menu strong, .big-banner .box .mobile-nav .is-children .back-menu strong,
+.mobile-nav .is-children .big-banner .box .back-menu strong, .small-banner .box .title b,
+.big-banner .box .title b, .small-banner .box .mobile-nav .is-children .back-menu b,
+.mobile-nav .is-children .small-banner .box .back-menu b, .big-banner .box .mobile-nav .is-children .back-menu b,
+.mobile-nav .is-children .big-banner .box .back-menu b {
+    font-weight: bold
+}
+
+.small-banner .box .text, .big-banner .box .text {
+    color: #646464;
+    margin: 10px 0;
+    font: 400 13px / 18px "Open Sans", "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif
+}
+
+.small-banner .box .link, .big-banner .box .link, .small-banner .box a,
+.big-banner .box a {
+    color: rgb(122, 183, 103);
+    font: 400 13px / 19px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    background: url(//juguettos.com/assets/i-arrow-right-pink-1538f677ecf187e4ff504abdbcf19e44286f85763b74cebf16e03c36afdf512a.svg) no-repeat center right;
+    padding-right: 15px;
+    text-transform: uppercase
+}
+
+.small-banner .box .btn-add-cart, .big-banner .box .btn-add-cart {
+    background: url(//juguettos.com/assets/i-shape-big-pink-dbfb883e6e575be0512d2f5bbbcba9ff60c2ec9d7fe5eed809c534bb7981958c.svg) no-repeat 0 0;
+    padding: 15px 30px;
+    color: #FFF;
+    font: 700 13px / 23px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif
+}
+
+.wrapper-banner-bg {
+    padding: 30px;
+    background: url(../img/red.png) no-repeat top left;
+    margin: 45px auto
+}
+
+.wrapper-banner-bg .wrapper-small-banner {
+    width: 33.33333%;
+    float: left;
+    margin: 35px 0;
+    overflow: hidden
+}
+
+.wrapper-banner-bg .wrapper-small-banner .small-banner, .wrapper-banner-bg .wrapper-small-banner .big-banner {
+    width: 100%;
+    min-width: 390px
+}
+
+.big-banner {
+    width: calc(100% - 95px)
+}
+
+.big-banner .image {
+    min-height: initial;
+    height: auto;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    float: left;
+    min-height: 205px
+}
+
+.big-banner .image.big {
+    min-height: 205px
+}
+
+.big-banner .box {
+    max-width: 510px;
+    width: 510px;
+    bottom: 0;
+    top: initial;
+    height: auto
+}
+
+.big-banner .box .text {
+    max-width: 290px;
+    float: left;
+    margin: 5px 0
+}
+
+.big-banner .box .title, .big-banner .box .mobile-nav .is-children .back-menu,
+.mobile-nav .is-children .big-banner .box .back-menu {
+    font-size: 21px
+}
+
+.big-banner .btn {
+    float: right
+}
+
+.big-banner .link-taxon {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 5px 0;
+    font: 400 12px / 21px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    color: rgb(122, 183, 103);
+    text-transform: uppercase;
+    text-align: left
+}
+
+.big-banner .image {
+    min-height: 410px
+}
+
+@media only screen and (max-width: 1024px) {
+    .wrapper-banner {
+        width: 50%
+    }
+
+    .wrapper-banner .banner {
+        height: 360px;
+        padding: 40px 0 140px 40px;
+        background-position: center 85%;
+        background-size: 130px
+    }
+
+    .wrapper-banner .banner .text {
+        font-size: 17px
+    }
+
+    .small-banner, .big-banner {
+        padding-right: 10px
+    }
+
+    .wrapper-banner-bg {
+        padding: 10px !important;
+        background-repeat: repeat;
+        width: 100%;
+        background-size: contain;
+        overflow-y: scroll
+    }
+
+    .wrapper-banner-bg .wrapper-small-banner {
+        width: 33.33333%;
+        margin: 5px 0
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .wrapper-banner {
+        width: 100%;
+        padding-right: 0
+    }
+
+    .wrapper-banner .banner {
+        height: auto;
+        padding: 40px 0 140px 40px;
+        background-position: center 95%;
+        background-size: 110px 130px
+    }
+
+    .wrapper-banner .banner .text {
+        max-width: inherit
+    }
+
+    .wrapper-banner .big-banner .image {
+        min-height: inherit
+    }
+
+    .wrapper-banner-small {
+        width: 100%;
+        padding: 0
+    }
+
+    .small-banner, .big-banner {
+        margin: 0 auto;
+        float: none
+    }
+
+    .small-banner .box, .big-banner .box {
+        max-width: 60%
+    }
+
+    .small-banner .box .text, .big-banner .box .text {
+        margin: 5px 0 5px
+    }
+
+    .wrapper-banner-bg {
+        padding: 10px !important;
+        width: 100%;
+        background: url(//juguettos.com/assets/bg-banners-v-97570c64c46b5ecc991caa1d58775e5d742ab8778ec9f3fd2c81900c31991254.png) no-repeat top left;
+        background-size: cover
+    }
+
+    .wrapper-banner-bg .wrapper-small-banner {
+        width: 100%;
+        margin: 5px 0
+    }
+
+    .big-banner {
+        min-width: auto;
+        width: 100%;
+        margin-top: 5px
+    }
+
+    .big-banner .image {
+        min-height: initial;
+        height: auto;
+        width: 100%;
+        position: relative;
+        right: 0;
+        bottom: 0;
+        float: left;
+        min-height: 135px
+    }
+
+    .big-banner .image.big {
+        min-height: 205px
+    }
+
+    .big-banner .box {
+        margin: 0;
+        max-width: 100%;
+        width: auto;
+        position: relative
+    }
+
+    .big-banner .box .text {
+        max-width: 100%;
+        float: left;
+        margin: 5px 0
+    }
+
+    .big-banner .box .btn {
+        float: left
+    }
+}
+
+
+.main-footer {
+    font: 400 13px / 24px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    margin-top: 30px;
+    background: url(../img/rd.svg) no-repeat center 60px;
+    margin-bottom: 75px;
+    position: relative;
+    z-index: 9
+}
+
+.main-footer.simple {
+    background: url(//juguettos.com/assets/bg-footer-simple-1b4c997a8e37377481a8ba7307ad974f1a7929cc2a8e1d6f057cb1fca63e702e.svg) no-repeat top center;
+    height: 275px
+}
+
+.main-footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.main-footer .stck-social {
+    background: url(../img/c1.svg) no-repeat left top;
+    padding: 10px 0 0 180px;
+    margin: 0 auto;
+    width: 680px;
+    min-height: 77px
+}
+
+.main-footer .stck-social .bg-social {
+    background-color: #E8F0FB;
+    padding: 10px 0 0 20px;
+    display: inline-block;
+    width: 100%
+}
+
+.main-footer .stck-social .bg-social .text {
+    color: #7A93A7;
+    font: 900 16px / 40px "Bellaboo", Arial;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+    display: inline;
+    float: left;
+    margin: 0
+}
+
+.main-footer .stck-social .social {
+    font-size: 0;
+    display: inline
+}
+
+.main-footer .stck-social .social li {
+    margin-left: 25px;
+    display: inline-block
+}
+
+.main-footer .stck-social .social li a {
+    width: 43px;
+    height: 43px;
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
+    display: inline-block
+}
+
+.main-footer .stck-social .social:after {
+    content: '';
+    float: right;
+    margin-top: -8px;
+    height: 0;
+    width: 0;
+    border-bottom: 32.5px solid transparent;
+    border-right: 20px solid white;
+    border-top: 32.5px solid transparent
+}
+
+
+.main-footer .i.youtube {
+    background: url(../img/y.svg) no-repeat 0 0
+}
+
+.main-footer .i.facebook {
+    background: url(../img/f.svg) no-repeat 0 0
+}
+
+.main-footer .i.twitter {
+    background: url(../img/t.svg) no-repeat 0 0
+}
+
+.main-footer .footer-nav {
+    margin-top: 183px;
+    background-color: #F8FCFF;
+    padding: 25px 0
+}
+
+.main-footer .footer-nav .wrapper-footer-ul {
+    float: left;
+    width: 25%;
+    text-align: center
+}
+
+.main-footer .footer-nav ul li {
+    margin: 0
+}
+
+.main-footer .footer-nav a, .main-footer .footer-nav .title, .main-footer .footer-nav .mobile-nav .is-children .back-menu,
+.mobile-nav .is-children .main-footer .footer-nav .back-menu {
+    margin: 0;
+    padding: 0
+}
+
+.main-footer .footer-nav .title, .main-footer .footer-nav .mobile-nav .is-children .back-menu,
+.mobile-nav .is-children .main-footer .footer-nav .back-menu {
+    font: 700 12px / 24px "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    text-transform: uppercase;
+    color: #8CA2B5
+}
+
+.main-footer .footer-nav a {
+    color: #8CA2B5
+}
+
+.main-footer.funnel {
+    background: #F8F8F8 url(//juguettos.com/assets/bg-footer-funnel-3d5982f82f76665ad4c8b47f8055d7aa4c2e99f05e98a5e2aab71debf7cbfdb2.svg) no-repeat center bottom
+}
+
+.main-footer.funnel .footer-nav {
+    background: transparent;
+    margin-top: 0;
+    padding-bottom: 180px
+}
+
+.main-footer.funnel .footer-nav ul {
+    float: left;
+    text-align: left;
+    width: 100%
+}
+
+.main-footer.funnel .footer-nav ul:first-child {
+    width: 66.66667%;
+    padding-left: 30px
+}
+
+.main-footer.funnel .footer-nav li {
+    color: rgb(122, 183, 103);
+    list-style: disc inside
+}
+
+.main-footer.funnel .footer-nav .wrapper-pay {
+    display: none;
+    float: left;
+    width: 33.33333%
+}
+
+.main-footer.funnel .footer-nav a, .main-footer.funnel .footer-nav .title,
+.main-footer.funnel .footer-nav .mobile-nav .is-children .back-menu,
+.mobile-nav .is-children .main-footer.funnel .footer-nav .back-menu {
+    margin: 0;
+    color: #7C7C7C;
+    list-style: none
+}
+
+.main-footer.funnel .footer-nav .i-pay {
+    float: left;
+    height: 30px;
+    padding: 0 5px;
+    margin-left: 5px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap
+}
+
+.main-footer.funnel .footer-nav .i-pay.paypal {
+    background: #fff url(//juguettos.com/assets/i-logos-bank-paypal-9c58caf486978c10545302dd76f2c70a6a4c8fe4927951aec5e8872a0fbe6500.png) no-repeat center;
+    width: 75px
+}
+
+.main-footer.funnel .footer-nav .i-pay.visa {
+    background: #fff url(//juguettos.com/assets/i-logos-bank-visa-252bad25e6d96f0bef0b8c3a08255dc83d67f0e4fb04e0eb35f69e5f4812a4f2.svg) no-repeat center;
+    width: 45px
+}
+
+.main-footer.funnel .footer-nav .i-pay.mastercard {
+    background: #fff url(//juguettos.com/assets/i-logos-bank-mastercard-b9b1efe8f3a3a1a7cc09ffdeb06a3904fe8b23fbf9b4cce8ed5a96031376d9ed.svg) no-repeat center;
+    width: 45px
+}
+
+.main-footer.funnel .footer-nav .i-pay.maestro {
+    background: #fff url(//juguettos.com/assets/i-logos-bank-maestro-4a3217c4b6931b57baefbb7ce77e901eedb90efd8319a4d537cc0176fee13775.svg) no-repeat center;
+    width: 45px
+}
+
+.footer-other-links {
+    position: relative;
+    background-color: #E8F0FB
+}
+
+.footer-other-links .wrapper-footer-other {
+    text-align: center;
+    display: inline-block
+}
+
+.footer-other-links:after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: '';
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-bottom: 25px solid transparent;
+    border-right: 20px solid white;
+    border-top: 25px solid transparent
+}
+
+.footer-other-links:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-bottom: 25px solid transparent;
+    border-left: 20px solid white;
+    border-top: 25px solid transparent
+}
+
+.footer-other-links ul {
+    display: inline-block;
+    text-align: center
+}
+
+.footer-other-links li {
+    color: #8CA2B5;
+    display: inline-block;
+    margin: 12px 25px
+}
+
+.footer-other-links p {
+    margin: 0
+}
+
+.footer-other-links a {
+    color: #8CA2B5;
+    text-transform: uppercase
+}
+
+.footer-other-links .copyw {
+    display: inline-block;
+    margin: 12px 25px
+}
+
+.footer-other-links .copyw:before {
+    content: '©'
+}
+
+@media only screen and (max-width: 1240px) {
+    .footer-other-links:before, .footer-other-links:after {
+        display: none
+    }
+
+    .footer-other-links .copyw {
+        display: block
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .main-footer {
+        margin: 0;
+        background: url(//juguettos.com/assets/bg-footer-tablet-951b53f12fd9559c4ffeeb82d83fb53fe98cdac377ca5c86f09132a9cf020215.svg) no-repeat center 96px
+    }
+
+    .main-footer .stck-social {
+        margin: 0 auto
+    }
+
+    .main-footer .stripe-footer {
+        max-width: 1024px
+    }
+
+    .main-footer .stripe-footer:after, .main-footer .stripe-footer:before {
+        display: none
+    }
+
+    .main-footer .stripe-footer li:first-child {
+        display: block
+    }
+
+    .main-footer .footer-nav .wrapper-footer-ul {
+        width: 50%
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .main-footer {
+        background: url(../img/ul.svg) no-repeat center 170px;
+        background-size: contain;
+        margin: 0
+    }
+
+    .main-footer .stck-social {
+        width: auto;
+        padding: 0;
+        background: url(../img/avi.svg) no-repeat;
+        background-position: 10% 20px
+    }
+
+    .main-footer .stck-social .bg-social {
+        background: transparent;
+        padding: 0
+    }
+
+    .main-footer .stck-social .bg-social .text {
+        margin: 25px 0px 15px 40%
+    }
+
+    .main-footer .stck-social .bg-social .social {
+        background-color: #E8F0FB;
+        padding: 0;
+        clear: left;
+        display: block;
+        margin: 0 15px;
+        text-align: center
+    }
+
+    .main-footer .stck-social .bg-social .social li {
+        margin: 0 7px;
+        background-position: center;
+        background-size: contain
+    }
+
+    .main-footer .stck-social .bg-social .social li a {
+        width: 30px;
+        height: 30px
+    }
+
+    .main-footer .stck-social .bg-social .social:after {
+        display: none
+    }
+
+    .main-footer .footer-nav {
+        margin-top: 50%
+    }
+
+    .main-footer .footer-nav .wrapper-footer-ul {
+        width: 100%
+    }
+
+    .main-footer .stripe-footer {
+        max-width: 767px;
+        padding-bottom: 10px
+    }
+
+    .main-footer .stripe-footer:after, .main-footer .stripe-footer:before {
+        display: none
+    }
+
+    .main-footer .stripe-footer li:first-child {
+        display: block
+    }
+
+    .main-footer .i {
+        margin-top: 10px
+    }
+
+    .main-footer.funnel {
+        background: #F8F8F8 url(//juguettos.com/assets/bg-footer-funnel-mobile-d03547dea4eda5c31f43b23613edba51751b32b1b93080b3a7fc695362c96c7d.svg) no-repeat center bottom;
+        background-size: contain
+    }
+
+    .main-footer.funnel .footer-nav {
+        padding: 20px 20px 160px 20px
+    }
+
+    .main-footer.funnel .footer-nav ul {
+        margin-bottom: 25px
+    }
+
+    .main-footer.funnel .footer-nav ul:first-child {
+        width: 100%;
+        padding-left: 0
+    }
+
+    .main-footer.funnel .footer-nav .wrapper-pay {
+        width: 100%
+    }
+}
+
+.main-header {
+    border-bottom: 1px solid #E6E6E6;
+    margin-bottom: 40px
+}
+
+.main-header.funnel {
+    border-bottom: 0 solid rgb(122, 183, 103)
+}
+
+.main-header.funnel hr {
+    border: 0;
+    height: 4px;
+    margin: -4px 0 0 0;
+    z-index: 1;
+    float: left;
+    width: 100%;
+    position: relative;
+    background-color: rgb(3, 44, 91);
+    background-image: -webkit-linear-gradient(right, rgb(3, 44, 91) 60%, rgb(122, 183, 103) 40%);
+    background-image: linear-gradient(to left, rgb(3, 44, 91) 60%, rgb(122, 183, 103) 40%)
+}
+
+#footer-sub{
+    background-color: #f3f7f8;
+    border-top: 1px solid #dbdbdb;
+}
+
+#footer-main{
+    background-color: rgb(12, 52, 93);
+}
+
+#footer-sub h5{
+    color:#565656;
+    margin-top: 25px;
+}
+
+#footer-sub ul{
+    list-style: none;
+    margin-top: 20px;
+}
+
+#footer-sub hr{
+    margin: 5px;
+
+}
+
+#footer-sub ul li{
+margin-left: -38px;
+}
+
+#footer-sub a:link {
+    text-decoration: none;
+    color:#565656;
+    font-size: 12px;
+}
+
+#footer-sub a:visited {
+    text-decoration: none;
+    color:#565656;
+}
+
+
+#footer-sub a:hover {
+    text-decoration: none;
+    color: blue;
+}
+
+
+#footer-sub a:active {
+    text-decoration: none;
+    color:#565656;
+}
+
+.vertical-line{
+    border-right: 1px solid #dbdbdb;
+    margin: 8px;
+    padding: 0px;
+}
+
+.glyphicon {
+    font-size: 35px;
+     color:#6d6c6c;
+}
+
+#sub-two{
+    margin: 0px;
+    padding: 0px;
+}
+
+#sub-two .vertical-line h4{
+    color:#6d6c6c;
+}
+
+
+#footer-main ul{
+    list-style: none;
+}
+
+#footer-main ul li{
+    float:left;
+    text-decoration: none;
+    padding-left: 15px;
+    margin-top: 17px;
+}
+
+#footer-main a:link {
+    color:white;
+    font-size: 12px;
+}
+
+#footer-main a:visited {
+    color:white;
+}
+
+
+#footer-main a:hover {
+    text-decoration: none;
+    color: #00b9f5;
+}
+
+
+#footer-main a:active {
+    color:white;
+}
+
+.glyphicon-search{
+    font-size: 20px;
+}
+
+#social-menu{
+    float: right;
+   margin-right: 60px;
+}
+
+#side-padding{
+    padding: 0px;
+    margin: 0px;
+}
+
+.jumbotron {
+background: rgb(12, 52, 93);
+color: #FFF;
+border-radius: 0px;
+}
+.jumbotron-sm { padding-top: 24px;
+padding-bottom: 24px; }
+.jumbotron small {
+color: #FFF;
+}
+.h1 small {
+font-size: 24px;
+}
+
+.transition-timer-carousel .carousel-caption {
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 4%, rgba(0,0,0,0.5) 32%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(4%,rgba(0,0,0,0.1)), color-stop(32%,rgba(0,0,0,0.5)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+	width: 100%;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	text-align: left;
+	padding-top: 5px;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+.transition-timer-carousel .carousel-caption .carousel-caption-header {
+	margin-top: 10px;
+	font-size: 24px;
+}
+.pagination>li>a, .pagination>li>span { border-radius: 50% !important;margin: 0 5px;}
+@media (min-width: 970px) {
+    /* Lower the font size of the carousel caption header so that our caption
+    doesn't take up the full image/slide on smaller screens */
+	.transition-timer-carousel .carousel-caption .carousel-caption-header {
+		font-size: 36px;
+	}
+}
+.transition-timer-carousel .carousel-indicators {
+	bottom: 0px;
+	margin-bottom: 5px;
+}
+.transition-timer-carousel .carousel-control {
+	z-index: 11;
+}
+.transition-timer-carousel .transition-timer-carousel-progress-bar {
+    height: 5px;
+    background-color: #5cb85c;
+    width: 0%;
+    margin: -5px 0px 0px 0px;
+    border: none;
+    z-index: 11;
+    position: relative;
+}
+.transition-timer-carousel .transition-timer-carousel-progress-bar.animate{
+    /* We make the transition time shorter to avoid the slide transitioning
+    before the timer bar is "full" - change the 4.25s here to fit your
+    carousel's transition time */
+    -webkit-transition: width 4.25s linear;
+	-moz-transition: width 4.25s linear;
+	-o-transition: width 4.25s linear;
+	transition: width 4.25s linear;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+/****** LOGIN MODAL ******/
+.loginmodal-container {
+  padding: 30px;
+  max-width: 350px;
+  width: 100% !important;
+  background-color: #F7F7F7;
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  font-family: roboto;
+}
+
+.loginmodal-container h1 {
+  text-align: center;
+  font-size: 1.8em;
+  font-family: roboto;
+}
+
+.loginmodal-container input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.loginmodal-container input[type=text], input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.loginmodal-container input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.loginmodal {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+/* border-radius: 3px; */
+/* -webkit-user-select: none;
+  user-select: none; */
+}
+
+.loginmodal-submit {
+  /* border: 1px solid #3079ed; */
+  border: 0px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1); 
+  background-color: #4d90fe;
+  padding: 17px 0px;
+  font-family: roboto;
+  font-size: 14px;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+}
+
+.loginmodal-submit:hover {
+  /* border: 1px solid #2f5bb7; */
+  border: 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #357ae8;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+}
+
+.loginmodal-container a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity ease 0.5s;
+} 
+
+.login-help{
+  font-size: 12px;
+}
