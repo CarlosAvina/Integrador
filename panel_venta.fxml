@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #FFFFFF;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+  <tabs>
+    <Tab fx:id="btnProducto" text="Nuevo">
+         <content>
+            <FlowPane alignment="CENTER" prefHeight="568.0" prefWidth="900.0">
+               <children>
+                  <GridPane prefHeight="490.0" prefWidth="777.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="376.0" minWidth="10.0" prefWidth="225.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="180.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="207.0" minWidth="10.0" prefWidth="154.0" />
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="138.0" minWidth="10.0" prefWidth="97.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="66.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="96.0" minWidth="10.0" prefWidth="62.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="182.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="136.0" minHeight="0.0" prefHeight="101.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="197.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="197.0" minHeight="10.0" prefHeight="140.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="197.0" minHeight="8.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="219.0" minHeight="0.0" prefHeight="169.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <JFXButton fx:id="btnVentaMas" alignment="CENTER" prefHeight="31.0" prefWidth="50.0" style="-fx-background-color: #F3F2F0;" text="+" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <JFXTextField fx:id="txtProdDescripcion" prefHeight="133.0" prefWidth="551.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="5" />
+                        <JFXComboBox fx:id="cmbVentaEmpleado" prefHeight="33.0" prefWidth="185.0" promptText="Empleado" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <JFXComboBox fx:id="cmbVentaCliente" prefHeight="33.0" prefWidth="170.0" promptText="Cliente" GridPane.columnIndex="1" />
+                        <JFXComboBox fx:id="cmbVentaPago" prefHeight="33.0" prefWidth="174.0" promptText="Forma de Pago" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                        <JFXTextField fx:id="txtVentaBuscar" prefHeight="31.0" prefWidth="196.0" text="Busqueda Producto" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <JFXTreeTableView fx:id="tblVentaBuscar" prefHeight="124.0" prefWidth="226.0" GridPane.columnSpan="2" GridPane.rowIndex="2" GridPane.rowSpan="2" />
+                        <JFXTextField fx:id="txtVentaaProducto" prefHeight="31.0" prefWidth="196.0" text="Producto" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <JFXTextField fx:id="txtVentaPrecio" prefHeight="31.0" prefWidth="160.0" text="\$" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="21.0" prefWidth="176.0" text="Cantidad:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <JFXTextField fx:id="txtVentaCant" prefHeight="31.0" prefWidth="196.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <JFXButton fx:id="btnVentaMenos" alignment="CENTER" prefHeight="31.0" prefWidth="50.0" style="-fx-background-color: #F3F2F0;" text="-" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                        <JFXTreeTableView fx:id="tblVentaShow" prefHeight="124.0" prefWidth="226.0" GridPane.columnSpan="4" GridPane.rowIndex="5" />
+                        <JFXButton fx:id="btnVentaRealiz" alignment="CENTER" prefHeight="31.0" prefWidth="87.0" style="-fx-background-color: #F3F2F0;" text="Realizar" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+               </children>
+            </FlowPane>
+         </content>
+    </Tab>
+    <Tab text="Reporte">
+         <content>
+            <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <GridPane prefHeight="516.0" prefWidth="848.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="643.0" minWidth="10.0" prefWidth="619.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="354.0" minWidth="10.0" prefWidth="229.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <JFXTreeTableView fx:id="tblVentaConsulta" prefHeight="513.0" prefWidth="619.0" GridPane.rowSpan="3" />
+                        <JFXButton fx:id="btnVentaConsultar" alignment="CENTER" prefHeight="39.0" prefWidth="112.0" style="-fx-background-color: #F3F2F0;" text="Consultar" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                     </children>
+                  </GridPane>
+               </children>
+            </FlowPane>
+         </content>
+    </Tab>
+  </tabs>
+</TabPane>
