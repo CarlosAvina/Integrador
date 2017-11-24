@@ -9,32 +9,7 @@ using System.Threading.Tasks;
 namespace wfcJugueteriaK
 {
 
-    [DataContract]
-    public class Persona
-    {
-        [DataMember]
-        public long id { get; set; }
-        [DataMember]
-        public string nombre { get; set; }
-        [DataMember]
-        public string apellidoPaterno { get; set; }
-        [DataMember]
-        public string apellidoMaterno { get; set; }
-        [DataMember]
-        public string genero { get; set; }
-        [DataMember]
-        public string rfc { get; set; }
-        [DataMember]
-        public string curp { get; set; }
-        [DataMember]
-        public string fechaNacimiento { get; set; }
-        [DataMember]
-        public string cp { get; set; }
-        [DataMember]
-        public string fotografia { get; set; }
-        [DataMember]
-        public string domicilio { get; set; }
-    }
+    
     [DataContract]
     public class Rol
     {
@@ -80,7 +55,7 @@ namespace wfcJugueteriaK
     public class Cliente
     {
         [DataMember]
-        public long id { get; set; }
+        public int id { get; set; }
         [DataMember]
         public string email { get; set; }
         [DataMember]

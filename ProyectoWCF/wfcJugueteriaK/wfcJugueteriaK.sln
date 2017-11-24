@@ -49,6 +49,9 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebSiteJK", "http://localho
 		SlnRelativePath = "..\WebSiteJK\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{7D39C253-612F-4FB1-B11E-1EEE1DAE7D3C} = {7D39C253-612F-4FB1-B11E-1EEE1DAE7D3C}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
