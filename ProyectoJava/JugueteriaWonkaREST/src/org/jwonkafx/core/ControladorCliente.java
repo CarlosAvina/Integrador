@@ -22,7 +22,6 @@ import net.sf.json.JSONObject;
 import org.jwonkafx.db.ConexionSQLServer;
 import org.jwonkafx.model.Cliente;
 import org.jwonkafx.model.Persona;
-
 /**
  *
  * @author franc
@@ -31,15 +30,11 @@ public class ControladorCliente
 {
     
     //private static final String URL_REST = "http://192.168.1.102/jwonka/api/RestCliente";
-    //private static final String URL_REST = "http://192.168.2.154/jwonka/api/RestCliente";
-    //192.168.43.129
-    private static final String URL_REST = "http://192.168.43.129:83/wcfServiciosJK/ServiceJS.svc/ConsultarCliente";
-    
-    
+    private static final String URL_REST="http://localhost:83/wcfServiciosJK/Servicio.svc/";
     public int insert(Cliente c) throws Exception
     {
         //Configuramos la URL del Servicio
-        String rutaServicio = URL_REST;
+        String rutaServicio = URL_REST+"RegistrarCliente";
         URL url = new URL(rutaServicio);
         HttpURLConnection connHttp = (HttpURLConnection)url.openConnection();
         
@@ -54,7 +49,7 @@ public class ControladorCliente
         
         //Este objeto nos ayudara a capturar la respuesta que el servidor nos envia
         BufferedReader br = null;
-        
+        String avinatonto;
         //Esta es una variable auxiliar que nos ayudara a ir leyendo la respuesta del servidor
         String lineaActual;
         
@@ -65,15 +60,13 @@ public class ControladorCliente
         String strJson = null;
         
         //Este objeto nos permitira convertir el objeto de tipo Cliente en una cadena JSON
-        JSONSerializer jss = new flexjson.JSONSerializer();
+         //Le indicamos a felxjson que ignore el atributo "class", ya que no lo necesita el REST hecho en .Net
+        JSONSerializer jss = new flexjson.JSONSerializer().exclude("*.class");
         
         //Este objeto nos permitira convertir la respuesta JSON del servidor
         //JSONDeserializer jdss = new JSONDeserializer();
         
         JSONObject jso = null;
-        
-        //Le indicamos a felxjson que ignore el atributo "class", ya que no lo necesita el REST hecho en .Net
-        jss.exclude("class");
         strJson = jss.serialize(c);
         System.out.println(strJson);
         
@@ -92,7 +85,7 @@ public class ControladorCliente
         //Enviamos los parametros al servidor
         out = new BufferedOutputStream(connHttp.getOutputStream());
         bwriter = new BufferedWriter(new OutputStreamWriter(out, "UTF-8"));
-        bwriter.write("=" + strJson);
+        bwriter.write(strJson);
         bwriter.flush();
         bwriter.close();
         out.close();
@@ -122,10 +115,10 @@ public class ControladorCliente
             connHttp.disconnect();
             
             //Verificamos  que el objeto JSON tiene la propiedad 'result'
-            if(jso.containsKey("result"))
+            if(!jso.isEmpty())
             {
-                c.setId(jso.getInt("idCliente"));
-                c.getPersona().setId(jso.getInt("idPersona"));
+                c.setId(jso.getInt("id"));
+                //c.getPersona().setId(jso.getInt("IdPersonaGenerado"));
                 return c.getId();
             }
             else
@@ -139,39 +132,150 @@ public class ControladorCliente
     
     public void update(Cliente c) throws Exception
     {
-        String sql = "{call dbo.UpdateCliente(?,?,?,?,?,?,?,?,?,?,?,?,?,?)}";
+        String rutaServicio = URL_REST+"UpdateCliente";
+        URL url = new URL(rutaServicio);
+        HttpURLConnection connHttp = (HttpURLConnection)url.openConnection();
         
-        ConexionSQLServer connSQLServer = new ConexionSQLServer();
-        CallableStatement cstmt = connSQLServer.abrir().prepareCall(sql);
+        //Aqui guardamos la respuesta del servidor
+        int respuestaServidor = 0; //Revisar los tipos de respuesta que pueda
         
-        cstmt.setInt(1,c.getId());
-        cstmt.setInt(2,c.getPersona().getId());
-        cstmt.setString(3,c.getPersona().getNombre());
-        cstmt.setString(4,c.getPersona().getApellidoPaterno());
-        cstmt.setString(5,c.getPersona().getApellidoMaterno());
-        cstmt.setString(6,c.getPersona().getGenero());
-        cstmt.setString(7,c.getPersona().getRfc());
-        cstmt.setString(8,c.getPersona().getCurp());
-        cstmt.setString(9,c.getPersona().getFechaNacimiento());
-        cstmt.setString(10,c.getPersona().getCp());
-        cstmt.setString(11,c.getPersona().getFotografia());
-        cstmt.setString(12,c.getPersona().getDomicilio());
-        cstmt.setString(13,c.getEmail());
-        cstmt.setString(14,c.getTelefono());
+        //Este objeto nos ayudara a enviarle datos al servidor
+        BufferedWriter bwriter = null;
         
-        cstmt.close();
-        connSQLServer.cerrar();
+        //Este objeto nos ayudara a mandarle los datos como parametros al servidor
+        OutputStream out = null;
+        
+        //Este objeto nos ayudara a capturar la respuesta que el servidor nos envia
+        BufferedReader br = null;
+        
+        //Esta es una variable auxiliar que nos ayudara a ir leyendo la respuesta del servidor
+        String lineaActual;
+        
+        //En esta variable se ira guardando la respuesta del servidor hasta que finalize de responder
+        String contenidoRespuesta = "";
+        
+        //Aqui guardaremos la respresentacion JSON del objeto Cliente que deseamos enviar al servidor
+        String strJson = null;
+        
+        //Este objeto nos permitira convertir el objeto de tipo Cliente en una cadena JSON
+         //Le indicamos a felxjson que ignore el atributo "class", ya que no lo necesita el REST hecho en .Net
+        JSONSerializer jss = new flexjson.JSONSerializer().exclude("*.class");
+        
+        //Este objeto nos permitira convertir la respuesta JSON del servidor
+        //JSONDeserializer jdss = new JSONDeserializer();
+        
+        JSONObject jso = null;
+        strJson = jss.serialize(c);
+        System.out.println(strJson);
+        
+        //Establecemos el metodo de conexión
+        connHttp.setRequestMethod("POST");
+        
+        //Indicamos que enviaremos los parametros codificador a traves del cuerpo de la peticion BODY
+        connHttp.setRequestProperty("Content-Type", "application/json");
+        
+        //Establecemos que enviaremos los valores por un metodo POST
+        connHttp.setDoOutput(true);
+        
+        //Establecemos que recibiremos respuresta del servidor
+        connHttp.setDoInput(true);
+        
+        //Enviamos los parametros al servidor
+        out = new BufferedOutputStream(connHttp.getOutputStream());
+        bwriter = new BufferedWriter(new OutputStreamWriter(out, "UTF-8"));
+        bwriter.write(strJson);
+        bwriter.flush();
+        bwriter.close();
+        out.close();
+        
+        //Mantenemos la conexion con el servidor
+        connHttp.connect();
+        
+        //Le pedimos al servidor que pricese la peticion y esperamos la respuesta
+        respuestaServidor = connHttp.getResponseCode();
+        
+        //Verificamos que nos respinda de forma satisfactoria
+        if(respuestaServidor != HttpURLConnection.HTTP_OK)
+        {
+          throw new Exception("El servidor respondió con codigo " + respuestaServidor);
+        }
     }
-    public void delete(int idCliente) throws Exception
+    public void delete(Cliente c) throws Exception
     {
+        String rutaServicio = URL_REST+"EliminarCliente";
+        URL url = new URL(rutaServicio);
+        HttpURLConnection connHttp = (HttpURLConnection)url.openConnection();
         
+        //Aqui guardamos la respuesta del servidor
+        int respuestaServidor = 0; //Revisar los tipos de respuesta que pueda
+        
+        //Este objeto nos ayudara a enviarle datos al servidor
+        BufferedWriter bwriter = null;
+        
+        //Este objeto nos ayudara a mandarle los datos como parametros al servidor
+        OutputStream out = null;
+        
+        //Este objeto nos ayudara a capturar la respuesta que el servidor nos envia
+        BufferedReader br = null;
+        
+        //Esta es una variable auxiliar que nos ayudara a ir leyendo la respuesta del servidor
+        String lineaActual;
+        
+        //En esta variable se ira guardando la respuesta del servidor hasta que finalize de responder
+        String contenidoRespuesta = "";
+        
+        //Aqui guardaremos la respresentacion JSON del objeto Cliente que deseamos enviar al servidor
+        String strJson = null;
+        
+        //Este objeto nos permitira convertir el objeto de tipo Cliente en una cadena JSON
+         //Le indicamos a felxjson que ignore el atributo "class", ya que no lo necesita el REST hecho en .Net
+        JSONSerializer jss = new flexjson.JSONSerializer().exclude("*.class");
+        
+        //Este objeto nos permitira convertir la respuesta JSON del servidor
+        //JSONDeserializer jdss = new JSONDeserializer();
+        
+        JSONObject jso = null;
+        strJson = jss.serialize(c);
+        System.out.println(strJson);
+        
+        //Establecemos el metodo de conexión
+        connHttp.setRequestMethod("POST");
+        
+        //Indicamos que enviaremos los parametros codificador a traves del cuerpo de la peticion BODY
+        connHttp.setRequestProperty("Content-Type", "application/json");
+        
+        //Establecemos que enviaremos los valores por un metodo POST
+        connHttp.setDoOutput(true);
+        
+        //Establecemos que recibiremos respuresta del servidor
+        connHttp.setDoInput(true);
+        
+        //Enviamos los parametros al servidor
+        out = new BufferedOutputStream(connHttp.getOutputStream());
+        bwriter = new BufferedWriter(new OutputStreamWriter(out, "UTF-8"));
+        bwriter.write(strJson);
+        bwriter.flush();
+        bwriter.close();
+        out.close();
+        
+        //Mantenemos la conexion con el servidor
+        connHttp.connect();
+        
+        //Le pedimos al servidor que pricese la peticion y esperamos la respuesta
+        respuestaServidor = connHttp.getResponseCode();
+        
+        //Verificamos que nos respinda de forma satisfactoria
+        if(respuestaServidor != HttpURLConnection.HTTP_OK)
+        {
+            throw new Exception("El servidor respondió con codigo " + respuestaServidor);
+        }
     }
     public ObservableList<Cliente> getAll(String filtro) throws Exception
     {
         ObservableList<Cliente> clientes = FXCollections.observableArrayList();
         
         //Configuramos la URL del Servicio:
-        String rutaServicio = URL_REST;
+        String rutaServicio = URL_REST+"ConsultarCliente";
         URL url = new URL(rutaServicio);
         HttpURLConnection connHttp = (HttpURLConnection)url.openConnection();
         
