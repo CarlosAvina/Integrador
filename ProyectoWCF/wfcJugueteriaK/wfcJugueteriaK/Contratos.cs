@@ -8,70 +8,8 @@ using System.Threading.Tasks;
 
 namespace wfcJugueteriaK
 {
-
     [ServiceContract]
-    public interface ContratoJK
-    {
-
-        //Insert
-        //[OperationContract]
-        //long RegistrarEmpleado(Empleado empleado);
-        //[OperationContract]
-        //long RegistrarCliente(Cliente cliente);
-        //[OperationContract]
-        //long RegistrarProducto(Producto producto);
-        //[OperationContract]
-        //long RegistrarBitacora();
-        //[OperationContract]
-        //bool RegistrarDetalleBitacora(Bitacora bitacora, Producto procuto, int cantidad, float precioCompra);
-        //[OperationContract]
-        //long RegistrarVenta(Empleado empleado, Cliente cliente, FormaPago formaPago);
-        //[OperationContract]
-        //bool RegistrarDetalleVenta(Venta bitacora, Producto procuto, int cantidad, float precio);
-
-        ////View
-        //[OperationContract]
-        //List<Cliente> ConsultarCliente();
-        //[OperationContract]
-        //List<Empleado> ConsultarEmpleado(string filtro);
-        //[OperationContract]
-        //List<Producto> ConsultarProducto(string filtro);
-        //[OperationContract]
-        //List<Bitacora> ConsultarBitacora();
-        //[OperationContract]
-        //List<Venta> ConsultarVenta();
-        //[OperationContract]
-        //List<DetalleBitacora> ConsultarDetalleBitacora();
-        //[OperationContract]
-        //List<DetalleVenta> ConsultarDetalleVenta();
-
-        ////Delete Logico
-        //[OperationContract]
-        //bool EliminarCliente(int id);
-        //[OperationContract]
-        //bool EliminarEmpleado(int id);
-        //[OperationContract]
-        //bool EliminarProducto(int id);
-        //[OperationContract]
-        //bool EliminarBitacora(int id);
-        //[OperationContract]
-        //bool EliminarVenta(int id);
-
-        ////Update
-        //[OperationContract]
-        //bool ActualizarCliente(Cliente cliente);
-        //[OperationContract]
-        //bool ActualizarEmpleado(Empleado empleado);
-        //[OperationContract]
-        //bool ActualizarProducto(Producto producto);
-
-
-        
-
-    }
-
-    [ServiceContract(Namespace = "ISSC311")]
-    public interface ContratoJSJK
+    public interface Contratos
     {
         //[OperationContract]
         //verificador Login(Usuario Usuario);
@@ -81,23 +19,31 @@ namespace wfcJugueteriaK
 
         ////Insert
         //[OperationContract]
+        //[WebInvoke()]
         //long RegistrarEmpleado(Empleado empleado);
+        
         [OperationContract]
-        long RegistrarCliente(Cliente cliente);
+        [WebInvoke(Method ="POST",BodyStyle =WebMessageBodyStyle.Bare,ResponseFormat =WebMessageFormat.Json,RequestFormat =WebMessageFormat.Json)]
+        Cliente RegistrarCliente(Cliente cliente);
         //[OperationContract]
+        //[WebInvoke()]
         //long RegistrarProducto(Producto producto);
         //[OperationContract]
+        //[WebInvoke()]
         //long RegistrarBitacora();
         //[OperationContract]
+        //[WebInvoke()]
         //bool RegistrarDetalleBitacora(Bitacora bitacora, Producto procuto, int cantidad, float precioCompra);
         //[OperationContract]
+        //[WebInvoke()]
         //long RegistrarVenta(Empleado empleado, Cliente cliente, FormaPago formaPago);
         //[OperationContract]
-        //bool RegistrarDetalleVenta(Venta bitacora, Producto procuto, int cantidad, float precio);
+        //[WebInvoke()]
+        //bool RegistrarDetalleVenta(Venta bitacora, Producto producto, int cantidad, float precio);
 
         //View
         [OperationContract]
-        [WebGet(ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.WrappedRequest)]
+        [WebGet(ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare)]
         List<Cliente> ConsultarCliente();
         //[OperationContract]
         //[WebGet()]
@@ -119,9 +65,9 @@ namespace wfcJugueteriaK
         //List<DetalleVenta> ConsultarDetalleVenta();
 
         ////Delete Logico
-        //[OperationContract]
-        //[WebInvoke()]
-        //bool EliminarCliente(int id);
+        [OperationContract]
+        [WebInvoke(Method = "POST", BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
+        void EliminarCliente(Cliente cliente);
         //[OperationContract]
         //[WebInvoke()]
         //bool EliminarEmpleado(int id);
@@ -135,12 +81,15 @@ namespace wfcJugueteriaK
         //[WebInvoke()]
         //bool EliminarVenta(int id);
 
-        ////Update
+        //Update
+        [OperationContract]
+        [WebInvoke(Method = "POST", BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
+        void UpdateCliente(Cliente cliente);
         //[OperationContract]
-        //bool ActualizarCliente(Cliente cliente);
-        //[OperationContract]
+        //[WebInvoke()]
         //bool ActualizarEmpleado(Empleado empleado);
         //[OperationContract]
+        //[WebInvoke()]
         //bool ActualizarProducto(Producto producto);
     }
 
