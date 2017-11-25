@@ -1,0 +1,9 @@
+C:\inetpub\wwwISSC311\wfcJugueteriaK\wfcJugueteriaK\bin\Debug\wfcJugueteriaK.dll.config
+C:\inetpub\wwwISSC311\wfcJugueteriaK\wfcJugueteriaK\bin\Debug\wfcJugueteriaK.dll
+C:\inetpub\wwwISSC311\wfcJugueteriaK\wfcJugueteriaK\bin\Debug\wfcJugueteriaK.pdb
+C:\inetpub\wwwISSC311\wfcJugueteriaK\wfcJugueteriaK\bin\Debug\GZipEncoder.dll
+C:\inetpub\wwwISSC311\wfcJugueteriaK\wfcJugueteriaK\bin\Debug\RNConnection.dll
+C:\inetpub\wwwISSC311\wfcJugueteriaK\wfcJugueteriaK\bin\Debug\RNConnection.pdb
+C:\inetpub\wwwISSC311\wfcJugueteriaK\wfcJugueteriaK\obj\Debug\wfcJugueteriaK.dll
+C:\inetpub\wwwISSC311\wfcJugueteriaK\wfcJugueteriaK\obj\Debug\wfcJugueteriaK.pdb
+C:\inetpub\wwwISSC311\wfcJugueteriaK\wfcJugueteriaK\obj\Debug\wfcJugueteriaK.csprojResolveAssemblyReference.cache
