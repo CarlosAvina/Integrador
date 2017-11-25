@@ -8,6 +8,7 @@ package org.jwonkafx.gui;
 import com.github.sarxos.webcam.Webcam;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
+import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -44,13 +45,12 @@ import org.jwonkafx.model.Marca;
  * @author danie
  */
 public class panel_productos {
-    
     @FXML AnchorPane pnlRoot;
     @FXML JFXTextField txtNombre;
     @FXML JFXTextField txtPrecio;
-    @FXML JFXTextField txtDescripcion;
-    @FXML JFXTextField txtEdadMinima;
-    @FXML JFXTextField txtEdadMaxima;
+    @FXML JFXTextArea txtDescripcion;
+    @FXML JFXComboBox cmbEdadMinima;
+    @FXML JFXComboBox cmbEdadMaxima;
     @FXML JFXComboBox cmbMarca;
     @FXML JFXButton btnGuardar;
     @FXML JFXButton btnConsultar;
@@ -71,6 +71,9 @@ public class panel_productos {
         fxmll = new FXMLLoader(System.class.getResource("/org/jwonkafx/gui/fxml/panel_producto.fxml"));
         fxmll.setController(this);
         fxmll.load();
+        
+        for(int i = 0;i < 100;i++) cmbEdadMinima.getItems().add(i + 1);
+        for(int i = 0;i < 100;i++) cmbEdadMaxima.getItems().add(i + 1);
         
         tblProductos.setItems(FXCollections.observableArrayList());
         TableAdapterProducto.adapt(tblProductos);
@@ -95,19 +98,18 @@ public class panel_productos {
     public void vaciarControles()
     {
         txtNombre.setText("");
-        txtEdadMinima.setText("");
-        txtEdadMaxima.setText("");
         txtDescripcion.setText("");
         txtPrecio.setText("");
         this.imgvFoto.setImage(null);
     }
+    
     public AnchorPane getPanelRoot()
     {
         return pnlRoot;
     }
     
-   public void cargarMarcas()
-   {
+    public void cargarMarcas()
+    {
         ObservableList<Marca> marcas = null;
         
         try
@@ -124,7 +126,7 @@ public class panel_productos {
         {
             e.printStackTrace();
         }
-   }
+    }
     
     public void consultar ()
     {
@@ -152,8 +154,8 @@ public class panel_productos {
             pr.setNombre(txtNombre.getText());
             pr.setDescripcion(txtDescripcion.getText());
             pr.setPrecio(Float.valueOf(txtPrecio.getText()));
-            pr.setEdadMinima(Integer.valueOf(txtEdadMinima.getText()));
-            pr.setEdadMaxima(Integer.valueOf(txtEdadMaxima.getText()));
+            pr.setEdadMinima(Integer.valueOf(cmbEdadMinima.getSelectionModel().getSelectedItem().toString()));
+            pr.setEdadMaxima(Integer.valueOf(cmbEdadMaxima.getSelectionModel().getSelectedItem().toString()));
             
             if(imgvFoto.getImage() != null)
                 pr.setFotografia(WebCamAdapterFX.encodeImageURLSafe(SwingFXUtils.fromFXImage(imgvFoto.getImage(), null)));
@@ -186,56 +188,57 @@ public class panel_productos {
         }
     }
 
-   private void agarrarProducto(Producto pr) throws Exception
-   {
+    private void agarrarProducto(Producto pr) throws Exception
+    {
        txtNombre.setText(pr.getNombre());
        txtDescripcion.setText(pr.getDescripcion());
        txtPrecio.setText(String.valueOf(pr.getPrecio()));
-       txtEdadMinima.setText(String.valueOf(pr.getEdadMinima()));
-       txtEdadMaxima.setText(String.valueOf(pr.getEdadMaxima()));
+       cmbEdadMinima.setValue(String.valueOf(pr.getEdadMinima()));
+       cmbEdadMaxima.setValue(String.valueOf(pr.getEdadMaxima()));
        Integer activo = pr.getActivo();
 
        cmbMarca.setValue(String.valueOf(pr.getMarca().getNombre()));
              
        imgvFoto.setImage(SwingFXUtils.toFXImage(WebCamAdapterFX.decodeImageURLSafe(pr.getFotografia()),null));
-   }
+    }
     
-private void eliminarProducto() throws Exception
-{
-    Producto pr = new Producto();
-     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+    private void eliminarProducto() throws Exception
+    {
+        Producto pr = new Producto();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setHeaderText("Eliminar producto");
-    if(cpr.delete(1)==true)//1 representa el id del producto
-    {
-        alert.setContentText("Producto Eliminado");
-        alert.show();
-        vaciarControles();
-        consultar();
+        
+        if(cpr.delete(1)==true)//1 representa el id del producto
+        {
+            alert.setContentText("Producto Eliminado");
+            alert.show();
+            vaciarControles();
+            consultar();
+        }
+        else
+        {
+            alert.setContentText("No se pudo eliminar");
+            alert.show();
+        }
     }
-    else
-    {
-        alert.setContentText("No se pudo eliminar");
-        alert.show();
-    }
-}
 
- private void cargarImagen() {
-         FileChooser fileChooser = new FileChooser();
+    private void cargarImagen() {
+        FileChooser fileChooser = new FileChooser();
              
-            //Set extension filter
-            FileChooser.ExtensionFilter extFilterJPG = new FileChooser.ExtensionFilter("JPG files (*.jpg)", "*.JPG");
-            FileChooser.ExtensionFilter extFilterPNG = new FileChooser.ExtensionFilter("PNG files (*.png)", "*.PNG");
-            fileChooser.getExtensionFilters().addAll(extFilterJPG, extFilterPNG);
-              
-            //Show open file dialog
-            File file = fileChooser.showOpenDialog(null);
-                       
-            try {
-                BufferedImage bufferedImage = ImageIO.read(file);
-                Image image = SwingFXUtils.toFXImage(bufferedImage, null);
-                imgvFoto.setImage(image);   //<--------- un control de imageview
-            } catch (IOException ex) {
-                Logger.getLogger(panel_productos.class.getName()).log(Level.SEVERE, null, ex);
-            }
+        //Set extension filter
+        FileChooser.ExtensionFilter extFilterJPG = new FileChooser.ExtensionFilter("JPG files (*.jpg)", "*.JPG");
+        FileChooser.ExtensionFilter extFilterPNG = new FileChooser.ExtensionFilter("PNG files (*.png)", "*.PNG");
+        fileChooser.getExtensionFilters().addAll(extFilterJPG, extFilterPNG);
+
+        //Show open file dialog
+        File file = fileChooser.showOpenDialog(null);
+
+        try {
+            BufferedImage bufferedImage = ImageIO.read(file);
+            Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+            imgvFoto.setImage(image);   //<--------- un control de imageview
+        } catch (IOException ex) {
+            Logger.getLogger(panel_productos.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }

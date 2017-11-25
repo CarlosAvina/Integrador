@@ -5,6 +5,9 @@
  */
 package org.jwonkafx.gui;
 
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXComboBox;
+import com.jfoenix.controls.JFXTextField;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.FXCollections;
@@ -40,24 +43,24 @@ import org.jwonkafx.model.Venta;
  */
 public class panel_ventas {
     @FXML AnchorPane pnlRoot;
-    @FXML TextField txtIdEmpleado;
-    @FXML TextField txtIdCliente;
-    @FXML TextField txtProducto;
-    @FXML TextField txtCantidad;
-    @FXML TextField txtIdVenta;
-    @FXML ComboBox cmbFormaPago;
+    //@FXML JFXTextField txtIdEmpleado;
+    //@FXML JFXTextField txtIdCliente;
+    @FXML JFXTextField txtProducto;
+    @FXML JFXTextField txtCantidad;
+    @FXML JFXComboBox cmbEmpleado;
+    @FXML JFXComboBox cmbCliente;
+    @FXML JFXComboBox cmbFormaPago;
     @FXML TableView tblProductos;
     @FXML TableView tblDetalleVenta;
     @FXML TableView tblVerVenta;
     @FXML TableView tblVerDetalleVenta;
     @FXML Label lblProducto;
     @FXML Label lblPrecio;
-    @FXML Button btnAgregar;
-    @FXML Button btnMenos;
-    @FXML Button btnMas;
-    @FXML Button btnVenta;
-    @FXML Button btnEliminar;
-    @FXML Button btnActualizar;
+    @FXML JFXButton btnAgregar;
+    @FXML JFXButton btnMenos;
+    @FXML JFXButton btnMas;
+    @FXML JFXButton btnVenta;
+    @FXML JFXButton btnActualizar;
     @FXML ImageView imgFoto;
     
     FXMLLoader fxmll;
@@ -125,8 +128,7 @@ public class panel_ventas {
         });
         
         tblVerVenta.setOnMouseClicked(evt->{try {
-            getIdVenta((Venta) tblVerVenta.getSelectionModel().selectedItemProperty().getValue());
-            getDetalleVenta();
+            getDetalleVenta((Venta)tblVerVenta.getSelectionModel().selectedItemProperty().getValue());
             } catch (Exception ex) {
                 Logger.getLogger(panel_clientes.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -206,8 +208,6 @@ public class panel_ventas {
                     lblPrecio.setText(String.valueOf(cantidadProducto * precio));
                 }
                 break;
-            default:
-                break;
         }
     }
     
@@ -266,8 +266,8 @@ public class panel_ventas {
         
         try
         {
-            cliente.setId(Integer.valueOf(txtIdCliente.getText()));
-            empleado.setId(Integer.valueOf(txtIdEmpleado.getText()));
+            //cliente.setId(Integer.valueOf(txtIdCliente.getText()));
+            //empleado.setId(Integer.valueOf(txtIdEmpleado.getText()));
             formaPago.setId(getIdFormaPago());
         
             v.setCliente(cliente);
@@ -312,21 +312,16 @@ public class panel_ventas {
         }
     }
     
-    public void getIdVenta(Venta v) throws Exception
-    {
-        txtIdVenta.setText(String.valueOf(v.getId()));
-    }
-    
     public void eliminarVenta(int idVenta) throws Exception
     {
         cv.deleteVenta(idVenta);
         getVenta();
     }
     
-    public void getDetalleVenta() throws Exception
+    public void getDetalleVenta(Venta venta) throws Exception
     {
         ObservableList<DetalleVenta> list;
-        list = cv.getDetalleVenta(Integer.valueOf(txtIdVenta.getText()));
+        list = cv.getDetalleVenta(venta.getId());
         tblVerDetalleVenta.setItems(list);
     }
 }

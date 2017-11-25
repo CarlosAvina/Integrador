@@ -14,7 +14,6 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
 <AnchorPane fx:id="pnlRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #FFFFFF;" tabClosingPolicy="UNAVAILABLE">
@@ -42,14 +41,12 @@
                            </rowConstraints>
                            <children>
                               <JFXButton fx:id="btnMenos" alignment="CENTER" prefHeight="31.0" prefWidth="50.0" style="-fx-background-color: #F3F2F0;" text="-" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                              <JFXComboBox fx:id="cmbVentaEmpleado" prefHeight="33.0" prefWidth="185.0" promptText="Empleado" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                              <JFXComboBox fx:id="cmbVentaCliente" prefHeight="33.0" prefWidth="170.0" promptText="Cliente" GridPane.columnIndex="1" />
+                              <JFXComboBox fx:id="cmbEmpleado" prefHeight="33.0" prefWidth="185.0" promptText="Empleado" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <JFXComboBox fx:id="cmbCliente" prefHeight="33.0" prefWidth="170.0" promptText="Cliente" GridPane.columnIndex="1" />
                               <JFXComboBox fx:id="cmbFormaPago" prefHeight="33.0" prefWidth="174.0" promptText="Forma de Pago" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
                               <JFXTextField fx:id="txtProducto" prefHeight="31.0" prefWidth="196.0" text="Busqueda Producto" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                              <JFXTextField fx:id="txtVentaaProducto" prefHeight="31.0" prefWidth="196.0" text="Producto" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                              <JFXTextField fx:id="txtVentaPrecio" prefHeight="31.0" prefWidth="160.0" text="\$" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                               <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="21.0" prefWidth="176.0" text="Cantidad:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                              <JFXTextField fx:id="txtVentaCant" prefHeight="31.0" prefWidth="196.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <JFXTextField fx:id="txtCantidad" prefHeight="31.0" prefWidth="196.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                               <JFXButton fx:id="btnMas" alignment="CENTER" prefHeight="31.0" prefWidth="50.0" style="-fx-background-color: #F3F2F0;" text="+" GridPane.columnIndex="5" GridPane.rowIndex="2" />
                               <JFXButton fx:id="btnVenta" alignment="CENTER" prefHeight="31.0" prefWidth="87.0" style="-fx-background-color: #F3F2F0;" text="Realizar" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="5" />
                               <TableView fx:id="tblProductos" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="2" GridPane.rowSpan="2">
@@ -65,6 +62,8 @@
                                  </columns>
                               </TableView>
                               <JFXButton fx:id="btnAgregar" alignment="TOP_CENTER" text="Agregar" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                              <Label fx:id="lblProducto" text="PRODUCTO:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Label fx:id="lblPrecio" text="\$00.00" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                      </children>

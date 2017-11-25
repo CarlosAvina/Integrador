@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="JugueteriaWonkaREST.jnlp">
+  <information>
+    <title>JugueteriaWonkaREST</title>
+    <vendor>Carlos Aviña</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="JugueteriaWonkaREST.jar" size="232487" download="eager" />
+    <jar href="lib\bridj-0.6.2.jar" size="878674" download="eager" />
+    <jar href="lib\commons-beanutils-1.9.3.jar" size="246174" download="eager" />
+    <jar href="lib\commons-collections-3.2.2.jar" size="588337" download="eager" />
+    <jar href="lib\commons-lang-2.6.jar" size="284220" download="eager" />
+    <jar href="lib\commons-logging-1.2.jar" size="61829" download="eager" />
+    <jar href="lib\ezmorph-1.0.6.jar" size="86487" download="eager" />
+    <jar href="lib\flexjson-2.1.jar" size="81151" download="eager" />
+    <jar href="lib\jfoenix.jar" size="2414497" download="eager" />
+    <jar href="lib\json-lib-2.4-jdk15.jar" size="159123" download="eager" />
+    <jar href="lib\jwebcam8.jar" size="29673" download="eager" />
+    <jar href="lib\slf4j-api-1.7.2.jar" size="26083" download="eager" />
+    <jar href="lib\sqljdbc41.jar" size="586192" download="eager" />
+    <jar href="lib\webcam-capture-0.3.10.jar" size="409084" download="eager" />
+    <jar href="lib\xom-1.2.8.jar" size="313283" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="JugueteriaWonkaREST" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="org.jwonkafx.gui.WindowMain"  name="JugueteriaWonkaREST" />
+  <update check="always"/>
+</jnlp>

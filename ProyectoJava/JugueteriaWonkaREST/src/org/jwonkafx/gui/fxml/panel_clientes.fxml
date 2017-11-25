@@ -24,7 +24,7 @@
          <tabs>
             <Tab text="Registrar">
                <content>
-                  <FlowPane alignment="CENTER" prefHeight="568.0" prefWidth="900.0">
+                  <FlowPane fx:id="flowpane" alignment="CENTER" prefHeight="568.0" prefWidth="900.0">
                      <children>
                         <GridPane prefHeight="490.0" prefWidth="777.0">
                            <columnConstraints>
@@ -44,67 +44,68 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <JFXTextField fx:id="txtNombre" promptText="Nombre">
+                              <JFXTextField fx:id="txtNombre" labelFloat="true" promptText="Nombre">
                                  <GridPane.margin>
                                     <Insets left="4.0" right="4.0" />
                                  </GridPane.margin>
                               </JFXTextField>
-                              <JFXTextField fx:id="txtApellidoPaterno" promptText="Apellido Paterno" GridPane.columnIndex="1">
+                              <JFXTextField fx:id="txtApellidoPaterno" labelFloat="true" promptText="Apellido Paterno" GridPane.columnIndex="1">
                                  <GridPane.margin>
                                     <Insets left="4.0" right="4.0" />
                                  </GridPane.margin>
                               </JFXTextField>
-                              <JFXTextField fx:id="txtApellidoMaterno" promptText="Apellido Materno" GridPane.columnIndex="2">
+                              <JFXTextField fx:id="txtApellidoMaterno" labelFloat="true" promptText="Apellido Materno" GridPane.columnIndex="2">
                                  <GridPane.margin>
                                     <Insets left="4.0" right="4.0" />
                                  </GridPane.margin>
                               </JFXTextField>
-                              <JFXTextField fx:id="txtRfc" promptText="RFC" GridPane.rowIndex="1">
+                              <JFXTextField fx:id="txtRfc" labelFloat="true" promptText="RFC" GridPane.rowIndex="1">
                                  <GridPane.margin>
                                     <Insets left="4.0" right="4.0" />
                                  </GridPane.margin>
                               </JFXTextField>
-                              <JFXTextField fx:id="txtCurp" promptText="CURP" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <JFXTextField fx:id="txtCurp" labelFloat="true" promptText="CURP" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <GridPane.margin>
                                     <Insets left="4.0" right="4.0" />
                                  </GridPane.margin>
                               </JFXTextField>
-                              <JFXTextField fx:id="txtCp" promptText="CP" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                              <JFXTextField fx:id="txtCodigoPostal" labelFloat="true" promptText="CP" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                  <GridPane.margin>
                                     <Insets left="4.0" right="4.0" />
                                  </GridPane.margin>
                               </JFXTextField>
-                              <JFXTextField fx:id="txtDomicilio" promptText="Domicilio" GridPane.columnSpan="3" GridPane.rowIndex="2">
+                              <JFXTextField fx:id="txtDomicilio" labelFloat="true" promptText="Domicilio" GridPane.columnSpan="3" GridPane.rowIndex="2">
                                  <GridPane.margin>
                                     <Insets left="4.0" right="4.0" />
                                  </GridPane.margin>
                               </JFXTextField>
-                              <JFXTextField fx:id="txtEmail" promptText="Email" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                              <JFXTextField fx:id="txtEmail" labelFloat="true" promptText="Email" GridPane.columnSpan="2" GridPane.rowIndex="3">
                                  <GridPane.margin>
                                     <Insets left="4.0" right="4.0" />
                                  </GridPane.margin>
                               </JFXTextField>
-                              <JFXTextField fx:id="txtTelefono" promptText="Teléfono" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                              <JFXTextField fx:id="txtTelefono" labelFloat="true" promptText="Teléfono" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3">
                                  <GridPane.margin>
                                     <Insets left="4.0" right="4.0" />
                                  </GridPane.margin>
                               </JFXTextField>
-                              <JFXComboBox fx:id="cmbGenero" prefHeight="27.0" prefWidth="190.0" promptText="Género" GridPane.columnIndex="3" />
+                              <JFXComboBox fx:id="cmbGenero" labelFloat="true" prefHeight="27.0" prefWidth="190.0" promptText="Género" GridPane.columnIndex="3" />
                               <JFXCheckBox fx:id="chbActivo" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="81.0" text="Activo" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                              <JFXComboBox fx:id="cmbCamara" prefHeight="27.0" prefWidth="148.0" promptText="Cámara" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <JFXComboBox fx:id="cmbCamarasWeb" prefHeight="27.0" prefWidth="148.0" promptText="Cámara" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                               <JFXButton fx:id="btnIniciarCamaraWeb" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #F3F2F0;" text="Iniciar cámara" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                               <JFXButton fx:id="btnTomarFoto" prefHeight="30.0" prefWidth="120.0" ripplerFill="WHITE" style="-fx-background-color: #83D6DE;" text="Tomar foto" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                  <font>
                                     <Font name="Open Sans SemiBold" size="14.0" />
                                  </font>
                               </JFXButton>
-                              <JFXButton fx:id="btnGuardar" prefHeight="30.0" prefWidth="120.0" ripplerFill="WHITE" style="-fx-background-color: #00F000;" text="Registrar" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                              <JFXButton fx:id="btnGuardar" prefHeight="30.0" prefWidth="120.0" ripplerFill="WHITE" style="-fx-background-color: #00F000;" text="Guardar" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="4">
                                  <font>
                                     <Font name="Open Sans SemiBold" size="14.0" />
                                  </font>
                               </JFXButton>
                               <ImageView fx:id="imgvFoto" fitHeight="180.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5" />
                               <JFXDatePicker fx:id="dpkFechaNacimiento" promptText="Fecha de nacimiento" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <JFXButton fx:id="btnEliminar" disable="true" style="-fx-background-color: red;" text="Eliminar" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="5" />
                            </children>
                         </GridPane>
                      </children>

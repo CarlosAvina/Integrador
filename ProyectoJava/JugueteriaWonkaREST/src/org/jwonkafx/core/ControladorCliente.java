@@ -30,7 +30,9 @@ public class ControladorCliente
 {
     
     //private static final String URL_REST = "http://192.168.1.102/jwonka/api/RestCliente";
-    private static final String URL_REST="http://localhost:83/wcfServiciosJK/Servicio.svc/";
+    //private static final String URL_REST="http://localhost:83/wcfServiciosJK/Servicio.svc/";
+    private static final String URL_REST="http://192.168.1.84:83/wcfServiciosJK/Servicio.svc/";
+    
     public int insert(Cliente c) throws Exception
     {
         //Configuramos la URL del Servicio
