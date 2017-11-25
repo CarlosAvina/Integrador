@@ -85,7 +85,7 @@ public class panel_ventas {
     
     public void inicializar() throws Exception
     {
-        fxmll = new FXMLLoader(System.class.getResource("/org/jwonkafx/gui/fxml/panel_ventas.fxml"));
+        fxmll = new FXMLLoader(System.class.getResource("/org/jwonkafx/gui/fxml/panel_venta.fxml"));
         fxmll.setController(this);
         fxmll.load();
         
@@ -154,12 +154,12 @@ public class panel_ventas {
             }
         });
         
-        btnEliminar.setOnAction(evt -> { try {
-            eliminarVenta(Integer.valueOf(txtIdVenta.getText()));
-            } catch (Exception ex) {
-                Logger.getLogger(panel_ventas.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        });
+//        btnEliminar.setOnAction(evt -> { try {
+//            eliminarVenta(Integer.valueOf(txtIdVenta.getText()));
+//            } catch (Exception ex) {
+//                Logger.getLogger(panel_ventas.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//        });
         
         tblDetalleVenta.setOnMouseClicked(evt -> { 
             if(evt.getClickCount() == 2)

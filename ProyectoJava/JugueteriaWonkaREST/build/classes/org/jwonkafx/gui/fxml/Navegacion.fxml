@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="194.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="117.0" prefWidth="194.0">
+         <children>
+            <GridPane prefHeight="117.0" prefWidth="194.0" style="-fx-background-color: #032C5B;">
+               <children>
+                  <Label text="KAD'S" textFill="WHITE" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Open Sans SemiBold" size="15.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="txtCorreo" text="correo@correo.com" textFill="WHITE" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Open Sans Light" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="8.0" left="10.0" />
+                     </GridPane.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <ImageView fitHeight="78.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="78.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="36.0" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="29.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnPanelClientes" accessibleText="Clientes" prefHeight="41.0" prefWidth="202.0" text="Clientes" />
+      <JFXButton fx:id="btnPanelEmpleados" accessibleText="Empleados" prefHeight="41.0" prefWidth="202.0" text="Empleados" />
+      <JFXButton fx:id="btnPanelVentas" accessibleText="Ventas" prefHeight="41.0" prefWidth="202.0" text="Ventas" />
+      <JFXButton fx:id="btnPanelCompras" accessibleText="Compras" prefHeight="41.0" prefWidth="202.0" text="Compras" />
+      <JFXButton fx:id="btnPanelProductos" accessibleText="Productos" prefHeight="41.0" prefWidth="202.0" text="Productos" />
+      <JFXButton fx:id="btnSalir" prefHeight="41.0" prefWidth="202.0" style="-fx-background-color: #FF6766;" text="Salir" />
+   </children>
+</VBox>

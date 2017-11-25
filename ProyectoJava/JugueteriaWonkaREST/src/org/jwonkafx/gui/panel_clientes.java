@@ -5,6 +5,11 @@
  */
 package org.jwonkafx.gui;
 import com.github.sarxos.webcam.Webcam;
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXCheckBox;
+import com.jfoenix.controls.JFXComboBox;
+import com.jfoenix.controls.JFXDatePicker;
+import com.jfoenix.controls.JFXTextField;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.logging.Level;
@@ -30,32 +35,29 @@ import org.jwonkafx.model.Persona;
  */
 public class panel_clientes{
     @FXML AnchorPane pnlRoot;
-    @FXML TextField txtNombre;
-    @FXML TextField txtApellidoPaterno;
-    @FXML TextField txtApellidoMaterno;
-    @FXML TextField txtIdCliente;
-    @FXML TextField txtIdPersona;
-    @FXML TextField txtRfc;
-    @FXML TextField txtCurp;
-    @FXML TextField txtDomicilio;
-    @FXML TextField txtCodigoPostal;
-    @FXML TextField txtFiltro;
-    @FXML TextField txtEmail;
-    @FXML TextField txtTelefono;
-    @FXML DatePicker dpkFechaNacimiento;
-    @FXML ComboBox cmbGenero;
-    @FXML ComboBox cmbCamarasWeb;
-    @FXML Button btnCrearNuevo;
-    @FXML Button btnGuardar;
-    @FXML Button btnEliminar;
-    @FXML Button btnConsultar;
-    @FXML Button btnTomarFoto;
-    @FXML Button btnIniciarCamaraWeb;
-    @FXML Button btnBuscarCliente;
+    @FXML JFXTextField txtNombre;
+    @FXML JFXTextField txtApellidoPaterno;
+    @FXML JFXTextField txtApellidoMaterno;
+    @FXML JFXTextField txtRfc;
+    @FXML JFXTextField txtCurp;
+    @FXML JFXTextField txtDomicilio;
+    @FXML JFXTextField txtCodigoPostal;
+    @FXML JFXTextField txtFiltro;
+    @FXML JFXTextField txtEmail;
+    @FXML JFXTextField txtTelefono;
+    @FXML JFXDatePicker dpkFechaNacimiento;
+    @FXML JFXComboBox cmbGenero;
+    @FXML JFXComboBox cmbCamarasWeb;
+    @FXML JFXButton btnGuardar;
+    @FXML JFXButton btnEliminar;
+    @FXML JFXButton btnConsultar;
+    @FXML JFXButton btnTomarFoto;
+    @FXML JFXButton btnIniciarCamaraWeb;
+    @FXML JFXButton btnBuscarCliente;
     @FXML TableView<Cliente> tblClientes;
     @FXML ImageView imgvCamaraWeb;
     @FXML ImageView imgvFoto;
-    @FXML CheckBox chbActivo;
+    @FXML JFXCheckBox chbActivo;
     
     FXMLLoader fxmll;
     WebCamAdapterFX webcamfx;
@@ -75,18 +77,20 @@ public class panel_clientes{
         tblClientes.setItems(FXCollections.observableArrayList());
         TableAdapterCliente.adapt(tblClientes);
         
-        btnCrearNuevo.setOnAction(evt -> { vaciarTextos(); });
         btnConsultar.setOnAction(evt ->{ consultar(""); });
-        btnGuardar.setOnAction(evt -> { guardarCliente(); });
-        btnIniciarCamaraWeb.setOnAction(evt -> { iniciarCamaraWeb(); });
-        btnTomarFoto.setOnAction(evt -> { tomarFoto(); });
+        btnGuardar.setOnAction(evt -> { 
+            guardarCliente();
+            vaciarTextos();
+        });
+        //btnIniciarCamaraWeb.setOnAction(evt -> { iniciarCamaraWeb(); });
+        //btnTomarFoto.setOnAction(evt -> { tomarFoto(); });
         tblClientes.setOnMouseClicked(evt->{try {
             agarraPersona(tblClientes.getSelectionModel().selectedItemProperty().getValue());
             } catch (Exception ex) {
                 Logger.getLogger(panel_clientes.class.getName()).log(Level.SEVERE, null, ex);
             }
-});
-        consultarWebCams();
+        });
+        //consultarWebCams();
     }
     
     public AnchorPane getPanelRoot()
@@ -127,7 +131,7 @@ public class panel_clientes{
     private void iniciarCamaraWeb()
     {
         if(webcamfx == null)
-            webcamfx = new WebCamAdapterFX(imgvCamaraWeb);
+            webcamfx = new WebCamAdapterFX(imgvFoto);
         if(webcamfx.isStarted())
             webcamfx.stop();
         if(cmbCamarasWeb.getSelectionModel().getSelectedItem()!= null)
@@ -157,24 +161,13 @@ public class panel_clientes{
         else
             p.setFotografia("");
         
-        if (!txtIdPersona.getText().trim().isEmpty()){ 
-            p.setId(Integer.valueOf(txtIdPersona.getText())); 
-        }
-            c.setActivo((chbActivo.isSelected()?1:0));
-            c.setEmail(txtEmail.getText());
-            c.setPersona(p);
-            c.setTelefono(txtTelefono.getText());
-            
-        if(!txtIdCliente.getText().trim().isEmpty()){
-            c.setId(Integer.valueOf(txtIdCliente.getText()));
-        }
         
-        if(c.getId() > 0 && c.getPersona().getId() > 0){
-            cc.update(c);
-        }
-        else{
-            cc.insert(c);             
-        }
+        c.setActivo((chbActivo.isSelected()?1:0));
+        c.setEmail(txtEmail.getText());
+        c.setPersona(p);
+        c.setTelefono(txtTelefono.getText());
+            
+        cc.insert(c);
         
         alert.setContentText("Usuarior registrado");
         alert.show();
@@ -189,8 +182,6 @@ public class panel_clientes{
     
     private void agarraPersona(Cliente c) throws Exception
     {
-       txtIdCliente.setText(String.valueOf(c.getId()));
-       txtIdPersona.setText(String.valueOf(c.getPersona().getId()));
        txtNombre.setText(c.getPersona().getNombre());
        txtApellidoPaterno.setText(c.getPersona().getApellidoPaterno());
        txtApellidoMaterno.setText(c.getPersona().getApellidoMaterno());
@@ -221,8 +212,6 @@ public class panel_clientes{
         txtNombre.setText("");
         txtApellidoPaterno.setText("");
         txtApellidoMaterno.setText("");
-        txtIdCliente.setText("");
-        txtIdPersona.setText("");
         txtRfc.setText("");
         txtCurp.setText("");
         txtDomicilio.setText("");

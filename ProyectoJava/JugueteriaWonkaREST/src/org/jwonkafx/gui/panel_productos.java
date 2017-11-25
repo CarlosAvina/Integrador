@@ -6,6 +6,9 @@
 package org.jwonkafx.gui;
 
 import com.github.sarxos.webcam.Webcam;
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXComboBox;
+import com.jfoenix.controls.JFXTextField;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -43,35 +46,29 @@ import org.jwonkafx.model.Marca;
 public class panel_productos {
     
     @FXML AnchorPane pnlRoot;
-    @FXML TextField txtNombre;
-     @FXML TextField txtIdProducto;
-    @FXML TextField txtPrecio;
-    @FXML TextField txtDescripcion;
-    @FXML TextField txtEdadMinima;
-    @FXML TextField txtEdadMaxima;
-    @FXML ComboBox cmbMarca;
-    @FXML Button btnCrearNuevo;
-    @FXML Button btnGuardar;
-    @FXML Button btnEliminar;
-    @FXML Button btnConsultar;
-    @FXML Button btnLoad;
+    @FXML JFXTextField txtNombre;
+    @FXML JFXTextField txtPrecio;
+    @FXML JFXTextField txtDescripcion;
+    @FXML JFXTextField txtEdadMinima;
+    @FXML JFXTextField txtEdadMaxima;
+    @FXML JFXComboBox cmbMarca;
+    @FXML JFXButton btnGuardar;
+    @FXML JFXButton btnConsultar;
+    @FXML JFXButton btnLoad;
     @FXML TableView<Producto> tblProductos;
-    @FXML ImageView imgvCamaraWeb;
     @FXML ImageView imgvFoto;
     
     FXMLLoader fxmll;
     ControladorProducto cpr;
     
-    
-    
-    
     public panel_productos() 
     {        
-        cpr=new ControladorProducto();
+        cpr = new ControladorProducto();
     }
+    
     public void inicializar() throws Exception
     {
-        fxmll = new FXMLLoader(System.class.getResource("/org/jwonkafx/gui/fxml/panel_productos.fxml"));
+        fxmll = new FXMLLoader(System.class.getResource("/org/jwonkafx/gui/fxml/panel_producto.fxml"));
         fxmll.setController(this);
         fxmll.load();
         
@@ -80,14 +77,13 @@ public class panel_productos {
         
         btnConsultar.setOnAction(evt ->{ consultar();});
         btnGuardar.setOnAction(evt -> {guardarProducto();});
-        btnEliminar.setOnAction(evt->{try {
-            eliminarProducto();
-            } catch (Exception ex) {
-                Logger.getLogger(panel_productos.class.getName()).log(Level.SEVERE, null, ex);
-            }
-});
+//        btnEliminar.setOnAction(evt->{try {
+//            eliminarProducto();
+//            } catch (Exception ex) {
+//                Logger.getLogger(panel_productos.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//        });
         btnLoad.setOnAction(evt->{cargarImagen();});
-        btnCrearNuevo.setOnAction(evt->{vaciarControles();});
         tblProductos.setOnMouseClicked(evt->{try {
             agarrarProducto(tblProductos.getSelectionModel().selectedItemProperty().getValue());
             } catch (Exception ex) {
@@ -98,7 +94,6 @@ public class panel_productos {
     }
     public void vaciarControles()
     {
-        txtIdProducto.setText("");
         txtNombre.setText("");
         txtEdadMinima.setText("");
         txtEdadMaxima.setText("");
@@ -154,35 +149,34 @@ public class panel_productos {
         alert.setHeaderText("Guardar producto");
         
         try{
-             pr.setNombre(txtNombre.getText());
-        pr.setDescripcion(txtDescripcion.getText());
-        pr.setPrecio(Float.valueOf(txtPrecio.getText()));
-        pr.setEdadMinima(Integer.valueOf(txtEdadMinima.getText()));
-        pr.setEdadMaxima(Integer.valueOf(txtEdadMaxima.getText()));
-        if(imgvFoto.getImage() != null)
-            pr.setFotografia(WebCamAdapterFX.encodeImageURLSafe(SwingFXUtils.fromFXImage(imgvFoto.getImage(), null)));
-        else
-            pr.setFotografia("");
-        if (!txtIdProducto.getText().trim().isEmpty()){ 
-            pr.setId(Integer.valueOf(txtIdProducto.getText())); 
-        }
+            pr.setNombre(txtNombre.getText());
+            pr.setDescripcion(txtDescripcion.getText());
+            pr.setPrecio(Float.valueOf(txtPrecio.getText()));
+            pr.setEdadMinima(Integer.valueOf(txtEdadMinima.getText()));
+            pr.setEdadMaxima(Integer.valueOf(txtEdadMaxima.getText()));
+            
+            if(imgvFoto.getImage() != null)
+                pr.setFotografia(WebCamAdapterFX.encodeImageURLSafe(SwingFXUtils.fromFXImage(imgvFoto.getImage(), null)));
+            else
+                pr.setFotografia("");
 
             m.setId(Integer.valueOf(cmbMarca.getSelectionModel().getSelectedIndex())+1);
             pr.setMarca(m);
-        if(pr.getId()>0&&pr.getMarca().getId()>0){
-            cpr.update(pr);
-            consultar();
-        }
-        else{
-            cpr.insert(pr); 
             
-          vaciarControles();
-          consultar();
-consultar();            
-        }
+            if(pr.getId()>0&&pr.getMarca().getId()>0){
+                cpr.update(pr);
+                consultar();
+            }
+            else{
+                cpr.insert(pr); 
+            
+                vaciarControles();
+                consultar();
+                consultar();            
+            }
         
-        alert.setContentText("Producto Registrado registrado");
-        alert.show();
+            alert.setContentText("Producto Registrado registrado");
+            alert.show();
         }
         catch (Exception ex)
         {
@@ -194,7 +188,6 @@ consultar();
 
    private void agarrarProducto(Producto pr) throws Exception
    {
-       txtIdProducto.setText(String.valueOf(pr.getId()));
        txtNombre.setText(pr.getNombre());
        txtDescripcion.setText(pr.getDescripcion());
        txtPrecio.setText(String.valueOf(pr.getPrecio()));
@@ -212,7 +205,7 @@ private void eliminarProducto() throws Exception
     Producto pr = new Producto();
      Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setHeaderText("Eliminar producto");
-    if(cpr.delete(Integer.valueOf(txtIdProducto.getText()))==true)
+    if(cpr.delete(1)==true)//1 representa el id del producto
     {
         alert.setContentText("Producto Eliminado");
         alert.show();

@@ -6,6 +6,11 @@
 package org.jwonkafx.gui;
 
 import com.github.sarxos.webcam.Webcam;
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXCheckBox;
+import com.jfoenix.controls.JFXComboBox;
+import com.jfoenix.controls.JFXDatePicker;
+import com.jfoenix.controls.JFXTextField;
 import static java.lang.String.valueOf;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -41,43 +46,38 @@ import org.jwonkafx.model.Usuario;
  * @author karla
  */
 public class panel_empleados {
-     @FXML TextField txtIdEmpleado;
-    @FXML TextField txtIdPersona;
-    @FXML TextField txtNombre;
-    @FXML TextField txtApellidoPaterno;
-    @FXML TextField txtApellidoMaterno;
-    @FXML TextField txtRfc;
-    @FXML TextField txtCurp;
-    @FXML TextField txtDomicilio;
-    @FXML TextField txtCodigoPostal;
-    @FXML TextField txtSalario;
-    @FXML TextField txtCodigoEmpleado;
-    @FXML TextField txtUsuario;
-    @FXML TextField txtContrasenna;
-    @FXML TextField txtIdUsuario;
-    @FXML TextField txtFiltro;
-    @FXML ComboBox cmbGenero;
-    @FXML ComboBox cmbRoles;
-    @FXML ComboBox cmbCamarasWeb;
-    @FXML DatePicker dpkFechaNacimiento;
-    @FXML DatePicker dpkIngreso;
-    @FXML CheckBox chbActivoUs;
-    @FXML Button btnTomarFoto;
-    @FXML Button btnCrearNuevo;
-    @FXML Button btnGuardar;
-    @FXML Button btnEliminar;
-    @FXML Button btnConsultar;
-    @FXML Button btnIniciarCamaraWeb;
-    @FXML Button btnBuscarEmpleado;
-    @FXML ImageView imgvCamaraWeb;
+    @FXML AnchorPane pnlRoot;
+    @FXML JFXTextField txtNombre;
+    @FXML JFXTextField txtApellidoPaterno;
+    @FXML JFXTextField txtApellidoMaterno;
+    @FXML JFXTextField txtRfc;
+    @FXML JFXTextField txtCurp;
+    @FXML JFXTextField txtDomicilio;
+    @FXML JFXTextField txtCodigoPostal;
+    @FXML JFXTextField txtSalario;
+    @FXML JFXTextField txtCodigoEmpleado;
+    @FXML JFXTextField txtUsuario;
+    @FXML JFXTextField txtContrasenna;
+    @FXML JFXComboBox cmbGenero;
+    @FXML JFXComboBox cmbRoles;
+    @FXML JFXComboBox cmbCamarasWeb;
+    @FXML JFXDatePicker dpkFechaNacimiento;
+    @FXML JFXCheckBox chbActivo;
+    @FXML JFXButton btnTomarFoto;
+    @FXML JFXButton btnCrearNuevo;
+    @FXML JFXButton btnGuardar;
+    @FXML JFXButton btnEliminar;
+    @FXML JFXButton btnConsultar;
+    @FXML JFXButton btnIniciarCamaraWeb;
+    @FXML JFXButton btnBuscarEmpleado;
     @FXML ImageView imgvFoto;
     @FXML TableView<Empleado> tblEmpleados;
-    @FXML AnchorPane pnlRoot;
     FXMLLoader fxmll;
     
     ControladorEmpleado ce;
     WebCamAdapterFX webcamfx;
     WebCams wc;
+    
     public panel_empleados()
     {
         ce = new ControladorEmpleado();
@@ -86,66 +86,44 @@ public class panel_empleados {
     }
     public void inicializar()throws Exception
     {
-        fxmll = new FXMLLoader(System.class.getResource("/org/jwonkafx/gui/fxml/panel_empleados.fxml"));
+        fxmll = new FXMLLoader(System.class.getResource("/org/jwonkafx/gui/fxml/panel_empleado.fxml"));
         fxmll.setController(this);
         fxmll.load();
         tblEmpleados.setItems(FXCollections.observableArrayList());
-        FechasAdaptador.adaptar(dpkFechaNacimiento, "dd/MM/yyyy");
-        FechasAdaptador.adaptar(dpkIngreso, "dd/MM/yyyy");
+        //FechasAdaptador.adaptar(dpkFechaNacimiento, "dd/MM/yyyy");
+        //FechasAdaptador.adaptar(dpkIngreso, "dd/MM/yyyy");
         TableAdapterEmpleado.adapt(tblEmpleados);
         btnConsultar.setOnAction((ActionEvent evt)->
         {
             consultar("");
-             
-        
-        
         });
         this.tblEmpleados.setOnMouseClicked(evt-> {
             Empleado empleado=new Empleado();
             empleado= tblEmpleados.getSelectionModel().selectedItemProperty().getValue();
             llenar(empleado);
         });
-         btnEliminar.setOnAction((ActionEvent evt)->
-    {
-        try
-        {
-            eliminar();
-        }
-        catch (Exception ex)
-        {
-            ex.printStackTrace();
-        }
-    });
 
-        btnBuscarEmpleado.setOnAction((ActionEvent evt)->
-        {
-            consultar(txtFiltro.getText());
-        });
-        btnGuardar.setOnAction((ActionEvent evt)->
-        {
-            insertar();
-        });
+//        btnGuardar.setOnAction(evt ->
+//        {
+//            insertar();
+//        });
         
-btnIniciarCamaraWeb.setOnAction(evt-> {
-    wc.iniciarWebCam(this.imgvCamaraWeb, cmbCamarasWeb.getSelectionModel().getSelectedItem().toString());
-});
-
-    btnTomarFoto.setOnAction(evt-> {wc.tomarFoto(imgvFoto);});
-    cmbCamarasWeb.setItems(wc.consultarWebCams());
+//        btnIniciarCamaraWeb.setOnAction(evt-> {
+//            wc.iniciarWebCam(this.imgvCamaraWeb, cmbCamarasWeb.getSelectionModel().getSelectedItem().toString());
+//        });
+//
+//        btnTomarFoto.setOnAction(evt-> {wc.tomarFoto(imgvFoto);});
+//        cmbCamarasWeb.setItems(wc.consultarWebCams());
     }
     private void llenar(Empleado empleado){
     try{
-    if(empleado.getId()== 0 && empleado.getPersona().getId()==0){
-     this.txtIdEmpleado.setText("");
-     this.txtIdPersona.setText("");
-     this.dpkFechaNacimiento.setValue(null);
-     this.imgvFoto.setImage(null);
-    }
+        if(empleado.getId()== 0 && empleado.getPersona().getId()==0){
+            this.dpkFechaNacimiento.setValue(null);
+            this.imgvFoto.setImage(null);
+        }
     else
     {
-        this.txtIdEmpleado.setText(""+empleado.getId());
-        this.txtIdPersona.setText(""+empleado.getPersona().getId());
-        DateTimeFormatter formato= DateTimeFormatter.ofPattern("dd/MM/yyyy") ;
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy") ;
         LocalDate localDate=LocalDate.parse(empleado.getPersona().getFechaNacimiento(),formato);
         this.dpkFechaNacimiento.setValue(localDate);
         this.imgvFoto.setImage(SwingFXUtils.toFXImage(WebCamAdapterFX.decodeImageURLSafe(empleado.getPersona().getFotografia()), null));
@@ -156,17 +134,17 @@ btnIniciarCamaraWeb.setOnAction(evt-> {
     this.txtCodigoPostal.setText(empleado.getPersona().getCp());
     this.txtCurp.setText(empleado.getPersona().getCurp());
     this.txtDomicilio.setText(empleado.getPersona().getDomicilio());
-  DateTimeFormatter formato= DateTimeFormatter.ofPattern("dd/MM/yyyy") ;
-        LocalDate localDate=LocalDate.parse(empleado.getPersona().getFechaNacimiento(),formato);    
-    this.dpkIngreso.setValue(localDate);
+    
+    DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy") ;
+    LocalDate localDate = LocalDate.parse(empleado.getPersona().getFechaNacimiento(),formato);  
+    
     this.txtRfc.setText(empleado.getPersona().getRfc());
-   this.cmbRoles.setValue(empleado.getUsuario().getRol().getRol());
-  this.txtSalario.setText(String.valueOf(empleado.getSalario()));
-   this.cmbGenero.getSelectionModel().select(empleado.getPersona().getGenero());
-   this.txtNombre.setText(empleado.getPersona().getNombre());
-  this.txtIdUsuario.setText(String.valueOf(empleado.getUsuario().getId()));
-  this.txtUsuario.setText(empleado.getUsuario().getUsername());
-  this.txtContrasenna.setText(empleado.getUsuario().getPassword());
+    this.cmbRoles.setValue(empleado.getUsuario().getRol().getRol());
+    this.txtSalario.setText(String.valueOf(empleado.getSalario()));
+    this.cmbGenero.getSelectionModel().select(empleado.getPersona().getGenero());
+    this.txtNombre.setText(empleado.getPersona().getNombre());
+    this.txtUsuario.setText(empleado.getUsuario().getUsername());
+    this.txtContrasenna.setText(empleado.getUsuario().getPassword());
     }catch(Exception e){
         e.printStackTrace();
     }
@@ -205,32 +183,13 @@ btnIniciarCamaraWeb.setOnAction(evt-> {
             u.setPassword(this.txtContrasenna.getText());
             rol.setId(((cmbRoles.getSelectionModel().getSelectedIndex())+1));
             
-            
-            
-             if (!txtIdEmpleado.getText().trim().isEmpty()){ 
-                e.setId(Integer.valueOf(txtIdEmpleado.getText())); 
-            }
-             if (!txtIdPersona.getText().trim().isEmpty()){ 
-                p.setId(Integer.valueOf(txtIdPersona.getText())); 
-            } 
-              if (!txtIdUsuario.getText().trim().isEmpty()){ 
-                u.setId(Integer.valueOf(txtIdUsuario.getText())); 
-            } 
-             
-             
-             
             u.setRol(rol);
             e.setPersona(p);
             e.setUsuario(u);
             
-             if(e.getPersona().getId() > 0 && e.getId() > 0){
-                ce.update(e);
-            }
-            else{
-                ce.insert(e);             
-            }
-              vaciarTextos();
-          consultar("");
+            ce.insert(e);
+            vaciarTextos();
+            consultar("");
         }catch(Exception ex)
         {
             Alert alert=new Alert(Alert.AlertType.ERROR,"Revise los campos \nERROR:"+ex,ButtonType.OK);
@@ -243,7 +202,6 @@ btnIniciarCamaraWeb.setOnAction(evt-> {
     try
     {
         Empleado em = new Empleado();
-        em.setId(Integer.valueOf(this.txtIdEmpleado.getText()));
         ce.eliminar(em);
         vaciarTextos();
         consultar("");
@@ -271,15 +229,10 @@ btnIniciarCamaraWeb.setOnAction(evt-> {
         txtNombre.setText("");
         txtApellidoPaterno.setText("");
         txtApellidoMaterno.setText("");
-        txtIdEmpleado.setText("");
-        txtIdPersona.setText("");
         txtRfc.setText("");
         txtCurp.setText("");
         txtDomicilio.setText("");
         txtCodigoPostal.setText("");
-        txtFiltro.setText("");
-        this.txtIdUsuario.setText("");
-        this.dpkIngreso.setValue(null);
         dpkFechaNacimiento.setValue(null);
         cmbGenero.setValue(null);
         this.txtUsuario.setText("");

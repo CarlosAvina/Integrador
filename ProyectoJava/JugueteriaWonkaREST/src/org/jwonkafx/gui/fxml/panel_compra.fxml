@@ -1,88 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane id="AnchorPane" fx:id="pnlRoot" prefHeight="571.0" prefWidth="758.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="pnlRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="901.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TabPane fx:id="panelTab" layoutX="11.0" layoutY="186.0" prefHeight="200.0" prefWidth="577.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <tabs>
-          <Tab fx:id="paneCompra" text="Compra Nueva">
-            <content>
-              <AnchorPane fx:id="pane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #54acd2;">
-                     <children>
-                        <Label layoutX="308.0" layoutY="64.0" text="Cantidad del Producto:">
-                           <font>
-                              
-                           </font>
-                        </Label>
-                        <TextField fx:id="txtIdProducto" layoutX="191.0" layoutY="60.0" prefHeight="25.0" prefWidth="80.0">
-                           <effect>
-                              
-                           </effect>
-                        </TextField>
-                        <Label layoutX="55.0" layoutY="96.0" text="Precio de Compra:">
-                           <font>
-                              
-                           </font>
-                        </Label>
-                        <TextField fx:id="txtPrecioCompra" layoutX="191.0" layoutY="92.0" prefHeight="25.0" prefWidth="80.0">
-                           <effect>
-                              
-                           </effect>
-                        </TextField>
-                        <Label layoutX="105.0" layoutY="64.0" text="IdProducto:">
-                           <font>
-                              
-                           </font>
-                        </Label>
-                        <TextField fx:id="txtCantidadProducto" layoutX="483.0" layoutY="60.0" prefHeight="25.0" prefWidth="80.0">
-                           <effect>
-                              
-                           </effect>
-                        </TextField>
-                        <Button fx:id="btnGuardar" layoutX="509.0" layoutY="172.0" mnemonicParsing="false" text="Guardar" textAlignment="JUSTIFY">
-                           <font>
-                              
-                           </font>
-                        </Button>
-                        <Button fx:id="btnNuevo" layoutX="419.0" layoutY="90.0" mnemonicParsing="false" text="Nuevo" textAlignment="JUSTIFY">
-                           <font>
-                              
-                           </font>
-                        </Button>
-                        <Label layoutX="26.0" layoutY="189.0" text="Detalle Compra">
-                           <font>
-                              
-                           </font>
-                        </Label>
-                        <TableView fx:id="tblProductos" layoutX="5.0" layoutY="213.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="213.0" />
-                     </children>
-                  </AnchorPane>
-            </content>
-          </Tab>
-            <Tab text="Reportes">
+      <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #FFFFFF;" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab fx:id="btnProducto" text="Compra">
                <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #54acd2;">
+                  <FlowPane alignment="CENTER" prefHeight="568.0" prefWidth="900.0">
                      <children>
-                        <TableView fx:id="tblVerCompra" layoutX="14.0" layoutY="44.0" prefHeight="444.0" prefWidth="361.0" />
-                        <TableView fx:id="tblVerDetalleCompra" layoutX="377.0" layoutY="44.0" prefHeight="444.0" prefWidth="361.0" />
-                        <Label layoutX="27.0" layoutY="14.0" text="Compra" />
-                        <Label layoutX="394.0" layoutY="14.0" text="Detalles" />
-                        <Button fx:id="btnEliminarCompra" layoutX="686.0" layoutY="495.0" mnemonicParsing="false" text="Eliminar" />
-                        <Label fx:id="lblIdVenta" layoutX="575.0" layoutY="499.0" text="ID Compra" />
-                        <TextField fx:id="txtID" disable="true" editable="false" layoutX="640.0" layoutY="495.0" prefHeight="25.0" prefWidth="41.0" />
-                        <Button fx:id="btnconsultarCompras" layoutX="78.0" layoutY="10.0" mnemonicParsing="false" text="Consultar" />
+                        <GridPane prefHeight="490.0" prefWidth="777.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="388.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="104.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" prefWidth="95.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="10.0" prefWidth="106.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="179.0" minWidth="10.0" prefWidth="84.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="182.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="182.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="173.0" minHeight="0.0" prefHeight="96.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="215.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="183.0" minHeight="10.0" prefHeight="166.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <ImageView fx:id="imgvCompraImagen" fitHeight="185.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                              <Label alignment="CENTER_RIGHT" prefHeight="51.0" prefWidth="243.0" text="Precio de Compra:" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                              <JFXComboBox fx:id="cmbCompraNombre" prefHeight="33.0" prefWidth="240.0" promptText="Nombre:" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <Label alignment="CENTER_RIGHT" prefHeight="51.0" prefWidth="143.0" text="Cantidad:" GridPane.columnIndex="1" />
+                              <JFXTextField fx:id="txtCompraCantidad" alignment="CENTER" prefHeight="31.0" prefWidth="153.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <JFXButton fx:id="btnCompraMenos" alignment="CENTER" prefHeight="31.0" prefWidth="50.0" style="-fx-background-color: #F3F2F0;" text="-" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <JFXButton fx:id="btnCompraMas" alignment="CENTER" prefHeight="32.0" prefWidth="50.0" style="-fx-background-color: #F3F2F0;" text="+" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <JFXButton fx:id="btnCompraAgregar" alignment="CENTER" prefHeight="7.0" prefWidth="189.0" style="-fx-background-color: #F3F2F0;" text="Agregar" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                              <JFXTextField fx:id="txtCompraPrecio" alignment="CENTER" prefHeight="31.0" prefWidth="153.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <JFXButton fx:id="btnGuardar" alignment="CENTER" prefHeight="31.0" prefWidth="209.0" ripplerFill="WHITE" style="-fx-background-color: #00F000;" text="Guardar" textFill="WHITE" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                              <Label alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="236.0" text="Detalle de la Compra:" GridPane.rowIndex="4" />
+                              <TableView fx:id="tblProductos" prefHeight="172.0" prefWidth="677.0" GridPane.columnSpan="5" GridPane.rowIndex="5">
+                                 <columns>
+                                    <TableColumn prefWidth="75.0" text="C1" />
+                                    <TableColumn prefWidth="75.0" text="C2" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </GridPane>
                      </children>
-                  </AnchorPane>
+                  </FlowPane>
                </content>
             </Tab>
-        </tabs>
+            <Tab text="Reporte">
+               <content>
+                  <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <GridPane prefHeight="516.0" prefWidth="848.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="643.0" minWidth="10.0" prefWidth="471.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="643.0" minWidth="10.0" prefWidth="69.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="643.0" minWidth="10.0" prefWidth="420.0" />
+                              <ColumnConstraints />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="186.0" minHeight="10.0" prefHeight="151.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="87.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <JFXButton fx:id="btnconsultarCompras" alignment="CENTER" prefHeight="39.0" prefWidth="254.0" style="-fx-background-color: #F3F2F0;" text="Actualizar" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                              <TableView fx:id="tblVerCompra" prefHeight="200.0" prefWidth="200.0" GridPane.rowSpan="2">
+                                 <columns>
+                                    <TableColumn prefWidth="75.0" text="C1" />
+                                    <TableColumn prefWidth="75.0" text="C2" />
+                                 </columns>
+                              </TableView>
+                              <TableView fx:id="tblVerDetalleCompra" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowSpan="2">
+                                 <columns>
+                                    <TableColumn prefWidth="75.0" text="C1" />
+                                    <TableColumn prefWidth="75.0" text="C2" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </FlowPane>
+               </content>
+            </Tab>
+         </tabs>
       </TabPane>
    </children>
 </AnchorPane>

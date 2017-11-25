@@ -6,6 +6,8 @@
 package org.jwonkafx.gui;
 
 import com.github.sarxos.webcam.Webcam;
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextField;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import javafx.collections.FXCollections;
@@ -48,19 +50,16 @@ import org.jwonkafx.model.Producto;
  */
 public class panel_compra {
     @FXML AnchorPane pnlRoot;
-    @FXML TextField txtIdProducto;
-    @FXML TextField txtPrecioCompra;
-    @FXML TextField txtCantidadProducto;
-    @FXML Button btnGuardar;
-    @FXML Button btnNuevo;
+    @FXML JFXTextField txtIdProducto;
+    @FXML JFXTextField txtPrecioCompra;
+    @FXML JFXTextField txtCantidadProducto;
+    @FXML JFXButton btnGuardar;
+    @FXML JFXButton btnNuevo;
+    @FXML JFXButton btnEliminarCompra;
+    @FXML JFXButton btnconsultarCompras;
     @FXML TableView<DetalleCompra> tblProductos;
-    
-    
     @FXML TableView<Compra> tblVerCompra;
     @FXML TableView<DetalleCompra> tblVerDetalleCompra;
-    @FXML Button btnEliminarCompra;
-    @FXML Button btnconsultarCompras;
-    @FXML TextField txtID;
     
     WebCamAdapterFX webcamfx;
     FXMLLoader fxmll;
@@ -93,9 +92,11 @@ public void inicializar() throws Exception
     tblVerCompra.setItems(FXCollections.observableArrayList());
     TableAdapterCompra.adapt(tblVerCompra);
     
-    btnEliminarCompra.setOnAction(evt->{eliminarCompra();});
-    btnGuardar.setOnAction(evt->{insertar();});
-    btnNuevo.setOnAction(evt->{nuevo();});
+    //btnEliminarCompra.setOnAction(evt->{eliminarCompra();});
+    btnGuardar.setOnAction(evt->{
+        insertar();
+        nuevo();
+    });
     
     this.tblProductos.setOnMouseClicked(evt-> {
         if(evt.getClickCount() == 2){
@@ -104,14 +105,14 @@ public void inicializar() throws Exception
         }
      });
     
-     this.btnconsultarCompras.setOnMouseClicked(evt-> {
+    this.btnconsultarCompras.setOnMouseClicked(evt-> {
          cargarCompras("");
      });
     
     this.tblVerCompra.setOnMouseClicked(evt-> {
             Compra c = new Compra();
             c = tblVerCompra.getSelectionModel().selectedItemProperty().getValue();
-            this.txtID.setText(""+c.getIdCompra());
+            //this.txtID.setText(""+c.getIdCompra());
             
             ObservableList<DetalleCompra> oList = FXCollections.observableArrayList(dcL);
             try{
@@ -157,7 +158,7 @@ public AnchorPane getPanelRoot()
         try
         {
             int idCompra;
-            idCompra = Integer.valueOf(this.txtID.getText());
+            idCompra = 1; //Obtener el id de la compra
             cc.delete(idCompra);
             ObservableList<DetalleCompra> dcompras =FXCollections.observableArrayList();
             tblVerDetalleCompra.setItems(dcompras);
