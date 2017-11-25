@@ -1,2 +1,0 @@
-﻿<<%@ ServiceHost Language="C#" Debug="true" Service="wfcJugueteriaK.ImplementacionJS" 
-    Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory"%>
