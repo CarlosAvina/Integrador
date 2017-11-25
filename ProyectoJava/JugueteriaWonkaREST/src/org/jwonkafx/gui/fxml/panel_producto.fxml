@@ -41,26 +41,26 @@
                               <RowConstraints maxHeight="173.0" minHeight="10.0" prefHeight="127.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <JFXTextField fx:id="txtNombre" promptText="Apellido Paterno" text="Nombre" GridPane.columnIndex="1">
+                              <JFXTextField fx:id="txtNombre" promptText="Producto" GridPane.columnIndex="1">
                                  <GridPane.margin>
                                     <Insets left="4.0" right="4.0" />
                                  </GridPane.margin>
                               </JFXTextField>
-                              <JFXTextField fx:id="txtProdPrecio" promptText="Apellido Materno" text="Precio" GridPane.columnIndex="2">
+                              <JFXTextField fx:id="txtPrecio" promptText="Precio" GridPane.columnIndex="2">
                                  <GridPane.margin>
                                     <Insets left="4.0" right="4.0" />
                                  </GridPane.margin>
                               </JFXTextField>
-                              <ImageView fx:id="imgvProdImagen" fitHeight="191.0" fitWidth="213.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                              <ImageView fx:id="imgvFoto" fitHeight="191.0" fitWidth="213.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                               <JFXButton fx:id="btnLoad" alignment="CENTER" prefHeight="72.0" prefWidth="176.0" style="-fx-background-color: #F3F2F0;" text="Cargar Imagen" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
                               <Label alignment="CENTER_RIGHT" prefHeight="51.0" prefWidth="143.0" text="Edad:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <JFXComboBox fx:id="cmbProdEdadDe" prefHeight="33.0" prefWidth="141.0" promptText="De:" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <JFXComboBox fx:id="cmbProdEdadHasta" prefHeight="33.0" prefWidth="144.0" promptText="Hasta:" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <JFXComboBox fx:id="cmbEdadMinima" prefHeight="33.0" prefWidth="141.0" promptText="De:" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                              <JFXComboBox fx:id="cmbEdadMaxima" prefHeight="33.0" prefWidth="144.0" promptText="Hasta:" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                               <Label alignment="CENTER_RIGHT" prefHeight="51.0" prefWidth="143.0" text="Marca:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                               <JFXComboBox fx:id="cmbMarca" prefHeight="33.0" prefWidth="167.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                               <Label prefHeight="51.0" prefWidth="143.0" text="Descripción:" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                               <JFXButton fx:id="btnGuardar" alignment="CENTER" prefHeight="31.0" prefWidth="160.0" ripplerFill="WHITE" style="-fx-background-color: #00F000;" text="Guardar" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                              <JFXTextArea GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="4" />
+                              <JFXTextArea fx:id="txtDescripcion" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="4" />
                            </children>
                         </GridPane>
                      </children>

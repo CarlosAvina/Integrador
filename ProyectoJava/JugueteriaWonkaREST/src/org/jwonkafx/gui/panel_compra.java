@@ -7,6 +7,7 @@ package org.jwonkafx.gui;
 
 import com.github.sarxos.webcam.Webcam;
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -50,12 +51,13 @@ import org.jwonkafx.model.Producto;
  */
 public class panel_compra {
     @FXML AnchorPane pnlRoot;
-    @FXML JFXTextField txtIdProducto;
-    @FXML JFXTextField txtPrecioCompra;
+    @FXML JFXComboBox cmbProducto;
+    @FXML JFXTextField txtCompraPrecio;
     @FXML JFXTextField txtCantidadProducto;
+    @FXML JFXButton btnMenos;
+    @FXML JFXButton btnMas;
+    @FXML JFXButton btnAgregar;
     @FXML JFXButton btnGuardar;
-    @FXML JFXButton btnNuevo;
-    @FXML JFXButton btnEliminarCompra;
     @FXML JFXButton btnconsultarCompras;
     @FXML TableView<DetalleCompra> tblProductos;
     @FXML TableView<Compra> tblVerCompra;
@@ -69,66 +71,66 @@ public class panel_compra {
     ArrayList<DetalleCompra> dcL;
 
 
-public panel_compra()
-{
+    public panel_compra()
+    {
+        cc = new ControladorCompra();
+        cdc = new ControladorDetalleCompra();
+        dcL = new ArrayList<DetalleCompra>();
+    }
+    
+    public void inicializar() throws Exception
+    {
+        fxmll= new FXMLLoader(System.class.getResource("/org/jwonkafx/gui/fxml/panel_compra.fxml"));
+        fxmll.setController(this);
+        fxmll.load();
 
-    cc=new ControladorCompra();
-    cdc=new ControladorDetalleCompra();
-    dcL = new ArrayList<DetalleCompra>();
-    
-}
-public void inicializar() throws Exception
-{
-    fxmll= new FXMLLoader(System.class.getResource("/org/jwonkafx/gui/fxml/panel_compra.fxml"));
-    fxmll.setController(this);
-    fxmll.load();
-    
-    tblProductos.setItems(FXCollections.observableArrayList());
-    TableAdapterCompraDetalle.adapt(tblProductos);
-    
-    tblVerDetalleCompra.setItems(FXCollections.observableArrayList());
-    TableAdapterCompraDetalle.adapt(tblVerDetalleCompra);
-   
-    tblVerCompra.setItems(FXCollections.observableArrayList());
-    TableAdapterCompra.adapt(tblVerCompra);
-    
-    //btnEliminarCompra.setOnAction(evt->{eliminarCompra();});
-    btnGuardar.setOnAction(evt->{
-        insertar();
-        nuevo();
-    });
-    
-    this.tblProductos.setOnMouseClicked(evt-> {
-        if(evt.getClickCount() == 2){
-           dcL.remove(tblProductos.getSelectionModel().selectedItemProperty().getValue());
-           consultar("");
-        }
-     });
-    
-    this.btnconsultarCompras.setOnMouseClicked(evt-> {
-         cargarCompras("");
-     });
-    
-    this.tblVerCompra.setOnMouseClicked(evt-> {
-            Compra c = new Compra();
-            c = tblVerCompra.getSelectionModel().selectedItemProperty().getValue();
-            //this.txtID.setText(""+c.getIdCompra());
-            
-            ObservableList<DetalleCompra> oList = FXCollections.observableArrayList(dcL);
-            try{
-               oList = cdc.getAll("", c.getIdCompra());
-               tblVerDetalleCompra.setItems(oList);
-            }
-            catch(Exception e){
-                e.printStackTrace();
-            }
-    });
-}
+        tblProductos.setItems(FXCollections.observableArrayList());
+        TableAdapterCompraDetalle.adapt(tblProductos);
 
-public AnchorPane getPanelRoot()
-{
-    return pnlRoot;
-}
+        tblVerDetalleCompra.setItems(FXCollections.observableArrayList());
+        TableAdapterCompraDetalle.adapt(tblVerDetalleCompra);
+
+        tblVerCompra.setItems(FXCollections.observableArrayList());
+        TableAdapterCompra.adapt(tblVerCompra);
+
+        //btnEliminarCompra.setOnAction(evt->{eliminarCompra();});
+        btnGuardar.setOnAction(evt->{
+            insertar();
+            nuevo();
+        });
+
+        this.tblProductos.setOnMouseClicked(evt-> {
+            if(evt.getClickCount() == 2){
+               dcL.remove(tblProductos.getSelectionModel().selectedItemProperty().getValue());
+               consultar("");
+            }
+         });
+
+        this.btnconsultarCompras.setOnMouseClicked(evt-> {
+             cargarCompras("");
+         });
+
+        this.tblVerCompra.setOnMouseClicked(evt-> {
+                Compra c = new Compra();
+                c = tblVerCompra.getSelectionModel().selectedItemProperty().getValue();
+                //this.txtID.setText(""+c.getIdCompra());
+
+                ObservableList<DetalleCompra> oList = FXCollections.observableArrayList(dcL);
+                try{
+                   oList = cdc.getAll("", c.getIdCompra());
+                   tblVerDetalleCompra.setItems(oList);
+                }
+                catch(Exception e){
+                    e.printStackTrace();
+                }
+        });
+    }
+
+    public AnchorPane getPanelRoot()
+    {
+        return pnlRoot;
+    }
+    
     private void insertar()
     {
         float total = 0;
@@ -154,6 +156,7 @@ public AnchorPane getPanelRoot()
             alert.show();    
         }
     }
+    
     private void eliminarCompra(){
         try
         {
@@ -169,15 +172,16 @@ public AnchorPane getPanelRoot()
             ex.printStackTrace();
         }
     }
+    
     private void nuevo()
     {
         DetalleCompra dc = new DetalleCompra();
         Producto p = new Producto();
         try{
-            p.setId(Integer.valueOf(txtIdProducto.getText()));
+            //p.setId(Integer.valueOf(txtIdProducto.getText()));
             dc.setCantidad(Integer.valueOf(txtCantidadProducto.getText()));
-            dc.setPrecioCompra(Float.valueOf(txtPrecioCompra.getText()));
-            dc.setTotal((Float.valueOf(txtPrecioCompra.getText())) *  (Integer.valueOf(txtCantidadProducto.getText())));
+            dc.setPrecioCompra(Float.valueOf(txtCompraPrecio.getText()));
+            dc.setTotal((Float.valueOf(txtCompraPrecio.getText())) *  (Integer.valueOf(txtCantidadProducto.getText())));
             dc.setProducto(p);
             dcL.add(dc);
             consultar("");
@@ -188,6 +192,7 @@ public AnchorPane getPanelRoot()
             alert.show();    
         }
     }
+    
     private void consultar(String filtro)
     {
         ObservableList<DetalleCompra> oList = FXCollections.observableArrayList(dcL);
@@ -200,14 +205,15 @@ public AnchorPane getPanelRoot()
         }
 
     }
+    
     private void limpiar(){
-             txtIdProducto.setText("");
-             txtCantidadProducto.setText("");
-             txtPrecioCompra.setText("");
-            dcL.clear();
-            consultar("");
+        txtCantidadProducto.setText("");
+        txtCompraPrecio.setText("");
+        dcL.clear();
+        consultar("");
     }
-     private void cargarCompras(String filtro){
+    
+    private void cargarCompras(String filtro){
         ObservableList<Compra> compras= null;
         try{
             compras = cc.getAll(filtro);

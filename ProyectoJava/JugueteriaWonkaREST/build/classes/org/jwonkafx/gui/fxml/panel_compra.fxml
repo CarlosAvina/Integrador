@@ -42,12 +42,12 @@
                            <children>
                               <ImageView fx:id="imgvCompraImagen" fitHeight="185.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                               <Label alignment="CENTER_RIGHT" prefHeight="51.0" prefWidth="243.0" text="Precio de Compra:" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
-                              <JFXComboBox fx:id="cmbCompraNombre" prefHeight="33.0" prefWidth="240.0" promptText="Nombre:" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <JFXComboBox fx:id="cmbProducto" prefHeight="33.0" prefWidth="240.0" promptText="Nombre:" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                               <Label alignment="CENTER_RIGHT" prefHeight="51.0" prefWidth="143.0" text="Cantidad:" GridPane.columnIndex="1" />
-                              <JFXTextField fx:id="txtCompraCantidad" alignment="CENTER" prefHeight="31.0" prefWidth="153.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                              <JFXButton fx:id="btnCompraMenos" alignment="CENTER" prefHeight="31.0" prefWidth="50.0" style="-fx-background-color: #F3F2F0;" text="-" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                              <JFXButton fx:id="btnCompraMas" alignment="CENTER" prefHeight="32.0" prefWidth="50.0" style="-fx-background-color: #F3F2F0;" text="+" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                              <JFXButton fx:id="btnCompraAgregar" alignment="CENTER" prefHeight="7.0" prefWidth="189.0" style="-fx-background-color: #F3F2F0;" text="Agregar" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                              <JFXTextField fx:id="txtCantidadProducto" alignment="CENTER" prefHeight="31.0" prefWidth="153.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <JFXButton fx:id="btnMas" alignment="CENTER" prefHeight="31.0" prefWidth="50.0" style="-fx-background-color: #F3F2F0;" text="+" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <JFXButton fx:id="btnMenos" alignment="CENTER" prefHeight="32.0" prefWidth="50.0" style="-fx-background-color: #F3F2F0;" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <JFXButton fx:id="btnAgregar" alignment="CENTER" prefHeight="7.0" prefWidth="189.0" style="-fx-background-color: #F3F2F0;" text="Agregar" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="1" />
                               <JFXTextField fx:id="txtCompraPrecio" alignment="CENTER" prefHeight="31.0" prefWidth="153.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                               <JFXButton fx:id="btnGuardar" alignment="CENTER" prefHeight="31.0" prefWidth="209.0" ripplerFill="WHITE" style="-fx-background-color: #00F000;" text="Guardar" textFill="WHITE" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3" />
                               <Label alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="236.0" text="Detalle de la Compra:" GridPane.rowIndex="4" />

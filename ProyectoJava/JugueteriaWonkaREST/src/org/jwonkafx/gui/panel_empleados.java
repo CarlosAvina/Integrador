@@ -11,16 +11,20 @@ import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
+import java.io.IOException;
 import static java.lang.String.valueOf;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import static java.time.temporal.TemporalQueries.localDate;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
@@ -31,6 +35,9 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import org.grios.jwebcam.WebCamAdapterFX;
 import org.jugueteria.gui.components.WebCams;
 import org.jwonkafx.core.ControladorEmpleado;
@@ -59,7 +66,7 @@ public class panel_empleados {
     @FXML JFXTextField txtUsuario;
     @FXML JFXTextField txtContrasenna;
     @FXML JFXComboBox cmbGenero;
-    @FXML JFXComboBox cmbRoles;
+    @FXML JFXComboBox cmbRol;
     @FXML JFXComboBox cmbCamarasWeb;
     @FXML JFXDatePicker dpkFechaNacimiento;
     @FXML JFXCheckBox chbActivo;
@@ -72,30 +79,44 @@ public class panel_empleados {
     @FXML JFXButton btnBuscarEmpleado;
     @FXML ImageView imgvFoto;
     @FXML TableView<Empleado> tblEmpleados;
-    FXMLLoader fxmll;
+    @FXML FlowPane flowpane;
     
+    FXMLLoader fxmll;
     ControladorEmpleado ce;
     WebCamAdapterFX webcamfx;
-    WebCams wc;
     
     public panel_empleados()
     {
         ce = new ControladorEmpleado();
-        webcamfx= new WebCamAdapterFX();
-        wc=new WebCams();
+        //webcamfx = new WebCamAdapterFX();
     }
     public void inicializar()throws Exception
     {
         fxmll = new FXMLLoader(System.class.getResource("/org/jwonkafx/gui/fxml/panel_empleado.fxml"));
         fxmll.setController(this);
         fxmll.load();
+        
+        cmbGenero.getItems().add("Hombre");
+        cmbGenero.getItems().add("Mujer");
+        cmbGenero.getItems().add("Otro");
+        
+        cmbRol.getItems().add("Administrador");
+        cmbRol.getItems().add("Vendedor");
+        cmbRol.getItems().add("Almacenista");
+        
         tblEmpleados.setItems(FXCollections.observableArrayList());
+        TableAdapterEmpleado.adapt(tblEmpleados);
         //FechasAdaptador.adaptar(dpkFechaNacimiento, "dd/MM/yyyy");
         //FechasAdaptador.adaptar(dpkIngreso, "dd/MM/yyyy");
-        TableAdapterEmpleado.adapt(tblEmpleados);
+        
         btnConsultar.setOnAction((ActionEvent evt)->
         {
-            consultar("");
+            try {
+                newStage();
+                //consultar("");
+            } catch (IOException ex) {
+                Logger.getLogger(panel_empleados.class.getName()).log(Level.SEVERE, null, ex);
+            }
         });
         this.tblEmpleados.setOnMouseClicked(evt-> {
             Empleado empleado=new Empleado();
@@ -108,12 +129,9 @@ public class panel_empleados {
 //            insertar();
 //        });
         
-//        btnIniciarCamaraWeb.setOnAction(evt-> {
-//            wc.iniciarWebCam(this.imgvCamaraWeb, cmbCamarasWeb.getSelectionModel().getSelectedItem().toString());
-//        });
-//
-//        btnTomarFoto.setOnAction(evt-> {wc.tomarFoto(imgvFoto);});
-//        cmbCamarasWeb.setItems(wc.consultarWebCams());
+        btnIniciarCamaraWeb.setOnAction(evt -> { iniciarCamaraWeb(); });
+        btnTomarFoto.setOnAction(evt -> { tomarFoto(); });
+        consultarWebCams();
     }
     private void llenar(Empleado empleado){
     try{
@@ -139,7 +157,7 @@ public class panel_empleados {
     LocalDate localDate = LocalDate.parse(empleado.getPersona().getFechaNacimiento(),formato);  
     
     this.txtRfc.setText(empleado.getPersona().getRfc());
-    this.cmbRoles.setValue(empleado.getUsuario().getRol().getRol());
+    this.cmbRol.setValue(empleado.getUsuario().getRol().getRol());
     this.txtSalario.setText(String.valueOf(empleado.getSalario()));
     this.cmbGenero.getSelectionModel().select(empleado.getPersona().getGenero());
     this.txtNombre.setText(empleado.getPersona().getNombre());
@@ -167,9 +185,9 @@ public class panel_empleados {
             p.setCurp(this.txtCurp.getText());
             p.setDomicilio(this.txtDomicilio.getText());
             p.setFechaNacimiento(this.dpkFechaNacimiento.getValue().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
-           if(this.imgvFoto.getImage()!=null){
-            p.setFotografia(WebCamAdapterFX.encodeImageURLSafe(SwingFXUtils.fromFXImage(imgvFoto.getImage(), null)));
-        }
+            if(this.imgvFoto.getImage()!= null){
+                p.setFotografia(WebCamAdapterFX.encodeImageURLSafe(SwingFXUtils.fromFXImage(imgvFoto.getImage(), null)));
+            }
             p.setGenero(this.cmbGenero.getSelectionModel().getSelectedItem().toString());
             p.setApellidoMaterno(this.txtApellidoMaterno.getText());
             p.setNombre(this.txtNombre.getText());
@@ -181,7 +199,7 @@ public class panel_empleados {
             
             u.setUsername(this.txtUsuario.getText());
             u.setPassword(this.txtContrasenna.getText());
-            rol.setId(((cmbRoles.getSelectionModel().getSelectedIndex())+1));
+            rol.setId(((cmbRol.getSelectionModel().getSelectedIndex())+1));
             
             u.setRol(rol);
             e.setPersona(p);
@@ -238,7 +256,47 @@ public class panel_empleados {
         this.txtUsuario.setText("");
         this.txtContrasenna.setText("");
         this.txtSalario.setText("");
-        this.cmbRoles.setValue(null);
+        this.cmbRol.setValue(null);
         this.imgvFoto.setImage(null);
+    }
+     
+    private void tomarFoto()
+    {
+        if(webcamfx != null && webcamfx.isStarted())
+            imgvFoto.setImage(SwingFXUtils.toFXImage(webcamfx.getBufferedImage(),null));
+    }
+    
+    public void consultarWebCams()
+    {
+        Webcam[] cams = WebCamAdapterFX.getSystemCamDevicesAsArray();
+        cmbCamarasWeb.getItems().clear();
+        for (Webcam w : cams) 
+            cmbCamarasWeb.getItems().add(w.getName());
+        
+    }
+    
+    private void iniciarCamaraWeb()
+    {
+        if(webcamfx == null)
+            webcamfx = new WebCamAdapterFX(imgvFoto);
+        if(webcamfx.isStarted())
+            webcamfx.stop();
+        if(cmbCamarasWeb.getSelectionModel().getSelectedItem()!= null)
+            webcamfx.start(cmbCamarasWeb.getSelectionModel().getSelectedItem().toString());
+    }
+    
+    public void newStage() throws IOException
+    {
+        Stage window = new Stage();
+        window.initModality(Modality.APPLICATION_MODAL);
+        window.setTitle("Editar empleado");
+        
+        fxmll = new FXMLLoader(System.class.getResource("/org/jwonkafx/gui/fxml/MainWindow.fxml"));
+        fxmll.setController(this);
+        fxmll.load();
+        
+        Scene scene = new Scene(new FlowPane(flowpane));
+        window.setScene(scene);
+        window.showAndWait();
     }
 }
